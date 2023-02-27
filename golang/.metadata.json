@@ -2,7 +2,7 @@
   "course": "golang",
   "type": "essential",
   "languages": ["golang"],
-  "order": [
-    "intro.md"
-    ]
+  "title": "Golang is Magic 101",
+  "description": "Learn the basics of Golang, the language that is taking the world by storm.",
+  "order": ["intro.md"]
 }

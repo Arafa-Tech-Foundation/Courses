@@ -1,13 +1,8 @@
 {
   "course": "webdev",
+  "title": "Web Development",
+  "description": "Learn the basics of web development",
   "type": "application",
   "languages": ["javascript", "html", "css"],
-  "order": [
-    "intro.md",
-    "2.md",
-    "3.md",
-    "4.md",
-    "5.md",
-    "6.md"
-  ]
+  "order": ["intro.md", "2.md", "3.md", "4.md", "5.md", "6.md"]
 }
