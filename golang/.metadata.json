@@ -1,0 +1,8 @@
+{
+  "course": "golang",
+  "type": "essential",
+  "languages": ["golang"],
+  "order": [
+    "intro.md"
+    ]
+}
