@@ -5,5 +5,5 @@
   "minutes": 60,
   "description": "Learn JavaScript, the programming language of the web.",
   "languages": ["javascript"],
-  "order": ["intro.md", "2.md", "3.md", "4.md", "5.md", "6.md"]
+  "order": ["intro", "2", "3", "4", "5", "6"]
 }
