@@ -3,6 +3,7 @@
   "type": "essential",
   "languages": ["python"],
   "title": "Python 101",
-  "description": "Learn the basics of Python, the most popular programming language in the world.",
+  "minutes": 60,
+  "description": "Learn Python, the most popular programming language in the world.",
   "order": ["1.md", "2.md", "3.md", "4.md", "5.md", "6.md"]
 }
