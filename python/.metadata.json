@@ -5,5 +5,5 @@
   "title": "Python 101",
   "minutes": 60,
   "description": "Learn Python, the most popular programming language in the world.",
-  "order": ["1", "2", "3", "4", "5", "6"]
+  "order": ["outline", "overview", "installation", "first_program"]
 }
