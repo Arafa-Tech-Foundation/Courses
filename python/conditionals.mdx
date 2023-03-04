@@ -1,0 +1,144 @@
+# Module: Basic Syntax
+
+## Lesson: Conditional statements (if/else)
+
+Conditional statements allow you to execute different blocks of code depending on whether a condition is true or false. In Python, conditional statements are created using the `if`, `elif`, and `else` keywords.
+
+### `if` statement
+
+The `if` statement is used to execute a block of code if a condition is true. Here's the basic syntax:
+
+```python
+if condition:
+# code to execute if condition is true
+```
+
+The condition is an expression that evaluates to either `True` or `False`. If the condition is true, the code block indented below the `if` statement will be executed. If the condition is false, the code block will be skipped.
+
+Here's an example:
+
+```python
+age = 25
+
+if age >= 18:
+    print("You are an adult")
+```
+
+This code will output `You are an adult` because the condition `age >= 18` is true.
+
+### `else` statement
+
+The `else` statement is used to execute a block of code if the condition in the `if` statement is false. Here's the syntax:
+
+```python
+if condition:
+    # code to execute if condition is true
+else:
+    # code to execute if condition is false
+```
+
+Here's an example:
+
+```python
+age = 15
+
+if age >= 18:
+    print("You are an adult")
+else:
+    print("You are not an adult")
+```
+
+This code will output `You are not an adult` because the condition `age >= 18` is false.
+
+### `elif` statement
+
+The `elif` statement allows you to check multiple conditions. `If` the condition in the if statement is false, it will check the condition in the `elif` statement. If that condition is also false, it will check the next `elif` statement, and so on. Here's the syntax:
+
+```python
+if condition1:
+    # code to execute if condition1 is true
+elif condition2:
+    # code to execute if condition2 is true
+else:
+    # code to execute if all conditions are false
+```
+
+Here's an example:
+
+```python
+age = 10
+
+if age < 0:
+    print("Invalid age")
+elif age < 18:
+    print("You are a minor")
+else:
+    print("You are an adult")
+```
+
+This code will output `You are a minor` because the condition `age < 18` is true.
+
+### Nested `if` statements
+
+You can also nest `if` statements inside other `if` statements. Here's an example:
+
+```python
+age = 25
+income = 50000
+
+if age >= 18:
+    if income >= 40000:
+        print("You are eligible for a loan")
+    else:
+        print("You are not eligible for a loan")
+else:
+    print("You are not eligible for a loan")
+```
+
+This code will output `You are eligible for a loan` because both conditions (`age >= 18` and `income >= 40000`) are true.
+
+### Exercise
+
+1. Write a program that takes an input from the user and checks if it's a positive number. If it is, print `Positive number`. If it's zero or negative, print `Not a positive number`.
+
+   ```python
+   number = int(input("Enter a number: "))
+
+   if number > 0:
+     print("Positive number")
+   else:
+     print("Not a positive number")
+   ```
+
+2. Write a program that takes two numbers as input from the user and prints the larger number. If the numbers are equal, print `The numbers are equal`.
+
+   ```python
+   num1 = float(input("Enter first number: "))
+   num2 = float(input("Enter second number: "))
+
+   if num1 > num2:
+     print(num1)
+   elif num2 > num1:
+     print(num2)
+   else:
+     print("The numbers are equal")
+   ```
+
+   In this program, we take two numbers as input from the user and compare them using the `if`, ``elif, and `else` statements. If`num1`is greater than`num2`, we print `num1`. If `num2`is greater than`num1`, we print `num2`. If they are equal, we print `The numbers are equal.`
+
+3. Write a program that takes a string as input from the user and checks if it's longer than 10 characters. If it is, print `Long string`. If it's 10 characters or shorter, print `Short string`.
+
+   ```python
+   string = input("Enter a string: ")
+
+   if len(string) > 10:
+     print("Long string")
+   else:
+     print("Short string")
+   ```
+
+   In this program, we take a string as input from the user and use the `len` function to check its length. If the length is greater than 10, we print `Long string`. Otherwise, we print `Short string`.
+
+## Conclusion
+
+Conditional statements are a fundamental concept in programming, and understanding them is essential for writing useful programs. In this lesson, we covered the `if`, `else`, `elif`, and nested `if` statements in Python. We also provided several exercises to help you practice using these statements in your code. By mastering conditional statements, you'll be well on your way to becoming a proficient Python programmer!

@@ -1,0 +1,115 @@
+# Module: Basic Syntax
+
+## Lesson: Loops (while/for)
+
+Loops are used in Python to repeat a set of statements multiple times. There are two types of loops in Python: `while` loops and `for` loops.
+
+### `while` Loops
+
+A `while` loop is used to repeat a set of statements as long as a condition is true. The basic syntax of a `while` loop is as follows:
+
+```python
+while condition:
+    # statements to be repeated while condition is true
+```
+
+Here, `condition` is a Boolean expression that determines whether the loop should continue or not. For example, to print the numbers from 1 to 5 using a `while` loop:
+
+```python
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+```
+
+This would output:
+
+```bash
+1
+2
+3
+4
+5
+```
+
+### For Loops
+
+A `for` loop is used to iterate over a sequence (such as a list, tuple, or string) and perform a set of statements for each item in the sequence. The basic syntax of a `for` loop is as follows:
+
+```python
+for item in sequence:
+    # statements to be repeated for each item
+```
+
+Here, `item` is a variable that represents each item in the `sequence`, and sequence is the sequence being iterated over. For example, to print each element of a list using a `for` loop:
+
+```python
+my_list = [1, 2, 3, 4, 5]
+
+for item in my_list:
+    print(item)
+```
+
+This would output:
+
+```bash
+1
+2
+3
+4
+5
+```
+
+### Loop Control Statements
+
+Python provides several loop control statements that can be used to modify the behavior of loops:
+
+- `break` - This statement is used to terminate the loop immediately. The control of the program flows to the statement immediately after the body of the loop.
+- `continue` - This statement is used to skip the current iteration of the loop and continue with the next iteration.
+- `pass` - This statement is a null operation. Nothing happens when it is executed. It is used as a placeholder.
+
+For example, to print the numbers from 1 to 5, except 3, using a `for` loop:
+
+```python
+for i in range(1, 6):
+		if i == 3:
+				continue
+		print(i)
+```
+
+This would output:
+
+```bash
+1
+2
+
+4
+5
+```
+
+To print the numbers from 1 to 5, except 3, using a `while` loop:
+
+```python
+i = 1
+
+while i <= 5:
+		if i == 3:
+				i += 1
+				continue
+		print(i)
+		i += 1
+```
+
+This would output:
+
+```bash
+1
+2
+4
+5
+```
+
+## Conclusion
+
+In this lesson, you learned about `for` loops and `while` loops in Python, as well as loop control statements. Loops are an important programming concept that allow you to perform repetitive tasks with less code, and can be used in a variety of applications. Now that you have an understanding of loops, you can use them in your own Python programs to solve problems more efficiently.
