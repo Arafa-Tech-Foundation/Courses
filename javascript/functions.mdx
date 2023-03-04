@@ -1,0 +1,48 @@
+# Module 1, Lesson 5: Functions and Parameters
+
+## Introduction
+
+In this lesson, we will learn about functions and parameters in JavaScript. Functions are one of the most important concepts in programming, as they allow us to create reusable code and organize our programs into logical pieces.
+
+## Functions
+
+A function is a block of code that can be called to perform a specific task. Functions are declared using the `function` keyword, followed by a name, and a set of parentheses. The code block that makes up the function is enclosed in curly braces `{ }`. Here is an example of a function that adds two numbers:
+
+```js
+function addNumbers(num1, num2) {
+  return num1 + num2;
+}
+```
+
+In this example, addNumbers is the name of the function, and num1 and num2 are parameters. Parameters are variables that are passed to the function when it is called. The code block inside the function adds the two numbers together and returns the result using the return keyword.
+Calling Functions
+
+Once a function is defined, it can be called or invoked by using its name followed by a set of parentheses containing any arguments. Arguments are the actual values that are passed to the function when it is called. Here is an example of how to call the addNumbers function we defined earlier:
+
+```js
+
+var result = addNumbers(5, 10);
+console.log(result); // Output: 15
+```
+
+In this example, 5 and 10 are the arguments passed to the addNumbers function. The function adds the two numbers together and returns the result, which is assigned to the variable result.
+
+### Default Parameters
+
+Default parameters allow us to specify default values for function parameters. If a value is not passed to the function, the default value is used instead. Here is an example:
+
+```js
+
+function greet(name = "world") {
+  console.log("Hello, " + name + "!");
+}
+
+greet(); // Output: "Hello, world!"
+greet("Alice"); // Output: "Hello, Alice!"
+```
+
+In this example, the greet function takes one parameter name with a default value of "world". If a value is passed to the function, it is used as the name parameter. If no value is passed, the default value is used instead.
+
+## Conclusion
+
+In this lesson, we learned about functions and parameters in JavaScript. We saw how to define a function, how to call it with arguments, and how to use default parameters. Functions are a powerful tool in programming that allow us to write reusable and organized code. In the next lesson, we will learn about arrays and objects.

@@ -1,0 +1,77 @@
+# Module 1: Getting Started with JavaScript 
+## Lesson: Variables and Scope
+
+## Introduction
+
+In this lesson, we will learn about variables and scope in JavaScript. Variables are used to store data that can be manipulated and changed throughout the execution of a program. Understanding how variables work in JavaScript is critical for writing effective and efficient code.
+
+## Variables
+
+In JavaScript, we use variables to store data. A variable is declared using the keywords `var`, `let`, or `const`, followed by a variable name, and optionally, an initial value. For example:
+
+```js
+var x = 10;
+let y = "Hello";
+const PI = 3.14;
+```
+The `var` keyword is used to declare a variable with function scope, while `let` and `const` are used to declare variables with block scope. Function scope means that a variable is only accessible within the function in which it is declared, while block scope means that a variable is only accessible within the block in which it is declared.
+Scope
+
+The scope of a variable refers to the part of the program where the variable is accessible. In JavaScript, there are two types of scope: global scope and local scope.
+
+### Global Scope
+
+A variable declared outside of any function or block has global scope. This means that the variable is accessible from anywhere in the program.
+
+```js
+
+// Global variable
+var x = 10;
+
+function myFunction() {
+  console.log(x); // Output: 10
+}
+
+console.log(x); // Output: 10
+```
+### Local Scope
+
+A variable declared inside a function or block has local scope. This means that the variable is only accessible from within the function or block in which it is declared.
+
+```js
+
+function myFunction() {
+  // Local variable
+  var y = 20;
+  console.log(y); // Output: 20
+}
+
+myFunction();
+console.log(y); // Output: ReferenceError: y is not defined
+```
+
+### Differences between `var`, `let`, and `const`
+
+The keywords `var`, `let`, and `const` are used to declare variables in JavaScript. The main differences between them are in their scoping and reassignment behavior.
+
+    `var`: Function scoped, can be redeclared and reassigned.
+    `let`: Block scoped, cannot be redeclared but can be reassigned.
+    `const`: Block scoped, cannot be redeclared or reassigned.
+
+```js
+var x = 10;
+var x = 20; // OK
+x = 30; // OK
+
+let y = 10;
+let y = 20; // SyntaxError: Identifier 'y' has already been declared
+y = 30; // OK
+
+const PI = 3.14;
+const PI = 3.14159; // SyntaxError: Identifier 'PI' has already been declared
+PI = 3.14159; // TypeError: Assignment to constant variable.
+```
+
+## Conclusion
+
+In this lesson, we learned about variables and scope in JavaScript. We explored the differences between var, let, and const and their scoping and reassignment behaviors. Understanding these concepts is essential for writing effective and efficient JavaScript code. In the next lesson, we will learn about operators and control structures.
