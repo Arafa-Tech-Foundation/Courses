@@ -1,0 +1,64 @@
+# Module: Functions
+
+## Lesson: Return Values
+
+In the previous lesson, we learned how to create functions in Python. In this lesson, we will learn about return values, which are the values that a function can send back to the code that called it.
+
+## What are return values?
+
+Return values are the values that a function sends back to the code that called it. These values can be used in the rest of the code to perform additional calculations or operations.
+
+## How to use return values
+
+To return a value from a function, we use the return statement followed by the value we want to return. Here is an example:
+
+```python
+def add_numbers(x, y):
+    result = x + y
+    return result
+```
+
+In this example, the `add_numbers` function takes two arguments, `x` and `y`, and adds them together. The `result` variable holds the sum, and the `return` statement sends that value back to the code that called the function.
+
+## Using return values in code
+
+When we call a function that returns a value, we can assign that value to a variable:
+
+```python
+sum = add_numbers(5, 7)
+```
+
+In this example, the `add_numbers` function is called with the arguments `5` and `7`. The return value, which is `12`, is then assigned to the variable `sum`.
+
+We can also use the return value directly in an expression:
+
+```python
+total = add_numbers(3, 8) + add_numbers(2, 5)
+```
+
+In this example, the return value of the first `add_numbers` call (`11`) is added to the return value of the second `add_numbers` call (`7`), resulting in a total of `18`.
+
+## Multiple return values
+
+A function can also return multiple values by separating them with commas:
+
+```python
+def divide_numbers(x, y):
+    quotient = x // y
+    remainder = x % y
+    return quotient, remainder
+```
+
+In this example, the `divide_numbers` function takes two arguments, `x` and `y`, and calculates the quotient and remainder. The `return` statement sends both values back to the code that called the function.
+
+We can assign both return values to separate variables:
+
+```python
+result1, result2 = divide_numbers(10, 3)
+```
+
+In this example, the `divide_numbers` function is called with the arguments `10` and `3`. The first return value (`3`) is assigned to the variable `result1`, and the second return value (`1`) is assigned to the variable `result2`.
+
+## Conclusion
+
+In this lesson, we learned about return values and how to use them in our code. We saw how to use the `return` statement to send a value back from a function, and how to use that value in the rest of our code. We also saw how a function can return multiple values, and how to use them in our code. In the next lesson, we will learn about variable scope in Python.
