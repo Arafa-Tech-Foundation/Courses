@@ -1,0 +1,78 @@
+# Module: Functions
+
+## Lesson: Parameters and Arguments
+
+In the previous lesson, we learned how to create and use functions in Python. In this lesson, we will learn about function parameters and arguments.
+
+## Function Parameters
+
+Function parameters are the values that are passed to a function when it is called. They allow us to customize the behavior of a function and make it more flexible.
+
+To define function parameters, we include them in the function definition within parentheses. For example:
+
+```python
+def greet(name):
+    print(f"Hello, {name}!")
+```
+In this example, `name` is the parameter of the `greet` function. When we call the function and pass a value for `name`, that value will be assigned to `name` within the function.
+
+## Function Arguments
+
+Function arguments are the values that are passed to a function when it is called. They provide the actual values for the function parameters. For example:
+
+```python
+def greet(name):
+    print(f"Hello, {name}!")
+
+greet("John")
+```
+
+In this example, `"John"` is the argument that is passed to the `greet` function. It will be assigned to the `name` parameter within the function, and the output will be `"Hello, John!`".
+
+## Positional Arguments
+
+The simplest way to pass arguments to a function is by using positional arguments. Positional arguments are matched to function parameters based on their order. For example:
+
+```python
+def greet(first_name, last_name):
+    print(f"Hello, {first_name} {last_name}!")
+
+greet("John", "Doe")
+```
+
+In this example, `"John"` is matched to the `first_name` parameter, and `"Doe"` is matched to the `last_name` parameter.
+
+## Keyword Arguments
+
+Keyword arguments allow us to specify arguments by their parameter name. This can be useful when we have functions with many parameters, or when we want to specify some arguments and use the default values for others. For example:
+
+```python
+def greet(first_name, last_name, middle_name=""):
+    if middle_name:
+        print(f"Hello, {first_name} {middle_name} {last_name}!")
+    else:
+        print(f"Hello, {first_name} {last_name}!")
+
+greet(first_name="John", last_name="Doe")
+greet(first_name="John", middle_name="Jacob", last_name="Jingleheimer Schmidt")
+```
+
+In this example, we use the `first_name` and `last_name` parameters as positional arguments, and we use the `middle_name` parameter as a keyword argument with a default value of `""`. We then call the function twice, once with only `first_name` and `last_name` specified as positional arguments, and once with all three parameters specified using keyword arguments.
+
+## Arbritrary Arguments
+
+Sometimes we want to pass a variable number of arguments to a function. We can do this using arbitrary arguments, which are denoted with an asterisk (`*`). For example:
+
+```python
+def greet(*names):
+    for name in names:
+        print(f"Hello, {name}!")
+
+greet("John", "Jane", "Jim")
+```
+
+In this example, we define the `greet` function with an arbitrary number of parameters using `*names`. We can then pass any number of arguments to the function, and they will be collected into a tuple named `names` within the function.
+
+## Conclusion
+
+Function parameters and arguments allow us to make our functions more flexible and customizable. By using positional arguments, keyword arguments, and arbitrary arguments, we can create functions that can handle a variety of inputs and outputs.

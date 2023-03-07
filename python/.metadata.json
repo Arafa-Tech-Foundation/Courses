@@ -15,6 +15,7 @@
     "basic_operations",
     "conditionals",
     "loops",
-    "creating_functions"
+    "creating_functions",
+    "parameters_and_arguments"
   ]
 }
