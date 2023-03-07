@@ -1,0 +1,66 @@
+# Module: Functions
+
+## Lesson: Creating and using functions
+
+Functions are a fundamental concept in programming. A function is a block of reusable code that performs a specific task. It allows you to break down your code into smaller, more manageable pieces and reduces code duplication.
+
+## Creating a function
+
+A function is defined using the `def` keyword, followed by the function name and parentheses. Any parameters that the function takes are specified within the parentheses.
+
+```python
+def my_function(param1, param2):
+    # Function code goes here
+    pass
+```
+
+The function code goes within the function body, which is indented under the function definition. The `pass` statement is a placeholder that does nothing, but is required in order to define an empty function.
+
+## Using a function
+
+Once you've defined a function, you can call it from other parts of your code by using the function name and passing any required arguments within parentheses.
+
+```python
+def add_numbers(a, b):
+    return a + b
+
+result = add_numbers(2, 3)
+print(result) # Output: 5
+```
+
+In this example, we define a function `add_numbers` that takes two arguments `a` and `b`. It returns the sum of `a` and `b`. We then call the function with the arguments `2` and `3`, which returns `5`. We store the result in the `result` variable and print it to the console.
+
+## Function parameters
+
+Functions can take any number of parameters, including none. You can specify default values for parameters, which will be used if the parameter is not passed in when the function is called.
+
+```python
+def greet(name="World"):
+    print("Hello, " + name + "!")
+
+greet() # Output: "Hello, World!"
+greet("Alice") # Output: "Hello, Alice!"
+```
+
+In this example, we define a function `greet` that takes a single parameter `name`, which defaults to `"World"`. If no parameter is passed in when the function is called, it will use the default value. We then call the function with both no parameter and a parameter of `"Alice"`.
+
+## Return values
+
+Functions can also return values using the `return` keyword. A function can return any value, including strings, numbers, and even other functions.
+
+```python
+def multiply_numbers(a, b):
+    return a * b
+
+def add_numbers(a, b):
+    return a + b
+
+result = multiply_numbers(2, 3) + add_numbers(4, 5)
+print(result) # Output: 17
+```
+
+In this example, we define two functions `multiply_numbers` and `add_numbers`. The `multiply_numbers` function returns the product of `a` and `b`, while the `add_numbers` function returns the sum of `a` and `b`. We then call both functions and add their results together, storing the result in the `result` variable and printing it to the console.
+
+## Conclusion
+
+Functions are a powerful tool for writing modular and reusable code. They allow you to break down your code into smaller, more manageable pieces and reduce code duplication. With this knowledge, you should be able to create your own functions and call them from other parts of your code.
