@@ -1,0 +1,143 @@
+# Module: Lists and Dictionaries
+
+## Lesson: Dictionary Methods (keys, values, items, etc.)
+
+In this lesson, you will learn how to use various dictionary methods in Python. Dictionaries are a collection of key-value pairs that can be used to store and retrieve data efficiently.
+
+## Creating a Dictionary
+
+To create a dictionary in Python, you can use curly braces `{}` or the `dict()` constructor. Here is an example of creating a dictionary:
+
+```python
+my_dict = {"key1": "value1", "key2": "value2"}
+```
+
+You can also create an empty dictionary by using empty curly braces `{}`:
+
+```python
+my_dict = {}
+```
+
+## Accessing Values in a Dictionary
+
+To access a value in a dictionary, you can use its key. Here is an example of accessing the value associated with a key in a dictionary:
+
+```python
+my_dict = {"key1": "value1", "key2": "value2"}
+print(my_dict["key1"])
+```
+
+Output:
+```
+value1
+```
+
+## Dictionary Methods
+
+### keys()
+
+The `keys()` method returns a list of all the keys in a dictionary. Here is an example of using the `keys()` method:
+
+```python
+my_dict = {"key1": "value1", "key2": "value2"}
+print(my_dict.keys())
+```
+
+Output:
+```
+dict_keys(['key1', 'key2'])
+```
+
+### values()
+
+The `values()` method returns a list of all the values in a dictionary. Here is an example of using the `values()` method:
+
+```python
+my_dict = {"key1": "value1", "key2": "value2"}
+print(my_dict.values())
+```
+
+Output:
+```
+dict_values(['value1', 'value2'])
+```
+
+### items()
+
+The `items()` method returns a list of all the key-value pairs in a dictionary as tuples. Here is an example of using the `items()` method:
+
+```python
+my_dict = {"key1": "value1", "key2": "value2"}
+print(my_dict.items())
+```
+
+Output:
+```
+dict_items([('key1', 'value1'), ('key2', 'value2')])
+```
+
+### get()
+
+The `get()` method returns the value associated with a key in a dictionary. If the key is not found, it returns a default value (which is `None` by default). Here is an example of using the `get()` method:
+
+```python
+my_dict = {"key1": "value1", "key2": "value2"}
+print(my_dict.get("key1"))
+print(my_dict.get("key3"))
+print(my_dict.get("key3", "default_value"))
+```
+
+Output:
+```
+value1
+None
+default_value
+```
+
+## Modifying a Dictionary
+
+You can modify a value in a dictionary by assigning a new value to its key. Here is an example of modifying a value in a dictionary:
+
+```python
+my_dict = {"key1": "value1", "key2": "value2"}
+my_dict["key1"] = "new_value1"
+print(my_dict)
+```
+
+Output:
+```
+{'key1': 'new_value1', 'key2': 'value2'}
+```
+
+You can also add a new key-value pair to a dictionary by using the `update()` method:
+
+```python
+my_dict = {"key1": "value1", "key2": "value2"}
+my_dict.update({"key3": "value3"})
+print(my_dict)
+```
+
+Output:
+```
+{'key1': 'value1', 'key2': 'value2', 'key3':'value3'}
+```
+
+## Removing Items from a Dictionary
+
+You can remove a key-value pair from a dictionary by using the del keyword followed by the key. Here is an example of removing a key-value pair from a dictionary:
+
+```python
+my_dict = {"key1": "value1", "key2": "value2"}
+del my_dict["key1"]
+print(my_dict)
+```
+
+Output:
+
+```
+{'key2': 'value2'}
+```
+
+## Conclusion
+
+In this lesson, you learned how to use various dictionary methods in Python. You can use the `keys()`, `values()`, and `items()` methods to retrieve information about a dictionary, and you can use the `get()`, `update()`, and `pop()` methods to modify a dictionary. You also learned how to create and access dictionaries, as well as remove items from them. With this knowledge, you can efficiently store and retrieve data in your Python programs.

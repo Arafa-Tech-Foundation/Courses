@@ -1,0 +1,66 @@
+# Module: File Input/Output
+
+## Lesson: Using the with Statement
+
+In this lesson, you will learn how to use the `with` statement to read from and write to files in Python. The `with` statement provides a way to work with files that is more concise and less error-prone than traditional file handling methods.
+
+## Reading from a File using the with Statement
+
+To read from a file using the `with` statement, you can use the `open()` function and specify the file name and mode. Here is an example of reading from a file using the `with` statement:
+
+```python
+with open('example.txt', 'r') as file:
+    data = file.read()
+    print(data)
+```
+
+In this example, the `open()` function is used to open the file `example.txt` in read mode (`'r'`). The `with` statement ensures that the file is closed when the block of code is exited, even if an exception is raised.
+
+The `read()` method is used to read the contents of the file and store them in the `data` variable. The `print()` function is used to output the contents of the file to the console.
+
+## Writing to a File using the with Statement
+
+To write to a file using the `with` statement, you can use the `open()` function and specify the file name and mode. Here is an example of writing to a file using the `with` statement:
+
+```python
+with open('example.txt', 'w') as file:
+    file.write('Hello, world!')
+```
+
+In this example, the `open()` function is used to open the file `example.txt` in write mode (`'w'`). The `with` statement ensures that the file is closed when the block of code is exited, even if an exception is raised.
+
+The `write()` method is used to write the string `'Hello, world!'` to the file.
+
+## Appending to a File using the with Statement
+
+To append to a file using the `with` statement, you can use the `open()` function and specify the file name and mode. Here is an example of appending to a file using the `with` statement:
+
+```python
+with open('example.txt', 'a') as file:
+    file.write('\nGoodbye, world!')
+```
+
+In this example, the `open()` function is used to open the file `example.txt` in append mode (`'a'`). The `with` statement ensures that the file is closed when the block of code is exited, even if an exception is raised.
+
+The `write()` method is used to write the string `'\nGoodbye, world!'` to the file, which will be appended to the end of the file on a new line.
+
+## Handling Exceptions with the with Statement
+
+The `with` statement can also be used to handle exceptions when working with files. Here is an example of using the `with` statement to handle a file exception:
+
+```python
+try:
+    with open('example.txt', 'r') as file:
+        data = file.read()
+        print(data)
+except FileNotFoundError:
+    print('The file does not exist.')
+```
+
+In this example, the `open()` function is used to open the file `example.txt` in read mode (`'r'`) inside a `try` block. The `with` statement ensures that the file is closed when the block of code is exited, even if an exception is raised.
+
+If a `FileNotFoundError` exception is raised, the `except` block is executed and the message `'The file does not exist.'` is printed to the console.
+
+## Conclusion
+
+In this lesson, you learned how to use the `with` statement to read from and write to files in Python. The `with` statement provides a concise and less error-prone way of working with files in Python. With the `with` statement, you can ensure that files are properly closed, even in the presence of exceptions. By using the `with` statement, you can write cleaner and more robust code when working with files.
