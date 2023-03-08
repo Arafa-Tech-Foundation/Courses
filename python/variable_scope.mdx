@@ -1,0 +1,84 @@
+# Module: Functions
+## Lesson: Variable Scope
+
+In this lesson, you will learn about variable scope in Python functions.
+
+## What is Variable Scope?
+
+Variable scope refers to the area of a program where a variable can be accessed. In Python, variables can have global or local scope.
+
+A global variable is a variable that can be accessed from anywhere in the program, whereas a local variable is a variable that can only be accessed within a certain part of the program, such as a function.
+
+## Global Variables
+
+A global variable is a variable that is defined outside of any function and can be accessed from anywhere in the program. Here's an example:
+
+```python
+x = 10
+
+def print_x():
+    print(x)
+
+print_x() # output: 10
+```
+
+In this example, `x` is a global variable that is accessible inside the `my_function` function.
+
+## Local variables
+
+Local variables are variables that are defined inside a function. They can only be accessed from within the function where they are defined.
+
+Here is an example:
+
+```python
+def my_function():
+  y = 20
+  print(y)
+
+my_function() # output: 20
+```
+
+In this example, `y` is a local variable that is only accessible inside the `my_function` function.
+
+## Using global variables inside a function
+
+You can use a global variable inside a function by using the global keyword. This tells Python that you want to use the global variable, rather than a local variable with the same name.
+
+Here is an example:
+
+```python
+x = 10
+
+def my_function():
+  global x
+  x = 20
+  print(x)
+
+my_function() # output: 20
+print(x) # output: 20
+```
+
+In this example, we use the `global` keyword to tell Python that we want to use the global variable `x`. We then modify the value of `x` inside the function, and the modified value is visible outside the function as well.
+
+## Avoiding naming conflicts
+
+When using global variables inside a function, it's important to avoid naming conflicts with local variables. If you define a local variable with the same name as a global variable, the local variable will take precedence within the function.
+
+Here is an example:
+
+```python
+x = 10
+
+def my_function():
+  x = 20
+  print(x)
+
+my_function() # output: 20
+print(x) # output: 10
+```
+
+In this example, we define a local variable `x` with the same name as the global variable `x`. Inside the function, the local variable takes precedence over the global variable, so the value of `x` printed inside the function is 20, while the value printed outside the function is still 10.
+
+## Conclusion
+
+In this lesson, you learned about variable scope in Python functions. You learned that global variables can be accessed from anywhere in the program, while local variables can only be accessed from within the function where they are defined. You also learned how to use global variables inside a function, and how to avoid naming conflicts between global and local variables.

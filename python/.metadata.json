@@ -17,6 +17,10 @@
     "loops",
     "creating_functions",
     "parameters_and_arguments",
-    "return_values"
+    "return_values",
+    "variable_scope",
+    "creating_and_accessings_lists",
+    "list_methods",
+    "creating_and_accessing_dictionaries"
   ]
 }
