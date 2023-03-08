@@ -1,0 +1,55 @@
+# Module: Object-Oriented Programming (OOP)
+
+## Lesson: Inheritance and Polymorphism
+
+In this lesson, you will learn about inheritance and polymorphism in Python's object-oriented programming (OOP) paradigm.
+
+## Inheritance
+
+Inheritance is a way to create a new class that is a modified version of an existing class. The new class is called the subclass or derived class, and the existing class is called the superclass or base class. The subclass inherits all the attributes and methods of the superclass and can also add its own.
+
+To create a subclass, you can define a new class and include the name of the superclass in parentheses after the class name. Here is an example of creating a subclass that inherits from a superclass called `Animal`:
+
+```python
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        pass
+
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+```
+
+In this example, `Dog` is the subclass and `Animal` is the superclass. The `Dog` class has its own `speak()` method, which overrides the `speak()` method of the `Animal` class.
+
+## Polymorphism
+
+Polymorphism is the ability of objects of different classes to be used interchangeably. In Python, this means that you can use objects of a subclass wherever you would use objects of the superclass. This allows for more flexible and reusable code.
+
+Here is an example of using polymorphism to call the `speak()` method of both a `Dog` object and an `Animal` object:
+
+```python
+def animal_speak(animal):
+    print(animal.speak())
+
+my_dog = Dog("Rufus")
+my_animal = Animal("Spike")
+
+animal_speak(my_dog)
+animal_speak(my_animal)
+```
+
+Output:
+```
+Woof!
+None
+```
+
+In this example, the `animal_speak()` function takes an `Animal` object as its parameter. The function calls the `speak()` method of the object, which is either a `Dog` object or an `Animal` object. The `Dog` object returns `"Woof!"`, and the `Animal` object returns `None` because its `speak()` method does not have an implementation.
+
+## Conclusion
+
+In this lesson, you learned about inheritance and polymorphism in Python's OOP paradigm. Inheritance allows you to create subclasses that inherit the attributes and methods of a superclass and add their own. Polymorphism allows you to use objects of different classes interchangeably, which leads to more flexible and reusable code. With these concepts, you can create complex and powerful programs using Python's OOP features.

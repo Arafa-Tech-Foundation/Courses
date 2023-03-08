@@ -1,0 +1,74 @@
+# Module: Object-Oriented Programming (OOP)
+
+## Lesson: Methods and Attributes
+
+In this lesson, you will learn about methods and attributes in object-oriented programming (OOP) using Python.
+
+## Methods
+
+Methods are functions that are associated with a class and can be used to perform operations on objects created from that class. They are defined within the class and can access and modify the attributes of an object. Methods are used to encapsulate behavior that belongs to the class.
+
+Here is an example of a class with a method:
+
+```python
+class Dog:
+    def bark(self):
+        print("Woof!")
+
+my_dog = Dog()
+my_dog.bark()
+```
+
+Output:
+```
+Woof!
+```
+
+In this example, the `Dog` class has a method called `bark()`, which prints "Woof!" when called. An object `my_dog` is created from the `Dog` class and the `bark()` method is called on it.
+
+## Attributes
+
+Attributes are variables that are associated with a class and can be used to store data that belongs to objects created from that class. They are defined within the class and can be accessed and modified by methods of the class. Attributes are used to encapsulate data that belongs to the class.
+
+Here is an example of a class with an attribute:
+
+```python
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+my_dog = Dog("Fido")
+print(my_dog.name)
+```
+
+Output:
+```
+Fido
+```
+
+In this example, the `Dog` class has an attribute called `name`, which is set to the value passed to the constructor method `__init__()` when an object is created from the class. An object `my_dog` is created from the `Dog` class with the name "Fido" and the `name` attribute is printed.
+
+## Public and Private Attributes and Methods
+
+In Python, there are no true private attributes or methods. However, a convention is used to indicate that an attribute or method should not be accessed or modified outside of the class. An attribute or method that starts with two underscores `__` is considered private and should not be accessed or modified outside of the class.
+
+Here is an example of a class with a private attribute and method:
+
+```python
+class Dog:
+    def __init__(self, name):
+        self.__name = name
+
+    def __bark(self):
+        print("Woof!")
+
+my_dog = Dog("Fido")
+print(my_dog.__name)  # Error: 'Dog' object has no attribute '__name'
+my_dog.__bark()  # Error: 'Dog' object has no attribute '__bark'
+```
+
+In this example, the `Dog` class has a private attribute called `__name` and a private method called `__bark()`. An object `my_dog` is created from the `Dog` class with the name "Fido". When we try to access the `__name` attribute or call the `__bark()` method outside of the class, we get an error.
+
+## Conclusion
+
+In this lesson, you learned about methods and attributes in object-oriented programming using Python. You learned how methods are used to encapsulate behavior that belongs to a class and how attributes are used to encapsulate data that belongs to a class. You also learned about public and private attributes and methods, and how to indicate that an attribute or method should not be accessed or modified outside of the class. With these skills, you can create more complex classes and objects in your Python programs.

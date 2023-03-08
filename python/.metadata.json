@@ -30,6 +30,8 @@
     "creating_own_modules",
     "install_and_use_external_packages",
     "introduction_to_OOP",
-    "classes_and_objects"
+    "classes_and_objects",
+    "methods_and_attributes",
+    "inheritance_and_polymorphism"
   ]
 }
