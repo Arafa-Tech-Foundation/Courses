@@ -1,0 +1,74 @@
+# Module: Modules and Packages
+
+## Lesson: Creating Your Own Modules
+
+In this lesson, you will learn how to create your own Python modules. A module is a file that contains Python code, and can be imported and used in other Python programs.
+
+## Creating a Module
+
+To create a module in Python, you can simply create a new file with a `.py` extension, and put your Python code in it. Here is an example of a module that defines a function to calculate the area of a circle:
+
+```python
+# circle.py
+
+import math
+
+def area(radius):
+    return math.pi * radius ** 2
+```
+
+This module imports the `math` module, which provides the value of pi, and defines a function called `area()` that takes the radius of a circle as a parameter and returns its area.
+
+## Importing a Module
+
+To use a module in another Python program, you can import it using the `import` statement. Here is an example of using the `circle` module in another Python program:
+
+```python
+import circle
+
+radius = 2.5
+print("Area of a circle with radius", radius, "is", circle.area(radius))
+```
+
+Output:
+```
+Area of a circle with radius 2.5 is 19.634954084936208
+```
+
+This program imports the `circle` module and uses its `area()` function to calculate the area of a circle with a radius of `2.5`.
+
+## Importing Specific Functions from a Module
+
+If you only need to use specific functions from a module, you can import them using the `from ... import` statement. Here is an example of importing the `area()` function from the `circle` module:
+
+```python
+from circle import area
+
+radius = 2.5
+print("Area of a circle with radius", radius, "is", area(radius))
+```
+
+Output:
+```
+Area of a circle with radius 2.5 is 19.634954084936208
+```
+
+## Importing a Module with a Different Name
+
+If you want to import a module with a different name, you can use the `as` keyword to give it a different name. Here is an example of importing the `circle` module with the name `c`:
+
+```python
+import circle as c
+
+radius = 2.5
+print("Area of a circle with radius", radius, "is", c.area(radius))
+```
+
+Output:
+```
+Area of a circle with radius 2.5 is 19.634954084936208
+```
+
+## Conclusion
+
+In this lesson, you learned how to create your own Python modules and import them into other Python programs. You also learned how to import specific functions from a module, and how to import a module with a different name. With these skills, you can organize your Python code into reusable modules that can be easily shared and reused in other programs.

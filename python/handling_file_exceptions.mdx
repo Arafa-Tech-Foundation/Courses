@@ -1,0 +1,63 @@
+# Module: File Input/Output
+
+## Lesson: Handling File Exceptions
+
+In this lesson, you will learn how to handle file exceptions when reading from and writing to files in Python.
+
+## File Exceptions
+
+When working with files in Python, there are several exceptions that can occur. Here are some common file exceptions:
+
+- `FileNotFoundError`: raised when a file cannot be found.
+- `PermissionError`: raised when the user does not have permission to access a file.
+- `IOError`: raised when an input/output error occurs.
+
+## Handling Exceptions with try...except
+
+You can use a `try...except` block to handle file exceptions in Python. Here is an example of using a `try...except` block to handle a `FileNotFoundError` exception:
+
+```python
+try:
+    with open("file.txt", "r") as file:
+        contents = file.read()
+except FileNotFoundError:
+    print("The file does not exist.")
+```
+
+In this example, the code tries to open a file called `file.txt` for reading. If the file does not exist, a `FileNotFoundError` exception is raised and the code prints a message to the console.
+
+## Handling Multiple Exceptions
+
+You can handle multiple exceptions by using multiple `except` blocks or a single `except` block with multiple exceptions. Here is an example of using a single `except` block with multiple exceptions:
+
+```python
+try:
+    with open("file.txt", "r") as file:
+        contents = file.read()
+except (FileNotFoundError, PermissionError):
+    print("There was an error accessing the file.")
+except IOError:
+    print("There was an input/output error.")
+```
+
+In this example, the code tries to open a file called `file.txt` for reading. If a `FileNotFoundError` or `PermissionError` exception is raised, the code prints a message to the console. If an `IOError` exception is raised, the code prints a different message to the console.
+
+## Handling Exceptions with finally
+
+You can use a `finally` block to perform cleanup actions, such as closing a file, regardless of whether an exception is raised. Here is an example of using a `finally` block to close a file:
+
+```python
+try:
+    file = open("file.txt", "r")
+    contents = file.read()
+except FileNotFoundError:
+    print("The file does not exist.")
+finally:
+    file.close()
+```
+
+In this example, the code tries to open a file called `file.txt` for reading. If the file does not exist, a `FileNotFoundError` exception is raised and the code prints a message to the console. Regardless of whether an exception is raised, the file is closed in the `finally` block.
+
+## Conclusion
+
+In this lesson, you learned how to handle file exceptions when reading from and writing to files in Python. You also learned how to use `try...except` blocks to handle exceptions and how to use `finally` blocks to perform cleanup actions. With these skills, you can write Python programs that are more resilient to file errors. 

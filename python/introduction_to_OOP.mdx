@@ -1,0 +1,103 @@
+# Module: Object-Oriented Programming (OOP)
+
+## Lesson: Introduction to OOP
+
+In this lesson, you will learn about Object-Oriented Programming (OOP) and how it works in Python.
+
+## What is Object-Oriented Programming (OOP)?
+
+Object-Oriented Programming is a programming paradigm that focuses on objects and their interactions. An object is an instance of a class, which is a blueprint for creating objects. Objects have attributes (variables) and methods (functions) that define their behavior.
+
+## Classes and Objects
+
+In Python, a class is defined using the `class` keyword. Here is an example of a simple class definition:
+
+```python
+class MyClass:
+    pass
+```
+
+To create an object from a class, you can call the class as if it were a function. Here is an example of creating an object from the `MyClass` class:
+
+```python
+my_object = MyClass()
+```
+
+## Methods and Attributes
+
+Classes have attributes and methods that define their behavior. Attributes are variables that store data, and methods are functions that perform operations on that data.
+
+Here is an example of a class with an attribute and a method:
+
+```python
+class MyClass:
+    def __init__(self, name):
+        self.name = name
+
+    def say_hello(self):
+        print(f"Hello, my name is {self.name}")
+```
+
+In this example, the `__init__()` method is a special method that is called when an object is created. It takes a parameter `name` and sets it as an attribute of the object. The `say_hello()` method is a regular method that prints out a greeting using the `name` attribute.
+
+To call a method on an object, you can use the dot notation. Here is an example of creating an object from the `MyClass` class and calling its `say_hello()` method:
+
+```python
+my_object = MyClass("Alice")
+my_object.say_hello()
+```
+
+Output:
+```
+Hello, my name is Alice
+```
+
+## Inheritance and Polymorphism
+
+Inheritance is a way of creating a new class that is a modified version of an existing class. The new class, called the subclass, inherits attributes and methods from the existing class, called the superclass.
+
+Here is an example of a subclass that inherits from the `MyClass` class:
+
+```python
+class MySubClass(MyClass):
+    def say_goodbye(self):
+        print(f"Goodbye, my name is {self.name}")
+```
+
+In this example, the `MySubClass` subclass inherits the `name` attribute and `say_hello()` method from the `MyClass` superclass. It also defines its own `say_goodbye()` method.
+
+Polymorphism is a way of using the same method or attribute name in different classes. This allows you to write more generic code that can be used with different types of objects.
+
+Here is an example of using polymorphism with the `say_hello()` method:
+
+```python
+class MyOtherClass:
+    def __init__(self, name):
+        self.name = name
+
+    def say_hello(self):
+        print(f"Hello, {self.name}!")
+
+def say_hello_twice(obj):
+    obj.say_hello()
+    obj.say_hello()
+
+my_object1 = MyClass("Alice")
+my_object2 = MyOtherClass("Bob")
+
+say_hello_twice(my_object1)
+say_hello_twice(my_object2)
+```
+
+Output:
+```
+Hello, my name is Alice
+Hello, my name is Alice
+Hello, Bob!
+Hello, Bob!
+```
+
+## Conclusion
+
+In this lesson, you learned the basics of object-oriented programming (OOP). You learned that OOP is a programming paradigm that focuses on objects, which encapsulate data and behavior. You learned about classes, which are blueprints for objects, and objects, which are instances of classes. You learned about attributes, which are data associated with objects, and methods, which are functions that can be called on objects. You also learned about inheritance, which is a mechanism for creating new classes based on existing classes, and polymorphism, which is the ability of objects to take on many forms. With this understanding of OOP, you can begin to write more complex programs that take advantage of its powerful concepts and capabilities.
+

@@ -1,0 +1,76 @@
+# Module: Modules and Packages
+
+## Lesson: Installing and Using External Packages
+
+In this lesson, you will learn how to install and use external packages in Python. External packages are modules of code that are created by other developers and can be installed in your Python environment to provide additional functionality.
+
+## Installing Packages
+
+To install external packages, you can use the `pip` package installer. `pip` is a tool that comes pre-installed with Python and can be used to download and install external packages from the Python Package Index (PyPI).
+
+To install a package, you can use the following command in your terminal or command prompt:
+
+```
+pip install package_name
+```
+
+Replace `package_name` with the name of the package you want to install. For example, to install the `requests` package, you can use the following command:
+
+```
+pip install requests
+```
+
+## Using Packages
+
+After installing a package, you can use it in your Python code by importing it at the beginning of your script. To import a package, you can use the `import` keyword followed by the name of the package. Here is an example of importing the `requests` package:
+
+```python
+import requests
+```
+
+You can then use functions and classes from the package in your code. Here is an example of using the `requests` package to make a GET request to a website:
+
+```python
+import requests
+
+response = requests.get("https://www.example.com")
+print(response.status_code)
+print(response.text)
+```
+
+Output:
+```
+200
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta ...
+```
+
+## Virtual Environments
+
+When working on a project, it's a good practice to create a virtual environment for that project. A virtual environment is an isolated Python environment that allows you to install packages without affecting the global Python environment.
+
+To create a virtual environment, you can use the `venv` module. Here is an example of creating a virtual environment in a directory named `myproject`:
+
+```
+python -m venv myproject
+```
+
+This command creates a new directory named `myproject` that contains a virtual environment. You can activate the virtual environment by running the following command:
+
+```
+source myproject/bin/activate
+```
+
+After activating the virtual environment, you can install packages and use them in your Python code. To deactivate the virtual environment, you can run the following command:
+
+```
+deactivate
+```
+
+## Conclusion
+
+In this lesson, you learned how to install and use external packages in Python. You also learned about virtual environments and how to create them using the `venv` module. With these skills, you can expand the functionality of your Python programs by installing and using external packages.

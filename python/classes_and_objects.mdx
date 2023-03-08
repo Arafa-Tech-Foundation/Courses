@@ -1,0 +1,77 @@
+# Module: Object-Oriented Programming (OOP)
+
+## Lesson: Classes and Objects
+
+In this lesson, you will learn about classes and objects in Python. Object-Oriented Programming (OOP) is a programming paradigm that organizes code into objects, which can interact with one another to perform complex tasks.
+
+## What is a Class?
+
+A class is a blueprint for creating objects. It defines a set of attributes and methods that objects of that class will have. Here is an example of a class definition in Python:
+
+```python
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def start(self):
+        print("The car is starting.")
+
+    def stop(self):
+        print("The car is stopping.")
+```
+
+In this example, `Car` is the name of the class. The `__init__()` method is a special method that initializes the attributes of the class when an object is created. The `start()` and `stop()` methods are other methods that the `Car` class has.
+
+## What is an Object?
+
+An object is an instance of a class. It has its own set of attributes and methods, and can interact with other objects of the same or different classes. Here is an example of creating an object of the `Car` class:
+
+```python
+my_car = Car("Toyota", "Corolla", 2020)
+```
+
+In this example, `my_car` is an object of the `Car` class, with the attributes `make` set to `"Toyota"`, `model` set to `"Corolla"`, and `year` set to `2020`.
+
+## Accessing Attributes and Methods of an Object
+
+To access the attributes and methods of an object, you can use dot notation. Here is an example of accessing the `make` attribute of the `my_car` object:
+
+```python
+print(my_car.make)
+```
+
+Output:
+```
+Toyota
+```
+
+Here is an example of calling the `start()` method of the `my_car` object:
+
+```python
+my_car.start()
+```
+
+Output:
+```
+The car is starting.
+```
+
+## Modifying Attributes of an Object
+
+You can modify the attributes of an object by assigning a new value to them. Here is an example of modifying the `make` attribute of the `my_car` object:
+
+```python
+my_car.make = "Honda"
+print(my_car.make)
+```
+
+Output:
+```
+Honda
+```
+
+## Conclusion
+
+In this lesson, you learned about classes and objects in Python. You learned how to define a class, create an object of a class, and access its attributes and methods. With these skills, you can use OOP to organize your code and create complex programs.
