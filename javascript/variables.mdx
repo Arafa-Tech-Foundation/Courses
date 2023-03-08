@@ -1,4 +1,5 @@
-# Module 1: Getting Started with JavaScript 
+# Module 1: Getting Started with JavaScript
+
 ## Lesson: Variables and Scope
 
 ## Introduction
@@ -14,6 +15,7 @@ var x = 10;
 let y = "Hello";
 const PI = 3.14;
 ```
+
 The `var` keyword is used to declare a variable with function scope, while `let` and `const` are used to declare variables with block scope. Function scope means that a variable is only accessible within the function in which it is declared, while block scope means that a variable is only accessible within the block in which it is declared.
 Scope
 
@@ -24,7 +26,6 @@ The scope of a variable refers to the part of the program where the variable is 
 A variable declared outside of any function or block has global scope. This means that the variable is accessible from anywhere in the program.
 
 ```js
-
 // Global variable
 var x = 10;
 
@@ -34,12 +35,12 @@ function myFunction() {
 
 console.log(x); // Output: 10
 ```
+
 ### Local Scope
 
 A variable declared inside a function or block has local scope. This means that the variable is only accessible from within the function or block in which it is declared.
 
 ```js
-
 function myFunction() {
   // Local variable
   var y = 20;
@@ -54,9 +55,9 @@ console.log(y); // Output: ReferenceError: y is not defined
 
 The keywords `var`, `let`, and `const` are used to declare variables in JavaScript. The main differences between them are in their scoping and reassignment behavior.
 
-    `var`: Function scoped, can be redeclared and reassigned.
-    `let`: Block scoped, cannot be redeclared but can be reassigned.
-    `const`: Block scoped, cannot be redeclared or reassigned.
+- `var`: Function scoped, can be redeclared and reassigned.
+- `let`: Block scoped, cannot be redeclared but can be reassigned.
+- `const`: Block scoped, cannot be redeclared or reassigned.
 
 ```js
 var x = 10;

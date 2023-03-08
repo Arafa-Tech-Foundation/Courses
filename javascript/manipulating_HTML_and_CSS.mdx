@@ -1,0 +1,60 @@
+# Module 2: Working with the DOM
+
+## Lesson: Manipulating HTML and CSS with JavaScript
+
+In this lesson, we'll learn how to manipulate HTML and CSS using JavaScript.
+
+### Changing the text of an element
+
+To change the text of an element, you can use the `innerHTML` property. Here's an example:
+
+```js
+const element = document.getElementById("myElement");
+element.innerHTML = "New text!";
+```
+
+### Changing the style of an element
+
+To change the style of an element, you can use the `style` property. Here's an example:
+
+```js
+const element = document.getElementById("myElement");
+element.style.color = "red";
+```
+
+### Adding and removing classes
+
+To add a class to an element, you can use the `classList.add()` method. To remove a class, you can use the `classList.remove()` method. Here's an example:
+
+```js
+const element = document.getElementById("myElement");
+element.classList.add("myClass");
+element.classList.remove("oldClass");
+```
+
+### Creating new elements
+
+To create a new element, you can use the `createElement()` method. Here's an example:
+
+```js
+const newElement = document.createElement("div");
+newElement.innerHTML = "New element!";
+```
+
+### Adding and removing elements
+
+To add a new element to the DOM, you can use the `appendChild()` method. To remove an element from the DOM, you can use the `removeChild()` method. Here's an example:
+
+```js
+const parentElement = document.getElementById("parent");
+const newElement = document.createElement("div");
+newElement.innerHTML = "New element!";
+parentElement.appendChild(newElement);
+
+const childElement = document.getElementById("child");
+parentElement.removeChild(childElement);
+```
+
+### Conclusion
+
+In this lesson, we've learned how to manipulate HTML and CSS using JavaScript. By understanding how to manipulate elements, you'll be able to dynamically change the content and appearance of your web page using JavaScript.

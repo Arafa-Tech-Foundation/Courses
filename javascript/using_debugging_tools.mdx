@@ -1,0 +1,38 @@
+# Module 3: Best Practices in JavaScript
+
+## Lesson: Using console.log() and Other Debugging Tools
+
+In this lesson, we'll learn about how to use console.log() and other debugging tools to help us debug our code.
+
+### Use console.log() to Print Values
+
+console.log() is a useful tool for printing values to the console. You can use it to see what's happening in your code and track down bugs.
+
+```js
+function calculateTotal(price, taxRate) {
+  console.log(price, taxRate); // Use console.log() to see the values of the arguments
+  const total = price + (price * taxRate);
+  console.log(total); // Use console.log() to see the value of the total
+  return total;
+}
+```
+
+### Use Breakpoints to Pause Code Execution
+
+You can use breakpoints to pause code execution and inspect the state of your code at that point. This is useful for tracking down bugs and understanding how your code is working.
+
+### Use Step Into, Step Over, and Step Out to Debug Your Code
+
+When using a debugger, you can use Step Into, Step Over, and Step Out to navigate through your code and understand how it's working.
+
+- Step Into: If the current line of code contains a function call, Step Into will step into that function and allow you to step through it line by line.
+- Step Over: Step Over will execute the current line of code and then move to the next line.
+- Step Out: If you've stepped into a function call, Step Out will execute the rest of that function and return to the line where the function was called.
+
+### Use a Debugger to Debug Your Code
+
+A debugger is a tool that allows you to step through your code and see how it's working. You can use a debugger to track down bugs and understand how your code is working.
+
+### Conclusion
+
+In this lesson, we've learned about how to use console.log() and other debugging tools to help us debug our code. By using console.log() to print values, breakpoints to pause code execution, Step Into, Step Over, and Step Out to navigate through our code, and a debugger to track down bugs, we can write code that is easier to debug and maintain.

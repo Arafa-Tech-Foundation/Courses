@@ -5,5 +5,22 @@
   "minutes": 60,
   "description": "Learn JavaScript, the programming language of the web.",
   "languages": ["javascript"],
-  "order": ["outline", "overview", "intro", "development_env", "syntax", "variables", "functions"]
+  "order": [
+    "outline",
+    "overview",
+    "intro",
+    "development_env",
+    "syntax",
+    "variables",
+    "functions",
+    "understanding_the_dom",
+    "accessing_elements",
+    "events",
+    "manipulating_HTML_and_CSS",
+    "events",
+    "clean_and_maintainable_code",
+    "debugging",
+    "using_debugging_tools",
+    "avoiding_common_mistakes",
+  ]
 }
