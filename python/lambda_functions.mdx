@@ -1,0 +1,56 @@
+# Module: Advanced Topics
+
+## Lesson: Lambda Functions
+
+In this lesson, you will learn about lambda functions in Python. Lambda functions are small, anonymous functions that can be created on-the-fly during program execution.
+
+## Creating a Lambda Function
+
+To create a lambda function in Python, you can use the `lambda` keyword followed by the function's input variables and a colon `:`. After the colon, you can define the function's return value using a single expression. Here is an example of a lambda function that returns the square of its input value:
+
+```python
+square = lambda x: x ** 2
+```
+
+You can also define a lambda function that takes multiple input variables:
+
+```python
+add = lambda x, y: x + y
+```
+
+## Using a Lambda Function
+
+Once you have defined a lambda function, you can use it like any other function in your program. Here is an example of using the `square` lambda function:
+
+```python
+result = square(3)
+print(result)
+```
+
+Output:
+```
+9
+```
+
+You can also pass a lambda function as an argument to another function. Here is an example of using the `map()` function to apply a lambda function to every element in a list:
+
+```python
+my_list = [1, 2, 3, 4, 5]
+squared_list = list(map(lambda x: x ** 2, my_list))
+print(squared_list)
+```
+
+Output:
+```
+[1, 4, 9, 16, 25]
+```
+
+## Advantages and Disadvantages of Lambda Functions
+
+Lambda functions have some advantages over regular functions in Python. They are concise and can be defined on-the-fly without the need for a separate function definition. They can also be used as arguments to other functions, which can make your code more modular and easier to read.
+
+However, lambda functions also have some limitations. They can only contain a single expression, which can limit their flexibility. They also lack the clarity of named functions, which can make your code harder to understand if lambda functions are overused.
+
+## Conclusion
+
+In this lesson, you learned about lambda functions in Python. You learned how to create and use lambda functions, and you learned about their advantages and disadvantages compared to regular functions. With this knowledge, you can use lambda functions to write concise, on-the-fly functions in your Python programs.

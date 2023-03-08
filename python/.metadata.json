@@ -32,6 +32,10 @@
     "introduction_to_OOP",
     "classes_and_objects",
     "methods_and_attributes",
-    "inheritance_and_polymorphism"
+    "inheritance_and_polymorphism",
+    "regular_expressions",
+    "lambda_functions",
+    "decorators",
+    "generators"
   ]
 }

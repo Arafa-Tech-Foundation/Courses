@@ -1,0 +1,87 @@
+# Module: Advanced Topics
+
+## Lesson: Generators
+
+In this lesson, you will learn about generators in Python. A generator is a special type of iterator that allows you to iterate over a potentially infinite sequence of values without actually creating the entire sequence in memory.
+
+## Creating a Generator
+
+To create a generator in Python, you can use a special type of function called a generator function. A generator function is similar to a regular function, but instead of using the `return` keyword to return a value, it uses the `yield` keyword to yield a value. Here is an example of a simple generator function that yields the first 3 even numbers:
+
+```python
+def even_numbers():
+    yield 2
+    yield 4
+    yield 6
+```
+
+To use a generator, you can call the generator function like a regular function, which will return a generator object. You can then use the `next()` function to iterate over the values yielded by the generator:
+
+```python
+my_generator = even_numbers()
+print(next(my_generator))
+print(next(my_generator))
+print(next(my_generator))
+```
+
+Output:
+```
+2
+4
+6
+```
+
+## Iterating Through a Generator
+
+You can also iterate through a generator using a `for` loop, which will automatically call `next()` on the generator until it is exhausted:
+
+```python
+my_generator = even_numbers()
+for value in my_generator:
+    print(value)
+```
+
+Output:
+```
+2
+4
+6
+```
+
+## Infinite Generators
+
+One of the benefits of generators is that they can be used to generate an infinite sequence of values. Here is an example of a generator function that yields an infinite sequence of Fibonacci numbers:
+
+```python
+def fibonacci():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+```
+
+To use an infinite generator, you will need to manually break out of the loop using a `break` statement or some other condition:
+
+```python
+my_generator = fibonacci()
+for i in range(10):
+    print(next(my_generator))
+```
+
+Output:
+```
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+```
+
+## Conclusion
+
+In this lesson, you learned about generators in Python. You learned how to create a generator function, how to iterate through a generator, and how to use generators to generate an infinite sequence of values. With generators, you can work with potentially infinite sequences of values without running out of memory or experiencing performance issues.

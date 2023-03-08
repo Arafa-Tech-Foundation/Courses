@@ -1,0 +1,72 @@
+# Module: Advanced Topics
+
+## Lesson: Regular Expressions
+
+In this lesson, you will learn how to use regular expressions in Python. Regular expressions are a powerful tool for matching patterns in text.
+
+## What are Regular Expressions?
+
+A regular expression, also known as a regex, is a sequence of characters that define a search pattern. You can use regular expressions to search for patterns in text, replace text, and validate user input.
+
+## Creating a Regular Expression
+
+To create a regular expression in Python, you can use the `re` module. Here is an example of creating a regular expression to match a sequence of digits:
+
+```python
+import re
+
+pattern = r"\d+"
+```
+
+In this example, the `r` before the string indicates that it is a raw string, which means that backslashes are not treated as escape characters.
+
+## Matching a Regular Expression
+
+You can use the `search()` function from the `re` module to match a regular expression against a string. Here is an example of matching a regular expression to a string:
+
+```python
+import re
+
+pattern = r"\d+"
+string = "The price is $20."
+match = re.search(pattern, string)
+
+if match:
+    print("Match found:", match.group())
+else:
+    print("Match not found")
+```
+
+Output:
+```
+Match found: 20
+```
+
+In this example, the regular expression matches any sequence of one or more digits. The `search()` function finds the first match in the string and returns a `Match` object. You can use the `group()` method to get the matched string.
+
+## Modifying a String with Regular Expressions
+
+You can use the `sub()` function from the `re` module to replace parts of a string that match a regular expression. Here is an example of using a regular expression to replace all digits in a string with `X`:
+
+```python
+import re
+
+pattern = r"\d"
+string = "The price is $20."
+new_string = re.sub(pattern, "X", string)
+
+print("Original string:", string)
+print("New string:", new_string)
+```
+
+Output:
+```
+Original string: The price is $20.
+New string: The price is $XX.
+```
+
+In this example, the regular expression matches any single digit. The `sub()` function replaces all matches with the string `"X"`.
+
+## Conclusion
+
+In this lesson, you learned how to use regular expressions in Python. You learned how to create a regular expression, match it against a string, and modify a string using a regular expression. With these skills, you can use regular expressions to search for and manipulate patterns in text in your Python programs.

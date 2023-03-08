@@ -1,0 +1,79 @@
+# Module: Advanced Topics
+
+## Lesson: Decorators
+
+In this lesson, you will learn about decorators in Python, which are a way to modify the behavior of a function without changing its source code.
+
+## What are Decorators?
+
+Decorators are functions that take another function as an argument and return a new function, usually modifying the original function's behavior. Decorators can be used to add functionality to existing functions, such as logging or timing the function's execution.
+
+## Syntax for Using Decorators
+
+In Python, decorators are applied using the `@` symbol followed by the decorator function's name before the function to be modified. Here is an example of using a decorator to time the execution of a function:
+
+```python
+import time
+
+def timer(func):
+    def wrapper():
+        start_time = time.time()
+        func()
+        end_time = time.time()
+        print("Time taken: ", end_time - start_time, " seconds")
+    return wrapper
+
+@timer
+def my_function():
+    time.sleep(2)
+
+my_function()
+```
+
+Output:
+```
+Time taken: 2.0005340576171875 seconds
+```
+
+In this example, the `timer` function takes another function `func` as an argument and returns a new function `wrapper` that measures the time taken to execute `func`. The `@timer` decorator is applied to the `my_function` function, modifying its behavior to include timing information.
+
+## Chaining Decorators
+
+You can also chain multiple decorators together to modify a function's behavior in multiple ways. Here is an example of using two decorators to time and log the execution of a function:
+
+```python
+import time
+
+def timer(func):
+    def wrapper():
+        start_time = time.time()
+        func()
+        end_time = time.time()
+        print("Time taken: ", end_time - start_time, " seconds")
+    return wrapper
+
+def logger(func):
+    def wrapper():
+        print("Logging the function ", func.__name__)
+        func()
+    return wrapper
+
+@timer
+@logger
+def my_function():
+    time.sleep(2)
+
+my_function()
+```
+
+Output:
+```
+Logging the function  my_function
+Time taken:  2.000502109527588 seconds
+```
+
+In this example, the `logger` decorator is applied first, modifying the behavior of `my_function` to log its execution. The `timer` decorator is then applied to the result of `logger`, modifying the behavior of the modified `my_function` to include timing information.
+
+## Conclusion
+
+In this lesson, you learned about decorators in Python, which are a way to modify the behavior of a function without changing its source code. You also learned how to apply decorators using the `@` symbol, and how to chain multiple decorators together to modify a function's behavior in multiple ways. With these skills, you can use decorators to add functionality to your functions and make your code more efficient and readable.
