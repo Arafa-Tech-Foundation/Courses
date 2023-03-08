@@ -1,0 +1,97 @@
+# Module: File Input/Output
+
+## Lesson: Reading from and Writing to Files
+
+In this lesson, you will learn how to read from and write to files in Python. File input/output (I/O) is an essential skill for many programming tasks, from reading data files to storing program output.
+
+## Opening a File
+
+Before you can read from or write to a file, you need to open it. You can open a file in Python using the `open()` function. The `open()` function takes two arguments: the file path and the mode.
+
+Here is an example of opening a file in read mode:
+
+```python
+file = open("example.txt", "r")
+```
+
+The mode argument can be `"r"` for read mode, `"w"` for write mode, or `"a"` for append mode.
+
+## Reading from a File
+
+Once you have opened a file in read mode, you can read its contents using the `read()` method. Here is an example of reading the contents of a file:
+
+```python
+file = open("example.txt", "r")
+content = file.read()
+print(content)
+```
+
+Output:
+```
+Hello, world!
+This is an example file.
+```
+
+You can also read a file line by line using the `readline()` method. Here is an example of reading the first line of a file:
+
+```python
+file = open("example.txt", "r")
+line = file.readline()
+print(line)
+```
+
+Output:
+```
+Hello, world!
+```
+
+## Writing to a File
+
+To write to a file in Python, you need to open it in write mode using the `open()` function. Here is an example of writing to a file:
+
+```python
+file = open("example.txt", "w")
+file.write("This is a new line.")
+file.close()
+```
+
+This code will create a new file if it does not exist, or overwrite the existing file if it does. If you want to add new content to an existing file, you can open it in append mode using `"a"` instead of `"w"`.
+
+## Closing a File
+
+After you have finished reading from or writing to a file, you should close it using the `close()` method. Here is an example of closing a file:
+
+```python
+file = open("example.txt", "r")
+content = file.read()
+file.close()
+```
+
+## Using the `with` Statement
+
+To ensure that a file is closed after you are done with it, you can use the `with` statement. The `with` statement automatically closes the file when the block of code is finished.
+
+Here is an example of using the `with` statement to read from a file:
+
+```python
+with open("example.txt", "r") as file:
+    content = file.read()
+print(content)
+```
+
+## Handling File Exceptions
+
+When working with files, it is essential to handle file exceptions properly. Common file exceptions include `FileNotFoundError` for when the file does not exist, and `PermissionError` for when you do not have permission to access the file.
+
+Here is an example of handling a `FileNotFoundError` exception:
+
+```python
+try:
+    file = open("example.txt", "r")
+except FileNotFoundError:
+    print("The file does not exist.")
+```
+
+## Conclusion
+
+In this lesson, you learned how to read from and write to files in Python. You also learned how to open and close files, use the `with` statement, and handle file exceptions. With these skills, you can work with files to store and manipulate data in your Python programs.

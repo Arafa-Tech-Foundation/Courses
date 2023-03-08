@@ -1,0 +1,97 @@
+# Module: Lists and Dictionaries
+
+## Lesson: Creating and Accessing Dictionaries
+
+In this lesson, you will learn how to create and access dictionaries in Python. Dictionaries are a collection of key-value pairs.
+
+## Creating a Dictionary
+
+To create a dictionary in Python, you can use curly braces `{}`. Here is an example of creating a dictionary with three key-value pairs:
+
+```python
+my_dict = {"key1": "value1", "key2": "value2", "key3": "value3"}
+```
+
+You can also create an empty dictionary by using empty curly braces `{}`:
+
+```python
+my_dict = {}
+```
+
+## Accessing Values in a Dictionary
+
+To access a value in a dictionary, you can use its key. Here is an example of accessing a value in a dictionary:
+
+```python
+my_dict = {"name": "John", "age": 30, "city": "New York"}
+print(my_dict["age"])
+```
+
+Output:
+```
+30
+```
+
+## Modifying a Dictionary
+
+You can modify a value in a dictionary by assigning a new value to its key. Here is an example of modifying the value for the key "age":
+
+```python
+my_dict = {"name": "John", "age": 30, "city": "New York"}
+my_dict["age"] = 31
+print(my_dict)
+```
+
+Output:
+```
+{'name': 'John', 'age': 31, 'city': 'New York'}
+```
+
+You can also add a new key-value pair to a dictionary by assigning a value to a new key:
+
+```python
+my_dict = {"name": "John", "age": 30, "city": "New York"}
+my_dict["country"] = "USA"
+print(my_dict)
+```
+
+Output:
+```
+{'name': 'John', 'age': 30, 'city': 'New York', 'country': 'USA'}
+```
+
+## Looping Through a Dictionary
+
+You can use a `for` loop to iterate over all the key-value pairs in a dictionary. Here is an example of looping through a dictionary and printing each key-value pair:
+
+```python
+my_dict = {"name": "John", "age": 30, "city": "New York"}
+for key, value in my_dict.items():
+    print(key, value)
+```
+
+Output:
+```
+name John
+age 30
+city New York
+```
+
+## Checking if a Key is in a Dictionary
+
+You can use the `in` keyword to check if a key is in a dictionary. Here is an example of checking if a key is in a dictionary:
+
+```python
+my_dict = {"name": "John", "age": 30, "city": "New York"}
+if "age" in my_dict:
+    print("age is in the dictionary")
+```
+
+Output:
+```
+age is in the dictionary
+```
+
+## Conclusion
+
+In this lesson, you learned how to create and access dictionaries in Python. You also learned how to modify a dictionary, loop through a dictionary, and check if a key is in a dictionary. With these skills, you can use dictionaries to store and manipulate key-value pairs in your Python programs.
