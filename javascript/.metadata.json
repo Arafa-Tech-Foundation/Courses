@@ -5,22 +5,41 @@
   "minutes": 60,
   "description": "Learn JavaScript, the programming language of the web.",
   "languages": ["javascript"],
-  "order": [
-    "outline",
-    "overview",
-    "intro",
-    "development_env",
-    "syntax",
-    "variables",
-    "functions",
-    "understanding_the_dom",
-    "accessing_elements",
-    "events",
-    "manipulating_HTML_and_CSS",
-    "events",
-    "clean_and_maintainable_code",
-    "debugging",
-    "using_debugging_tools",
-    "avoiding_common_mistakes"
+  "schema": [
+    {
+      "name": "Module 0: Course Description",
+      "order": [
+        "outline",
+        "overview"
+      ]
+    },
+    {
+      "name": "Module 1: Getting Started with Javascript",
+      "order": [
+        "intro",
+        "development_env",
+        "syntax",
+        "variables",
+        "functions"
+      ]
+    },
+    {
+      "name": "Module 2: Working with the DOM",
+      "order": [
+        "understanding_the_dom",
+        "accessing_elements",
+        "manipulating_HTML_and_CSS",
+        "events"
+      ]
+    },
+    {
+      "name": "Module 3: Best Practices in Javascript",
+      "order":[
+        "clean_and_maintainable_code",
+        "debugging",
+        "using_debugging_tools",
+        "avoiding_common_mistakes"
+      ]
+    }
   ]
 }

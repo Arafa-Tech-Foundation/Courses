@@ -5,37 +5,78 @@
   "title": "Python 101",
   "minutes": 60,
   "description": "Learn Python, the most popular programming language in the world.",
-  "order": [
-    "outline",
-    "overview",
-    "installation",
-    "first_program",
-    "data_types",
-    "variables",
-    "basic_operations",
-    "conditionals",
-    "loops",
-    "creating_functions",
-    "parameters_and_arguments",
-    "return_values",
-    "variable_scope",
-    "creating_and_accessings_lists",
-    "list_methods",
-    "creating_and_accessing_dictionaries",
-    "dictionary_methods",
-    "reading_writing_files",
-    "with_statement",
-    "handling_file_exceptions",
-    "importing_modules_and_packages",
-    "creating_own_modules",
-    "install_and_use_external_packages",
-    "introduction_to_OOP",
-    "classes_and_objects",
-    "methods_and_attributes",
-    "inheritance_and_polymorphism",
-    "regular_expressions",
-    "lambda_functions",
-    "decorators",
-    "generators"
+  "schema": [
+    {
+      "name": "Module 0: Introduction",
+      "order": [
+        "outline",
+        "overview",
+        "installation",
+        "first_program"
+      ]
+    },
+    {
+      "name": "Module 1: Basic Syntax",
+      "order": [
+        "data_types",
+        "variables",
+        "basic_operations",
+        "conditionals",
+        "loops"
+      ]
+    },
+    {
+      "name": "Module 2: Functions",
+      "order": [
+        "creating_functions",
+        "parameters_and_arguments",
+        "return_values",
+        "variable_scope"
+      ]
+    },
+    {
+      "name": "Module 3: Lists and Dictionaries",
+      "order": [
+        "creating_and_accessings_lists",
+        "list_methods",
+        "creating_and_accessing_dictionaries",
+        "dictionary_methods"
+      ]
+    },
+    {
+      "name": "Module 4: File Input/Output",
+      "order": [
+        "reading_writing_files",
+        "with_statement",
+        "handling_file_exceptions"
+      ]
+    },
+    {
+      "name": "Module 5: Modules and Packages",
+      "order": [
+        "importing_modules_and_packages",
+        "creating_own_modules",
+        "install_and_use_external_packages"
+      ]
+    },
+    {
+
+      "name": "Module 6: Object-Oriented Programming (OOP)",
+      "order": [
+        "introduction_to_OOP",
+        "classes_and_objects",
+        "methods_and_attributes",
+        "inheritance_and_polymorphism"
+      ]
+    },
+    {
+      "name": "Module 7: Advanced Topics",
+      "order": [
+        "regular_expressions",
+        "lambda_functions",
+        "decorators",
+        "generators"
+      ]
+    }
   ]
 }
