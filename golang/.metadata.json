@@ -5,5 +5,5 @@
   "languages": ["golang"],
   "title": "Golang is Magic 101",
   "description": "Learn Golang, the language that is taking the world by storm.",
-  "order": ["intro"]
+  "schema": []
 }
