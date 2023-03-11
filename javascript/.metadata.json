@@ -36,7 +36,7 @@
       "name": "Module 3: Best Practices in Javascript",
       "order":[
         "clean_and_maintainable_code",
-        "debugging",
+        "debugging_and_error_handling",
         "using_debugging_tools",
         "avoiding_common_mistakes"
       ]
