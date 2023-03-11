@@ -1,8 +1,0 @@
-{
-  "course": "webdev",
-  "title": "Web Development",
-  "description": "Learn the basics of web development",
-  "type": "application",
-  "languages": ["javascript", "html", "css"],
-  "schema": []
-}

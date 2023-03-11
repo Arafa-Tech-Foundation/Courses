@@ -1,9 +1,0 @@
-{
-  "course": "sql",
-  "type": "essential",
-  "languages": ["sql"],
-  "title": "SQL 101",
-  "minutes": 60,
-  "description": "Learn SQL, the language for relational databases.",
-  "schema": []
-}

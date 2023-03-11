@@ -37,7 +37,7 @@
     {
       "name": "Module 3: Lists and Dictionaries",
       "order": [
-        "creating_and_accessings_lists",
+        "creating_and_accessing_lists",
         "list_methods",
         "creating_and_accessing_dictionaries",
         "dictionary_methods"
