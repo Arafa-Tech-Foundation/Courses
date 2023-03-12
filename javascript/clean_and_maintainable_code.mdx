@@ -1,10 +1,8 @@
-# Module 3: Best Practices in JavaScript
-
-## Lesson: Writing Clean and Maintainable Code
+# Lesson: Writing Clean and Maintainable Code
 
 In this lesson, we'll learn about best practices for writing clean and maintainable code in JavaScript.
 
-### Use Consistent Naming Conventions
+## Use Consistent Naming Conventions
 
 When writing JavaScript code, it's important to use consistent naming conventions for variables, functions, and other elements. This makes your code easier to read and understand.
 
@@ -19,7 +17,7 @@ const firstName = "John";
 const lastName = "Doe";
 
 function calculateTotal(price, taxRate) {
-  const total = price + (price * taxRate);
+  const total = price + price * taxRate;
   return total;
 }
 
@@ -33,19 +31,19 @@ class Car {
 const TAX_RATE = 0.1;
 ```
 
-### Use Comments to Explain Your Code
+## Use Comments to Explain Your Code
 
 Use comments to explain complex or confusing parts of your code. Comments help other developers understand your code and make it easier to maintain.
 
 ```js
 function calculateTotal(price, taxRate) {
   // Calculate the total price including tax
-  const total = price + (price * taxRate);
+  const total = price + price * taxRate;
   return total;
 }
 ```
 
-### Break Your Code into Functions
+## Break Your Code into Functions
 
 Break your code into smaller functions that do one thing well. This makes your code more modular and easier to maintain.
 
@@ -61,7 +59,7 @@ function calculateTax(price, taxRate) {
 }
 ```
 
-### Use Meaningful Variable Names
+## Use Meaningful Variable Names
 
 Use variable names that describe what the variable represents. This makes your code easier to read and understand.
 
@@ -73,6 +71,6 @@ const numberOfEmployees = 10; // Good
 const n = 10; // Bad
 ```
 
-### Conclusion
+## Conclusion
 
 In this lesson, we've learned about best practices for writing clean and maintainable code in JavaScript. By following these practices, you'll be able to create code that is easier to read, understand, and maintain.

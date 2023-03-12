@@ -7,16 +7,11 @@
   "description": "Learn Python, the most popular programming language in the world.",
   "schema": [
     {
-      "name": "Module 0: Introduction",
-      "order": [
-        "outline",
-        "overview",
-        "installation",
-        "first_program"
-      ]
+      "name": "Module 1: Introduction",
+      "order": ["outline", "overview", "installation", "first_program"]
     },
     {
-      "name": "Module 1: Basic Syntax",
+      "name": "Module 2: Basic Syntax",
       "order": [
         "data_types",
         "variables",
@@ -26,7 +21,7 @@
       ]
     },
     {
-      "name": "Module 2: Functions",
+      "name": "Module 3: Functions",
       "order": [
         "creating_functions",
         "parameters_and_arguments",
@@ -35,7 +30,7 @@
       ]
     },
     {
-      "name": "Module 3: Lists and Dictionaries",
+      "name": "Module 4: Lists and Dictionaries",
       "order": [
         "creating_and_accessing_lists",
         "list_methods",
@@ -44,7 +39,7 @@
       ]
     },
     {
-      "name": "Module 4: File Input/Output",
+      "name": "Module 5: File Input/Output",
       "order": [
         "reading_writing_files",
         "with_statement",
@@ -52,7 +47,7 @@
       ]
     },
     {
-      "name": "Module 5: Modules and Packages",
+      "name": "Module 6: Modules and Packages",
       "order": [
         "importing_modules_and_packages",
         "creating_own_modules",
@@ -60,8 +55,7 @@
       ]
     },
     {
-
-      "name": "Module 6: Object-Oriented Programming (OOP)",
+      "name": "Module 7: Object-Oriented Programming (OOP)",
       "order": [
         "introduction_to_OOP",
         "classes_and_objects",
@@ -70,7 +64,7 @@
       ]
     },
     {
-      "name": "Module 7: Advanced Topics",
+      "name": "Module 8: Advanced Topics",
       "order": [
         "regular_expressions",
         "lambda_functions",
