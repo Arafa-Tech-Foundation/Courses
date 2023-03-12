@@ -8,7 +8,7 @@
   "schema": [
     {
       "name": "Module 1: Introduction",
-      "order": ["outline", "overview", "installation", "first_program"]
+      "order": ["overview", "installation", "first_program"]
     },
     {
       "name": "Module 2: Basic Syntax",

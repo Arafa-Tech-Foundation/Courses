@@ -7,24 +7,15 @@
   "languages": ["javascript"],
   "schema": [
     {
-      "name": "Module 0: Course Description",
-      "order": [
-        "outline",
-        "overview"
-      ]
+      "name": "Module 1: Introduction",
+      "order": ["overview", "installation"]
     },
     {
-      "name": "Module 1: Getting Started with Javascript",
-      "order": [
-        "intro",
-        "development_env",
-        "syntax",
-        "variables",
-        "functions"
-      ]
+      "name": "Module 2: Getting Started with Javascript",
+      "order": ["intro", "development_env", "syntax", "variables", "functions"]
     },
     {
-      "name": "Module 2: Working with the DOM",
+      "name": "Module 3: Working with the DOM",
       "order": [
         "understanding_the_dom",
         "accessing_elements",
@@ -33,8 +24,8 @@
       ]
     },
     {
-      "name": "Module 3: Best Practices in Javascript",
-      "order":[
+      "name": "Module 4: Best Practices in Javascript",
+      "order": [
         "clean_and_maintainable_code",
         "debugging_and_error_handling",
         "using_debugging_tools",
