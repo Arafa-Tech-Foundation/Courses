@@ -8,68 +8,72 @@
   "schema": [
     {
       "name": "Module 1: Introduction",
-      "order": ["overview", "installation", "first_program"]
+      "lessons": [
+        { "name": "overview", "video": "1-1.mp4" },
+        { "name": "installation" },
+        { "name": "first_program" }
+      ]
     },
     {
       "name": "Module 2: Basic Syntax",
-      "order": [
-        "data_types",
-        "variables",
-        "basic_operations",
-        "conditionals",
-        "loops"
+      "lessons": [
+        { "name": "data_types" },
+        { "name": "variables" },
+        { "name": "basic_operations" },
+        { "name": "conditionals" },
+        { "name": "loops" }
       ]
     },
     {
       "name": "Module 3: Functions",
-      "order": [
-        "creating_functions",
-        "parameters_and_arguments",
-        "return_values",
-        "variable_scope"
+      "lessons": [
+        { "name": "creating_functions" },
+        { "name": "parameters_and_arguments" },
+        { "name": "return_values" },
+        { "name": "variable_scope" }
       ]
     },
     {
       "name": "Module 4: Lists and Dictionaries",
-      "order": [
-        "creating_and_accessing_lists",
-        "list_methods",
-        "creating_and_accessing_dictionaries",
-        "dictionary_methods"
+      "lessons": [
+        { "name": "creating_and_accessing_lists" },
+        { "name": "list_methods" },
+        { "name": "creating_and_accessing_dictionaries" },
+        { "name": "dictionary_methods" }
       ]
     },
     {
       "name": "Module 5: File Input/Output",
-      "order": [
-        "reading_writing_files",
-        "with_statement",
-        "handling_file_exceptions"
+      "lessons": [
+        { "name": "reading_writing_files" },
+        { "name": "with_statement" },
+        { "name": "handling_file_exceptions" }
       ]
     },
     {
       "name": "Module 6: Modules and Packages",
-      "order": [
-        "importing_modules_and_packages",
-        "creating_own_modules",
-        "install_and_use_external_packages"
+      "lessons": [
+        { "name": "importing_modules_and_packages" },
+        { "name": "creating_own_modules" },
+        { "name": "install_and_use_external_packages" }
       ]
     },
     {
       "name": "Module 7: Object-Oriented Programming (OOP)",
-      "order": [
-        "introduction_to_OOP",
-        "classes_and_objects",
-        "methods_and_attributes",
-        "inheritance_and_polymorphism"
+      "lessons": [
+        { "name": "introduction_to_OOP" },
+        { "name": "classes_and_objects" },
+        { "name": "methods_and_attributes" },
+        { "name": "inheritance_and_polymorphism" }
       ]
     },
     {
       "name": "Module 8: Advanced Topics",
-      "order": [
-        "regular_expressions",
-        "lambda_functions",
-        "decorators",
-        "generators"
+      "lessons": [
+        { "name": "regular_expressions" },
+        { "name": "lambda_functions" },
+        { "name": "decorators" },
+        { "name": "generators" }
       ]
     }
   ]
