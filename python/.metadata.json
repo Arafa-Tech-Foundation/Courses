@@ -5,7 +5,7 @@
   "title": "Python 101",
   "minutes": 60,
   "description": "Learn Python, the most popular programming language in the world.",
-  "schema": [
+  "modules": [
     {
       "name": "Module 1: Introduction",
       "lessons": [
