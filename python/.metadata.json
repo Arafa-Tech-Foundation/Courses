@@ -17,7 +17,7 @@
     {
       "name": "Module 2: Basic Syntax",
       "lessons": [
-        { "name": "data_types" },
+        { "name": "data_types", "video": "2-1.mp4" },
         { "name": "variables" },
         { "name": "basic_operations" },
         { "name": "conditionals" },
