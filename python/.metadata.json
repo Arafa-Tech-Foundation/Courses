@@ -18,7 +18,7 @@
       "name": "Module 2: Basic Syntax",
       "lessons": [
         { "name": "data_types", "video": "2-1.mp4" },
-        { "name": "variables" },
+        { "name": "variables", "video": "2-2.mp4" },
         { "name": "basic_operations" },
         { "name": "conditionals" },
         { "name": "loops" }
