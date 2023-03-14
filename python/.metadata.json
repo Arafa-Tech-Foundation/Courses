@@ -10,8 +10,8 @@
       "name": "Module 1: Introduction",
       "lessons": [
         { "name": "overview", "video": "1-1.mp4" },
-        { "name": "installation" },
-        { "name": "first_program" }
+        { "name": "installation", "video": "1-2.mp4" },
+        { "name": "first_program", "video": "1-3.mp4" }
       ]
     },
     {
