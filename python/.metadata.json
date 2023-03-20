@@ -28,9 +28,9 @@
       "name": "Module 3: Functions",
       "lessons": [
         { "name": "creating_functions", "video": "3-1.mp4" },
-        { "name": "parameters_and_arguments" },
-        { "name": "return_values" },
-        { "name": "variable_scope" }
+        { "name": "parameters_and_arguments", "video": "3-2.mp4" },
+        { "name": "return_values", "video": "3-3.mp4" },
+        { "name": "variable_scope", "video": "3-4.mp4" }
       ]
     },
     {
