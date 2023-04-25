@@ -1,5 +1,5 @@
 {
-  "course": "python",
+  "name": "python",
   "type": "essential",
   "languages": ["python"],
   "title": "Python 101",
