@@ -4,7 +4,7 @@
   "type": "essential",
   "languages": ["python"],
   "title": "Introduction to Python",
-  "minutes": 480,
+  "minutes": 150,
   "description": "Learn Python, the most popular programming language in the world.",
   "modules": [
     {
