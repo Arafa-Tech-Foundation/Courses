@@ -3,8 +3,13 @@
   "instructor": "Hazim O. Arafa",
   "type": "essential",
   "languages": ["python"],
+  "skills": [
+    "Understand the fundamentals of Python programming, including data types, variables, functions, and control structures.",
+    "Acquire knowledge on object-oriented programming (OOP) concepts, including inheritance, encapsulation, and polymorphism.",
+    "Develop proficiency in working with Python libraries and modules, including NumPy, Pandas, and Matplotlib."
+  ],
   "title": "Introduction to Python",
-  "minutes": 150,
+  "minutes": 300,
   "description": "Learn Python, the most popular programming language in the world.",
   "modules": [
     {
