@@ -1,9 +1,10 @@
 {
   "name": "python",
+  "instructor": "Hazim O. Arafa",
   "type": "essential",
   "languages": ["python"],
-  "title": "Python 101",
-  "minutes": 60,
+  "title": "Introduction to Python",
+  "minutes": 480,
   "description": "Learn Python, the most popular programming language in the world.",
   "modules": [
     {
