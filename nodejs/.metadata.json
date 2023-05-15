@@ -13,7 +13,7 @@
     "Recap the course and learn best practices for Node.js development."
   ],
   "title": "Introduction to Node.js",
-  "minutes": 1200,
+  "minutes": 840,
   "description": "Learn Node.js, a popular JavaScript runtime, and build scalable network applications and web servers.",
   "modules": [
     {
