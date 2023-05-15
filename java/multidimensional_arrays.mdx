@@ -1,0 +1,91 @@
+# Module 6: Array
+
+## Lesson 3: Multidimensional Arrays
+
+Welcome to Lesson 3 of Module 6: Array. In this lesson, we'll learn about multidimensional arrays, which are arrays with more than one dimension. We'll see how to create, initialize, and traverse a 2D array, work with jagged arrays, and create an array of objects.
+
+### Creating and Accessing Multidimensional Arrays
+
+A multidimensional array is an array of arrays. To create a 2D array, we can use the following syntax:
+
+```java
+int[][] myArray = new int[3][4];
+```
+
+This creates a 2D array with 3 rows and 4 columns. We can also create an array of arrays explicitly like this:
+
+```java
+int[][] myArray = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {10, 11, 12}};
+```
+
+To access an element of a 2D array, we can use two indexes: one for the row and one for the column. For example, to access the element in the second row and third column of `myArray`, we can use the following syntax:
+
+```java
+int element = myArray[1][2]; // element is 6
+```
+
+### Initializing and Traversing a 2D Array
+
+We can initialize a 2D array using nested loops. For example, to initialize a 3x3 array with the values of the multiplication table, we can use the following code:
+
+```java
+int[][] multiplicationTable = new int[3][3];
+for (int i = 0; i < multiplicationTable.length; i++) {
+    for (int j = 0; j < multiplicationTable[i].length; j++) {
+        multiplicationTable[i][j] = (i + 1) * (j + 1);
+    }
+}
+```
+
+To traverse a 2D array, we can use nested loops as well. For example, to print the elements of `myArray`, we can use the following code:
+
+```java
+for (int i = 0; i < myArray.length; i++) {
+    for (int j = 0; j < myArray[i].length; j++) {
+        System.out.print(myArray[i][j] + " ");
+    }
+    System.out.println();
+}
+```
+
+### Working with Jagged Arrays
+
+A jagged array is a multidimensional array in which the rows have different lengths. To create a jagged array, we can use the following syntax:
+
+```java
+int[][] jaggedArray = {{1, 2}, {3, 4, 5}, {6, 7, 8, 9}};
+```
+
+To traverse a jagged array, we need to use the length of each row explicitly:
+
+```java
+for (int i = 0; i < jaggedArray.length; i++) {
+    for (int j = 0; j < jaggedArray[i].length; j++) {
+        System.out.print(jaggedArray[i][j] + " ");
+    }
+    System.out.println();
+}
+```
+
+### Array of Objects
+
+We can create an array of objects just like we create an array of any other type. For example, to create an array of `Person` objects, we can use the following code:
+
+```java
+Person[] people = new Person[3];
+people[0] = new Person("Alice", 25);
+people[1] = new Person("Bob", 30);
+people[2] = new Person("Charlie", 35);
+```
+
+To access the elements of the array, we can use the following syntax:
+
+```java
+Person person = people[0];
+String name = person.getName(); // name is "Alice"
+int age = person.getAge(); // age is 25
+```
+
+## Conclusion
+
+In this lesson, we learned about multidimensional arrays, which are arrays with more than one dimension. We saw how to create, initialize, and traverse a 2D array, work with jagged arrays, and create an array of objects.

@@ -1,0 +1,75 @@
+# Module 7: ArrayList
+
+## Lesson 2: ArrayList Operations and Iteration
+
+Welcome to Lesson 2 of Module 7: ArrayList! In this lesson, we'll explore various operations that can be performed on ArrayLists, such as searching, sorting, and iteration. We'll also discuss how to use ArrayList with primitive types.
+
+### Searching and Sorting ArrayList
+
+One of the most common operations performed on ArrayLists is searching for elements. The `indexOf` method is used to find the index of the first occurrence of a specified element in an ArrayList. If the element is not found, the method returns -1.
+
+```java
+ArrayList<String> names = new ArrayList<>();
+names.add("John");
+names.add("Sarah");
+names.add("Michael");
+int index = names.indexOf("Sarah");
+System.out.println(index); // output: 1
+```
+
+Sorting an ArrayList is also a frequently used operation. The `Collections.sort()` method can be used to sort the ArrayList in ascending order.
+
+```java
+ArrayList<Integer> numbers = new ArrayList<>();
+numbers.add(5);
+numbers.add(2);
+numbers.add(8);
+Collections.sort(numbers);
+System.out.println(numbers); // output: [2, 5, 8]
+```
+
+### Iterating over ArrayList using loops
+
+We can use loops to iterate over the elements of an ArrayList. The enhanced `for` loop is the most common way to iterate over ArrayLists.
+
+```java
+ArrayList<String> names = new ArrayList<>();
+names.add("John");
+names.add("Sarah");
+names.add("Michael");
+for (String name : names) {
+    System.out.println(name);
+}
+```
+
+We can also use a regular `for` loop with the `size()` and `get()` methods to iterate over an ArrayList.
+
+```java
+ArrayList<Integer> numbers = new ArrayList<>();
+numbers.add(5);
+numbers.add(2);
+numbers.add(8);
+for (int i = 0; i < numbers.size(); i++) {
+    System.out.println(numbers.get(i));
+}
+```
+
+### Using ArrayList with Primitive Types
+
+By default, ArrayLists can only store objects. However, we can use wrapper classes to store primitive types in ArrayLists. For example, we can use `Integer` wrapper class to store `int` values.
+
+```java
+ArrayList<Integer> numbers = new ArrayList<>();
+numbers.add(5);
+numbers.add(2);
+numbers.add(8);
+int sum = 0;
+for (Integer number : numbers) {
+    sum += number;
+}
+System.out.println(sum); // output: 15
+```
+
+## Conclusion
+
+In this lesson, we explored various operations that can be performed on ArrayLists, such as searching, sorting, and iteration. We also discussed how to use ArrayList with primitive types. In the next lesson, we'll learn about the common methods used with ArrayLists and the class hierarchy of ArrayList.

@@ -1,0 +1,60 @@
+# Module 3: Boolean Expressions and if Statements
+
+## Lesson 1: Boolean Expressions and Relational Operators
+
+Welcome to the first lesson of Module 3: Boolean Expressions and if Statements. In this lesson, we'll learn about Boolean expressions and relational operators in Java.
+
+### Boolean Expressions and Their Evaluation
+
+In Java, a Boolean expression is an expression that evaluates to a Boolean value (true or false). Boolean expressions are used in control statements to determine the flow of program execution.
+
+Boolean expressions can consist of variables, constants, and operators. For example, the expression `x > y` is a Boolean expression that evaluates to `true` if `x` is greater than `y`, and `false` otherwise.
+
+### Relational Operators
+
+Relational operators are used to compare two values and evaluate to a Boolean value. Java supports the following relational operators:
+
+- `<` less than
+- `>` greater than
+- `<=` less than or equal to
+- `>=` greater than or equal to
+- `==` equal to
+- `!=` not equal to
+
+For example, the expression `x > y` uses the greater than (`>`) operator to compare the values of `x` and `y`.
+
+### Compound Boolean Expressions
+
+You can create compound Boolean expressions by using logical operators such as `&&` (AND), `||` (OR), and `!` (NOT).
+
+For example, the expression `x > y && z > y` is a compound Boolean expression that evaluates to `true` if `x` is greater than `y` and `z` is greater than `y`.
+
+### Short-Circuit Evaluation
+
+Java uses short-circuit evaluation to improve the performance of compound Boolean expressions. In short-circuit evaluation, if the result of a Boolean expression can be determined by evaluating only the left side of the expression, the right side of the expression is not evaluated.
+
+For example, if the left side of a `&&` expression evaluates to `false`, the right side of the expression is not evaluated, because the result of the `&&` expression will always be `false`.
+
+Here's an example code snippet that demonstrates the use of Boolean expressions and relational operators in Java:
+
+```java
+int x = 5;
+int y = 10;
+int z = 7;
+
+if (x > y) {
+    System.out.println("x is greater than y");
+} else {
+    System.out.println("x is not greater than y");
+}
+
+if (x > y && z > y) {
+    System.out.println("Both conditions are true");
+} else {
+    System.out.println("At least one condition is false");
+}
+```
+
+## Conclusion
+
+In this lesson, we learned about Boolean expressions and relational operators in Java. We also learned how to create compound Boolean expressions using logical operators and how short-circuit evaluation can improve the performance of Boolean expressions. In the next lesson, we'll learn about the if statement and its syntax.

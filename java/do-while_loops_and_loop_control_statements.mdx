@@ -1,0 +1,125 @@
+# Module 4: Iteration
+
+## Lesson 3: do-while Loops and Loop Control Statements
+
+Welcome to lesson 3 of module 4 on iteration! In this lesson, we will cover the do-while loop and loop control statements in Java.
+
+### The do-while loop
+
+The do-while loop is similar to the while loop but with one key difference: the condition is checked at the end of the loop rather than at the beginning. This means that the loop body will always execute at least once.
+
+Here is the syntax for the do-while loop:
+
+```txt
+do {
+  // loop body
+} while (condition);
+```
+
+The loop condition is checked at the end of each iteration. If the condition is true, the loop continues to execute. If the condition is false, the loop terminates and control is passed to the next statement after the loop.
+
+Let's look at an example of a do-while loop:
+
+```java
+int i = 1;
+do {
+  System.out.println(i);
+  i++;
+} while (i <= 5);
+```
+
+Output:
+
+```txt
+1
+2
+3
+4
+5
+```
+
+### Loop control statements: break and continue
+
+Sometimes, you may want to terminate a loop early or skip certain iterations based on some condition. Java provides two loop control statements for this purpose: break and continue.
+
+#### The break statement
+
+The break statement is used to terminate a loop early. When the break statement is encountered inside a loop, control is immediately transferred to the next statement after the loop.
+
+Here is an example of using the break statement:
+
+```java
+for (int i = 1; i <= 10; i++) {
+  if (i == 5) {
+    break;
+  }
+  System.out.println(i);
+}
+```
+
+Output:
+
+```txt
+1
+2
+3
+4
+```
+
+#### The continue statement
+
+The continue statement is used to skip the current iteration of a loop and move on to the next iteration. When the continue statement is encountered inside a loop, control is transferred to the loop condition check.
+
+Here is an example of using the continue statement:
+
+```java
+for (int i = 1; i <= 5; i++) {
+  if (i == 3) {
+    continue;
+  }
+  System.out.println(i);
+}
+```
+
+Output:
+
+```txt
+1
+2
+4
+5
+```
+
+### Using labels for loop control
+
+Java also allows you to use labels for loop control statements. A label is simply a name followed by a colon and is placed before the loop statement.
+
+Here is an example of using labels for loop control:
+
+```java
+outerLoop:
+for (int i = 1; i <= 3; i++) {
+  innerLoop:
+  for (int j = 1; j <= 3; j++) {
+    if (i == 2 && j == 2) {
+      break outerLoop;
+    }
+    System.out.println(i + " " + j);
+  }
+}
+```
+
+Output:
+
+```txt
+1 1
+1 2
+1 3
+2 1
+```
+
+In the above example, the label outerLoop is used to terminate the outer loop when i is equal to 2 and j is equal to 2.
+
+## Conclusion
+
+In this lesson, we covered the do-while loop and loop control statements in Java. We learned how to use the do-while loop to execute a loop body at least once, and how to use the break and continue statements to terminate a loop early or skip iterations. Finally, we learned how to use labels for loop control. In the next module, we will learn about writing classes in Java.

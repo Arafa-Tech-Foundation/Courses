@@ -1,0 +1,112 @@
+# Module 9: Inheritance
+
+## Lesson 3: Class Hierarchies and Method Overriding
+
+Welcome to the third and final lesson of the Inheritance module. In this lesson, we'll discuss creating class hierarchies, inheriting from multiple superclasses, method overriding, and superclass constructors.
+
+### Creating Class Hierarchies
+
+Inheritance allows us to create class hierarchies where subclasses inherit attributes and methods from a superclass. We can create a hierarchy of classes where a superclass is at the top, and subclasses inherit from it.
+
+Let's consider an example. Suppose we have a class called `Shape`, which has a method called `draw()`. We can create subclasses such as `Circle` and `Rectangle`, which will inherit the `draw()` method from `Shape`.
+
+```java
+public class Shape {
+  public void draw() {
+    System.out.println("Drawing a shape");
+  }
+}
+
+public class Circle extends Shape {
+  // Circle class inherits the draw() method from the Shape class
+}
+
+public class Rectangle extends Shape {
+  // Rectangle class inherits the draw() method from the Shape class
+}
+```
+
+### Inheriting from Multiple Superclasses
+
+Java does not allow inheriting from multiple classes, but we can implement multiple interfaces. However, we can simulate multiple inheritance by using abstract classes. In Java, we can inherit from only one superclass, but the superclass can inherit from another class, creating a hierarchy of classes.
+
+```java
+public class Animal {
+  // Animal class implementation
+}
+
+public class Mammal extends Animal {
+  // Mammal class inherits from the Animal class
+}
+
+public class Fish {
+  // Fish class implementation
+}
+
+public class Shark extends Fish {
+  // Shark class inherits from the Fish class
+}
+
+public class Whale extends Mammal {
+  // Whale class inherits from the Mammal class
+}
+```
+
+### Method Overriding and Dynamic Method Dispatch
+
+When a subclass inherits a method from a superclass, it can override the method to provide its implementation. The subclass's method must have the same name, return type, and parameter list as the superclass method.
+
+```java
+public class Animal {
+  public void makeSound() {
+    System.out.println("Animal makes a sound");
+  }
+}
+
+public class Dog extends Animal {
+  @Override
+  public void makeSound() {
+    System.out.println("Dog barks");
+  }
+}
+```
+
+Dynamic method dispatch is a mechanism where a method call is resolved at runtime rather than compile-time. It allows us to call the overridden method in the subclass instead of the superclass's method.
+
+```java
+Animal animal = new Dog();
+animal.makeSound(); // This will call the Dog class's makeSound() method
+```
+
+### Superclass Constructors and Initialization Order
+
+When a subclass is created, it must first call its superclass's constructor to initialize the inherited attributes. The `super()` keyword is used to call the superclass's constructor.
+
+```java
+public class Animal {
+  private int age;
+
+  public Animal(int age) {
+    this.age = age;
+  }
+}
+
+public class Dog extends Animal {
+  public Dog(int age) {
+    super(age); // Call the Animal constructor to initialize age attribute
+  }
+}
+```
+
+The initialization order of a subclass is as follows:
+
+1. The superclass's static fields and static initializer blocks are executed.
+2. The subclass's static fields and static initializer blocks are executed.
+3. The superclass's instance fields and instance initializer blocks are executed.
+4. The superclass's constructor is executed.
+5. The subclass's instance fields and instance initializer blocks are executed.
+6. The subclass's constructor is executed.
+
+## Conclusion
+
+In this lesson, we discussed creating class hierarchies, inheriting from multiple superclasses, method overriding, and superclass

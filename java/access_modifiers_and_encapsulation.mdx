@@ -1,0 +1,100 @@
+# Module 2: Using Objects
+
+## Lesson 3: Access Modifiers and Encapsulation
+
+Welcome to Lesson 3 of Module 2! In this lesson, we'll discuss access modifiers and encapsulation in Java.
+
+### Access Modifiers
+
+In Java, access modifiers are used to control access to class members (fields, methods, and nested classes). There are three access modifiers in Java:
+
+- `public`: accessible from anywhere
+- `private`: only accessible within the same class
+- `protected`: accessible within the same class and its subclasses, as well as classes in the same package
+
+To specify an access modifier, you simply place it before the member's declaration:
+
+```java
+public class MyClass {
+  public int myPublicField;
+  private int myPrivateField;
+  protected int myProtectedField;
+}
+```
+
+### Getters and Setters
+
+Getters and setters are methods used to read and write the values of private fields. They are often used to implement encapsulation, which is the practice of hiding the implementation details of a class from other classes.
+
+Here's an example of a class with private fields and public getters and setters:
+
+```java
+public class Person {
+  private String name;
+  private int age;
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  public void setAge(int age) {
+    this.age = age;
+  }
+}
+```
+
+In this example, the `name` and `age` fields are private, but we provide public methods (`getName()`, `setName()`, `getAge()`, and `setAge()`) to access and modify their values.
+
+### Encapsulation
+
+Encapsulation is the practice of hiding the implementation details of a class from other classes. By using access modifiers and providing public methods (getters and setters), we can control how other classes access and modify the data in our class.
+
+Encapsulation helps to make our code more maintainable and less error-prone. By hiding the implementation details of a class, we can change the internal behavior of the class without affecting the code in other classes that use it.
+
+### Information Hiding and Data Abstraction
+
+Information hiding is the practice of hiding the implementation details of a class from other classes. It is closely related to encapsulation and is one of the fundamental principles of object-oriented programming.
+
+Data abstraction is the practice of representing complex data types in a simplified way. It allows us to focus on the essential features of a data type while hiding the implementation details.
+
+### Immutable Classes
+
+An immutable class is a class whose objects cannot be modified once they are created. Immutable classes are often used to represent values that should not be changed, such as dates, times, and currency amounts.
+
+To make a class immutable, we need to make its fields private and final and provide no public methods that can modify the values of those fields. Here's an example of an immutable class:
+
+```java
+public final class CurrencyAmount {
+  private final String currency;
+  private final BigDecimal amount;
+
+  public CurrencyAmount(String currency, BigDecimal amount) {
+    this.currency = currency;
+    this.amount = amount;
+  }
+
+  public String getCurrency() {
+    return currency;
+  }
+
+  public BigDecimal getAmount() {
+    return amount;
+  }
+}
+```
+
+In this example, the `currency` and `amount` fields are private and final, and we provide public getters (`getCurrency()` and `getAmount()`) to access their values. Once a `CurrencyAmount` object is created, its values cannot be modified.
+
+## Conclusion
+
+In this lesson, we discussed access modifiers and encapsulation in Java. By using access modifiers, we can control the visibility of our class members, and by using encapsulation, we can protect our data from being modified by external code. Getters and setters allow us to provide controlled access to our class members and can help with data validation.
+
+In the next lesson, we will explore boolean expressions and if statements in Java. We will learn how to use relational operators and logical operators to create complex conditions and how to use if statements to execute code based on these conditions.

@@ -1,0 +1,88 @@
+# Module 2: Using Objects
+
+## Lesson 2: Constructors and Overloading
+
+Welcome to Lesson 2 of Module 2: Using Objects. In this lesson, we'll learn about constructors and overloading in Java.
+
+### Constructors
+
+A constructor is a special method that is used to initialize objects of a class. It has the same name as the class and no return type. When an object is created, the constructor is called automatically.
+
+#### Default Constructors
+
+A default constructor is a constructor with no parameters. It is automatically created by Java if no constructor is explicitly defined in the class. It initializes the instance variables to their default values.
+
+Here's an example of a default constructor:
+
+```java
+public class Person {
+    private String name;
+    private int age;
+
+    // Default Constructor
+    public Person() {
+        name = "John Doe";
+        age = 0;
+    }
+}
+```
+
+#### Parameterized Constructors
+
+A parameterized constructor is a constructor that takes one or more parameters. It is used to initialize the instance variables to specific values provided by the user.
+
+Here's an example of a parameterized constructor:
+
+```java
+public class Person {
+    private String name;
+    private int age;
+
+    // Parameterized Constructor
+    public Person(String n, int a) {
+        name = n;
+        age = a;
+    }
+}
+```
+
+#### The this keyword
+
+The `this` keyword is used to refer to the current object. It is often used in constructors to differentiate between the instance variables and the constructor parameters.
+
+Here's an example of using the `this` keyword:
+
+```java
+public class Person {
+    private String name;
+    private int age;
+
+    // Parameterized Constructor
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+```
+
+### Method Overloading
+
+Method overloading is a feature in Java that allows a class to have two or more methods with the same name but different parameters. The methods can have different parameter types, different numbers of parameters, or both.
+
+Here's an example of method overloading:
+
+```java
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public double add(double a, double b) {
+        return a + b;
+    }
+}
+```
+
+## Conclusion
+
+In this lesson, we learned about constructors and overloading in Java. Constructors are used to initialize objects of a class, and can be default or parameterized. The `this` keyword is used to refer to the current object. Method overloading is a feature in Java that allows a class to have two or more methods with the same name but different parameters. In the next lesson, we'll learn about access modifiers and encapsulation in Java.

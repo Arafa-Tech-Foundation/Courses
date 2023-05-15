@@ -1,0 +1,133 @@
+# Module 9: Inheritance
+
+## Lesson 2: Polymorphism and Abstract Classes
+
+Welcome to Lesson 2 of Module 9 on Inheritance! In this lesson, we will discuss polymorphism and abstract classes in Java.
+
+### Polymorphism
+
+Polymorphism is the ability of an object to take on many forms. In Java, polymorphism can be achieved through inheritance and interfaces. Polymorphism allows us to write flexible and reusable code.
+
+#### Benefits of Polymorphism
+
+- Allows for flexible and extensible code
+- Promotes code reuse
+- Enables code to work with objects of different classes
+
+### Abstract Classes
+
+An abstract class is a class that cannot be instantiated. It can only be used as a superclass for other classes. Abstract classes are used to define common behavior and attributes that can be shared among multiple subclasses.
+
+#### Abstract Class Example
+
+Let's look at an example of an abstract class in Java:
+
+```java
+abstract class Animal {
+   public abstract void sound();
+}
+
+class Cat extends Animal {
+   public void sound() {
+      System.out.println("Meow");
+   }
+}
+
+class Dog extends Animal {
+   public void sound() {
+      System.out.println("Woof");
+   }
+}
+
+public class Main {
+   public static void main(String[] args) {
+      Animal cat = new Cat();
+      Animal dog = new Dog();
+      cat.sound();
+      dog.sound();
+   }
+}
+```
+
+In the example above, `Animal` is an abstract class that defines an abstract method `sound()`. The subclasses `Cat` and `Dog` inherit from the `Animal` class and implement their own `sound()` methods. In the `main()` method, we create instances of `Cat` and `Dog` and call their `sound()` methods through the `Animal` reference.
+
+#### Abstract Method Example
+
+An abstract method is a method that is declared but does not have an implementation. It must be implemented in the subclass.
+
+```java
+abstract class Shape {
+   public abstract double area();
+}
+
+class Circle extends Shape {
+   double radius;
+
+   public Circle(double radius) {
+      this.radius = radius;
+   }
+
+   public double area() {
+      return Math.PI * radius * radius;
+   }
+}
+
+class Rectangle extends Shape {
+   double width, height;
+
+   public Rectangle(double width, double height) {
+      this.width = width;
+      this.height = height;
+   }
+
+   public double area() {
+      return width * height;
+   }
+}
+
+public class Main {
+   public static void main(String[] args) {
+      Shape circle = new Circle(5);
+      Shape rectangle = new Rectangle(5, 10);
+      System.out.println("Circle Area: " + circle.area());
+      System.out.println("Rectangle Area: " + rectangle.area());
+   }
+}
+```
+
+In the example above, `Shape` is an abstract class that defines an abstract method `area()`. The subclasses `Circle` and `Rectangle` inherit from the `Shape` class and implement their own `area()` methods.
+
+### Interfaces
+
+An interface is a collection of abstract methods. A class that implements an interface must implement all the abstract methods in the interface.
+
+#### Implementing an Interface Example
+
+Let's look at an example of implementing an interface in Java:
+
+```java
+interface Shape {
+   public void draw();
+}
+
+class Circle implements Shape {
+   public void draw() {
+      System.out.println("Drawing Circle");
+   }
+}
+
+class Rectangle implements Shape {
+   public void draw() {
+      System.out.println("Drawing Rectangle");
+   }
+}
+
+public class Main {
+   public static void main(String[] args) {
+      Shape circle = new Circle();
+      Shape rectangle = new Rectangle();
+      circle.draw();
+      rectangle.draw();
+   }
+}
+```

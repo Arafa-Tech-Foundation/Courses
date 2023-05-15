@@ -1,0 +1,76 @@
+# Module 7: ArrayList
+
+## Lesson 3: ArrayList Methods and Class Hierarchy
+
+Welcome to the third lesson of the ArrayList module! In this lesson, we'll learn about some common ArrayList methods and the class hierarchy of ArrayList.
+
+### ArrayList Methods
+
+ArrayList provides several methods that make it easy to work with collections of objects. Let's look at some of the most common ArrayList methods:
+
+#### size()
+
+The size() method returns the number of elements in the ArrayList.
+
+```java
+ArrayList<String> fruits = new ArrayList<>();
+fruits.add("apple");
+fruits.add("banana");
+fruits.add("orange");
+int size = fruits.size(); // returns 3
+```
+
+#### get()
+
+The get() method returns the element at the specified index.
+
+```java
+String fruit = fruits.get(1); // returns "banana"
+```
+
+#### set()
+
+The set() method replaces the element at the specified index with the specified element.
+
+```java
+fruits.set(0, "pear");
+// fruits is now ["pear", "banana", "orange"]
+```
+
+#### remove()
+
+The remove() method removes the element at the specified index.
+
+```java
+fruits.remove(2);
+// fruits is now ["pear", "banana"]
+```
+
+#### clear()
+
+The clear() method removes all elements from the ArrayList.
+
+```java
+fruits.clear();
+// fruits is now []
+```
+
+### ArrayList Class Hierarchy
+
+ArrayList is a class that is part of the Java Collections Framework, which provides a set of classes and interfaces for working with collections of objects. ArrayList extends the AbstractList class, which provides a basic implementation of the List interface. The List interface extends the Collection interface, which is the root interface of the Java Collections Framework.
+
+Here's a diagram of the class hierarchy of ArrayList:
+
+```txt
+       Object
+         |
+     AbstractCollection
+         |
+     AbstractList
+         |
+      ArrayList
+```
+
+### Conclusion
+
+In this lesson, we learned about some common ArrayList methods and the class hierarchy of ArrayList. ArrayList is a powerful class that makes it easy to work with collections of objects. In the next module, we'll learn about 2D arrays and how to manipulate them in Java.

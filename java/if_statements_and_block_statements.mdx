@@ -1,0 +1,98 @@
+# Module 3: Boolean Expressions and if Statements
+
+## Lesson 2: if Statements and Block Statements
+
+### Introduction
+
+In this lesson, we'll learn about the `if` statement and its syntax. The `if` statement is a fundamental control structure in programming and is used to conditionally execute code based on a boolean expression.
+
+### The if Statement and its Syntax
+
+The syntax of the `if` statement is as follows:
+
+```java
+if (boolean_expression) {
+    // code to execute if the boolean_expression is true
+}
+```
+
+The `if` statement evaluates the boolean expression in parentheses. If the expression evaluates to `true`, the code block inside the curly braces is executed. If the expression evaluates to `false`, the code block is skipped.
+
+Here's an example of using the `if` statement to conditionally execute code:
+
+```java
+int x = 10;
+
+if (x > 5) {
+    System.out.println("x is greater than 5");
+}
+```
+
+In this example, the boolean expression `x > 5` evaluates to `true` because `x` is equal to `10`, which is greater than `5`. Therefore, the code inside the `if` block is executed, which prints the message "x is greater than 5" to the console.
+
+### if-else Statement
+
+In addition to the `if` statement, there's also an `if-else` statement. The `if-else` statement allows you to execute one block of code if the boolean expression is true, and another block of code if the boolean expression is false.
+
+Here's an example of using the `if-else` statement:
+
+```java
+int x = 10;
+
+if (x > 5) {
+    System.out.println("x is greater than 5");
+} else {
+    System.out.println("x is less than or equal to 5");
+}
+```
+
+In this example, because `x` is greater than `5`, the boolean expression evaluates to `true`. Therefore, the code block inside the first set of curly braces is executed, and the message "x is greater than 5" is printed to the console.
+
+### Nested if Statements
+
+You can also nest `if` statements inside other `if` statements. This is useful when you need to check multiple conditions.
+
+Here's an example of using nested `if` statements:
+
+```java
+int x = 10;
+int y = 20;
+
+if (x > 5) {
+    if (y > 15) {
+        System.out.println("x is greater than 5 and y is greater than 15");
+    }
+}
+```
+
+In this example, the outer `if` statement checks if `x` is greater than `5`. If that condition is true, the inner `if` statement checks if `y` is greater than `15`. If both conditions are true, the code inside the inner `if` block is executed, and the message "x is greater than 5 and y is greater than 15" is printed to the console.
+
+### The switch Statement
+
+Another way to perform conditional execution is with the `switch` statement. The `switch` statement is useful when you need to compare a single value against multiple possible values.
+
+Here's an example of using the `switch` statement:
+
+```java
+int dayOfWeek = 2;
+
+switch (dayOfWeek) {
+    case 1:
+        System.out.println("Monday");
+        break;
+    case 2:
+        System.out.println("Tuesday");
+        break;
+    case 3:
+        System.out.println("Wednesday");
+        break;
+    default:
+        System.out.println("Invalid day of week");
+}
+```
+
+In this example we have a variable called `dayOfWeek` that stores the value `2`. The `switch` statement compares this value against the possible values `1`, `2`, and `3`. Because the value is `2`, the second `case` statement is executed, which prints the message "Tuesday" to the console.
+
+### Conclusion
+
+In this lesson, we learned about the `if` statement and its syntax. We also learned about the `if-else` statement, nested `if` statements, and the `switch` statement. In the next lesson, we'll learn about the `Conditional Operators` statement and its syntax.

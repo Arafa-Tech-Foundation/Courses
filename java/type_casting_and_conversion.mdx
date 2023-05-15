@@ -1,0 +1,49 @@
+# Module 1: Primitive Types
+
+## Lesson 3: Type Casting and Conversion
+
+Welcome to Lesson 3 of Module 1! In this lesson, we will learn about type casting and conversion in Java.
+
+### Introduction to Type Casting and Conversion
+
+In Java, type casting and conversion are used to convert data from one type to another. There are two types of type casting: implicit and explicit. Implicit type casting is done automatically by the compiler, while explicit type casting requires the programmer to cast the type manually.
+
+### Implicit and Explicit Casting
+
+Implicit casting is also called widening conversion, where data is converted from a lower data type to a higher data type. For example, an integer can be implicitly cast to a double. On the other hand, explicit casting is called narrowing conversion, where data is converted from a higher data type to a lower data type. In explicit casting, we use a cast operator to convert the data type.
+
+### Widening and Narrowing Conversions
+
+Widening conversion is converting a smaller data type to a larger data type, such as converting an int to a double. Narrowing conversion is the opposite of widening conversion, where a larger data type is converted to a smaller data type, such as converting a double to an int. Narrowing conversion requires explicit casting.
+
+### Converting Between Numeric Types
+
+In Java, we can convert between numeric data types using casting. However, if we want to convert a floating-point number to an integer, we need to be careful because the decimal part is truncated. For example, if we cast a double 3.14 to an int, the result will be 3.
+
+### Type Casting with Objects
+
+Type casting with objects is similar to type casting with primitive data types. We use the cast operator to convert an object of one class to an object of another class. However, we need to be careful because if we try to cast an object to a class that it is not compatible with, we will get a ClassCastException.
+
+### Type Promotion and Conversion Rules
+
+In Java, there are type promotion and conversion rules that determine how the types are converted in expressions. For example, if we have an expression that contains both an integer and a floating-point number, the integer is promoted to a floating-point number.
+
+### Example Code
+
+```java
+int x = 10;
+double y = x; // implicit casting
+System.out.println(y); // output: 10.0
+
+double z = 3.14;
+int w = (int) z; // explicit casting
+System.out.println(w); // output: 3
+
+String s = "123";
+int n = Integer.parseInt(s); // converting String to int
+System.out.println(n); // output: 123
+```
+
+## Conclusion
+
+In this lesson, we learned about type casting and conversion in Java. We learned about implicit and explicit casting, widening and narrowing conversions, converting between numeric types, type casting with objects, and type promotion and conversion rules. Understanding type casting and conversion is essential for writing efficient and effective code in Java. In the next module, we will learn about objects and classes.

@@ -1,0 +1,131 @@
+{
+  "name": "java",
+  "instructor": "Hazim O. Arafa",
+  "type": "essential",
+  "languages": ["Java"],
+  "skills": [
+    "Understand the fundamentals of Java programming, including variables, data types, and control structures.",
+    "Acquire knowledge on object-oriented programming (OOP) concepts in Java, such as classes, inheritance, and polymorphism.",
+    "Develop proficiency in working with Java libraries and frameworks, including JavaFX and JDBC."
+  ],
+  "minutes": 1200,
+  "title": "AP Computer Science A (APCSA) in Java",
+  "description": "Learn Java programming and prepare for the AP Computer Science A exam.",
+  "modules": [
+    {
+      "name": "Module 1: Primitive Types",
+      "lessons": [
+        {
+          "name": "introduction_to_data_types_and_variables",
+          "video": "1-1.mp4"
+        },
+        { "name": "operations_and_expressions", "video": "1-2.mp4" },
+        { "name": "type_casting_and_conversion", "video": "1-3.mp4" }
+      ]
+    },
+    {
+      "name": "Module 2: Using Objects",
+      "lessons": [
+        { "name": "introduction_to_objects_and_classes", "video": "2-1.mp4" },
+        { "name": "constructors_and_overloading", "video": "2-2.mp4" },
+        { "name": "access_modifiers_and_encapsulation", "video": "2-3.mp4" }
+      ]
+    },
+    {
+      "name": "Module 3: Boolean Expressions and if Statements",
+      "lessons": [
+        {
+          "name": "boolean_expressions_and_relational_operators",
+          "video": "3-1.mp4"
+        },
+        { "name": "if_statements_and_block_statements", "video": "3-2.mp4" },
+        {
+          "name": "conditional_operators_and_complex_conditions",
+          "video": "3-3.mp4"
+        }
+      ]
+    },
+    {
+      "name": "Module 4: Iteration",
+      "lessons": [
+        { "name": "while_loops", "video": "4-1.mp4" },
+        { "name": "for_loops", "video": "4-2.mp4" },
+        {
+          "name": "do_while_loops_and_loop_control_statements",
+          "video": "4-3.mp4"
+        }
+      ]
+    },
+    {
+      "name": "Module 5: Writing Classes",
+      "lessons": [
+        {
+          "name": "class_design_and_object_oriented_concepts",
+          "video": "5-1.mp4"
+        },
+        { "name": "method_design_and_overriding", "video": "5-2.mp4" },
+        { "name": "static_variables_and_methods", "video": "5-3.mp4" }
+      ]
+    },
+    {
+      "name": "Module 6: Array",
+      "lessons": [
+        { "name": "introduction_to_arrays", "video": "6-1.mp4" },
+        {
+          "name": "array_operations_and_enhanced_for_loop",
+          "video": "6-2.mp4"
+        },
+        { "name": "multidimensional_arrays", "video": "6-3.mp4" }
+      ]
+    },
+    {
+      "name": "Module 7: ArrayList",
+      "lessons": [
+        { "name": "introduction_to_arraylist", "video": "7-1.mp4" },
+        { "name": "arraylist_operations_and_iteration", "video": "7-2.mp4" },
+        { "name": "arraylist_methods_and_class_hierarchy", "video": "7-3.mp4" }
+      ]
+    },
+    {
+      "name": "Module 8: 2D Array",
+      "lessons": [
+        { "name": "introduction_to_2d_array", "video": "8-1.mp4" },
+        { "name": "manipulating_2d_arrays", "video": "8-2.mp4" },
+        { "name": "jagged_2d_arrays_and_applications", "video": "8-3.mp4" }
+      ]
+    },
+    {
+      "name": "Module 9: Inheritance",
+      "lessons": [
+        { "name": "inheritance_and_superclasses", "video": "9-1.mp4" },
+        { "name": "polymorphism_and_abstract_classes", "video": "9-2.mp4" },
+        {
+          "name": "class_hierarchies_and_method_overriding",
+          "video": "9-3.mp4"
+        }
+      ]
+    },
+    {
+      "name": "Module 10: Recursion",
+      "lessons": [
+        { "name": "introduction_to_recursion", "video": "10-1.mp4" },
+        {
+          "name": "recursive_thinking_and_problem_solving",
+          "video": "10-2.mp4"
+        },
+        {
+          "name": "recursion_applications_and_performance",
+          "video": "10-3.mp4"
+        }
+      ]
+    },
+    {
+      "name": "Module 11: Conclusion and Exam Preparation",
+      "lessons": [
+        { "name": "reviewing_key_concepts", "video": "11-1.mp4" },
+        { "name": "strategies_for_ap_exam_success", "video": "11-2.mp4" },
+        { "name": "mock_exam_and_feedback", "video": "11-3.mp4" }
+      ]
+    }
+  ]
+}

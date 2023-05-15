@@ -1,0 +1,111 @@
+# Module 3: Boolean Expressions and if Statements
+
+## Lesson 3: Conditional Operators and Complex Conditions
+
+### Introduction
+
+In the previous lessons, we learned about Boolean expressions, relational operators, and if statements. In this lesson, we will learn about conditional operators and complex conditions, which allow us to create more efficient and concise code.
+
+### The Conditional (Ternary) Operator
+
+The conditional operator, also known as the ternary operator, is a shorthand way to write an if-else statement. It has the following syntax:
+
+```txt
+condition ? expression1 : expression2;
+```
+
+If the condition is true, the expression1 is evaluated and returned. Otherwise, expression2 is evaluated and returned.
+
+Let's see an example:
+
+```java
+int age = 18;
+String message = age >= 18 ? "You are an adult" : "You are not an adult";
+System.out.println(message);
+```
+
+Output:
+
+```txt
+You are an adult
+```
+
+In this example, we use the ternary operator to assign a string message to a variable based on the value of the age variable.
+
+### Complex Conditions with Logical Operators
+
+We can combine multiple conditions using logical operators such as `&&` (AND) and `||` (OR). The `&&` operator returns true only if both conditions are true, while the `||` operator returns true if at least one condition is true.
+
+Let's see an example:
+
+```java
+int age = 25;
+boolean isStudent = true;
+if (age >= 18 && isStudent) {
+    System.out.println("You are an adult student");
+} else {
+    System.out.println("You are not an adult student");
+}
+```
+
+Output:
+
+```txt
+You are an adult student
+```
+
+In this example, we use the `&&` operator to combine two conditions and check if the age is greater than or equal to 18 and the person is a student.
+
+### Using Parentheses to Control Evaluation Order
+
+When combining multiple conditions, it's important to use parentheses to control the order of evaluation. The expressions inside parentheses are evaluated first.
+
+Let's see an example:
+
+```java
+int x = 5;
+int y = 10;
+int z = 15;
+if ((x < y && y < z) || (x > y && y > z)) {
+    System.out.println("y is in the middle");
+} else {
+    System.out.println("y is not in the middle");
+}
+```
+
+Output:
+
+```txt
+y is in the middle
+```
+
+In this example, we use parentheses to group the conditions and make sure that the `||` operator is evaluated after the `&&` operator.
+
+### Combining Conditions with Boolean Operators
+
+We can also use boolean operators to combine the results of two or more conditions. The `&` (AND) and `|` (OR) operators perform bitwise operations on boolean values. The `&&` and `||` operators, on the other hand, perform logical operations and use short-circuit evaluation.
+
+Let's see an example:
+
+```java
+int age = 25;
+boolean isStudent = true;
+boolean isSenior = false;
+if (age >= 18 && (isStudent || isSenior)) {
+    System.out.println("You are eligible for a discount");
+} else {
+    System.out.println("You are not eligible for a discount");
+}
+```
+
+Output:
+
+```txt
+You are eligible for a discount
+```
+
+In this example, we use the `&&` and `||` operators to combine multiple conditions and check if the person is eligible for a discount.
+
+### Conclusion
+
+In this lesson, we learned about the conditional operator and how to use it to write concise if-else statements. We

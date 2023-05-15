@@ -1,0 +1,53 @@
+# Module 6: Arrays
+
+## Lesson 1: Introduction to Arrays
+
+Welcome to the first lesson of Module 6! In this lesson, we'll provide an overview of arrays and how they work in Java.
+
+### Arrays and their Purpose
+
+An array is a collection of similar data types that are stored in contiguous memory locations. Arrays allow us to store and manipulate multiple values of the same type using a single variable. They are useful for storing and processing large amounts of data.
+
+### Declaring and Initializing Arrays
+
+To declare an array in Java, we specify the data type of the elements followed by the square brackets [] and then the name of the array. Here's an example of declaring an array of integers:
+
+```java
+int[] myArray;
+```
+
+To initialize the array with values, we use curly braces {} and separate each value with a comma. Here's an example of initializing an array of integers:
+
+```java
+int[] myArray = {1, 2, 3, 4, 5};
+```
+
+### Accessing Array Elements
+
+We can access individual elements in an array by using their index position. The index position starts from 0 for the first element and increments by 1 for each subsequent element. Here's an example of accessing an element in an array:
+
+```java
+int[] myArray = {1, 2, 3, 4, 5};
+int firstElement = myArray[0]; // firstElement = 1
+int thirdElement = myArray[2]; // thirdElement = 3
+```
+
+### Array Length and Bounds Checking
+
+To get the length of an array, we can use the `length` property of the array. Here's an example of getting the length of an array:
+
+```java
+int[] myArray = {1, 2, 3, 4, 5};
+int length = myArray.length; // length = 5
+```
+
+It's important to note that array indices start at 0 and end at length-1. Attempting to access an element outside of the bounds of an array will result in an `ArrayIndexOutOfBoundsException` error. For example:
+
+```java
+int[] myArray = {1, 2, 3, 4, 5};
+int sixthElement = myArray[5]; // throws ArrayIndexOutOfBoundsException
+```
+
+## Conclusion
+
+In this lesson, we provided an overview of arrays and how they work in Java. We learned how to declare and initialize arrays, how to access individual elements in an array, and how to get the length of an array. In the next lesson, we'll dive deeper into array operations and the enhanced for loop.

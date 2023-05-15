@@ -1,0 +1,107 @@
+# Module 10: Recursion
+
+## Lesson 3: Recursion Applications and Performance
+
+Welcome to the third and final lesson of the Recursion module! In this lesson, we'll explore some practical applications of recursion, including recursive algorithms for sorting and searching, recursive mathematical functions, and tail recursion optimization.
+
+### Recursive Algorithms for Sorting and Searching
+
+Recursion can be a useful technique for sorting and searching data. One common algorithm that uses recursion is quicksort, which is a popular sorting algorithm used in computer science. Here is an example of a quicksort implementation in Java:
+
+```java
+public static void quickSort(int[] arr, int low, int high) {
+  if (low < high) {
+    int pivot = partition(arr, low, high);
+    quickSort(arr, low, pivot - 1);
+    quickSort(arr, pivot + 1, high);
+  }
+}
+
+public static int partition(int[] arr, int low, int high) {
+  int pivot = arr[high];
+  int i = low - 1;
+  for (int j = low; j <= high - 1; j++) {
+    if (arr[j] < pivot) {
+      i++;
+      int temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+    }
+  }
+  int temp = arr[i + 1];
+  arr[i + 1] = arr[high];
+  arr[high] = temp;
+  return i + 1;
+}
+```
+
+This implementation uses a divide-and-conquer strategy, where the array is partitioned into smaller subarrays and recursively sorted.
+
+Recursive algorithms can also be used for searching data, such as binary search. Here is an example of a binary search implementation in Java:
+
+```java
+public static int binarySearch(int[] arr, int low, int high, int target) {
+  if (low > high) {
+    return -1;
+  }
+  int mid = low + (high - low) / 2;
+  if (arr[mid] == target) {
+    return mid;
+  } else if (arr[mid] > target) {
+    return binarySearch(arr, low, mid - 1, target);
+  } else {
+    return binarySearch(arr, mid + 1, high, target);
+  }
+}
+```
+
+This implementation uses recursion to search for a target element in a sorted array, by repeatedly dividing the array in half.
+
+### Recursive Mathematical Functions
+
+Recursion can also be used to implement mathematical functions, such as factorials and Fibonacci numbers. Here is an example of a recursive factorial function in Java:
+
+```java
+public static int factorial(int n) {
+  if (n == 0) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+```
+
+This implementation uses recursion to compute the factorial of a given number by repeatedly multiplying it by its predecessors.
+
+### Tail Recursion and Optimization
+
+Tail recursion is a special case of recursion where the recursive call is the last statement executed in a function. Tail recursion can be optimized by the compiler, by replacing the current stack frame with the next recursive call, thus avoiding a stack overflow. Here is an example of a tail-recursive factorial function in Java:
+
+```java
+public static int factorial(int n, int acc) {
+  if (n == 0) {
+    return acc;
+  }
+  return factorial(n - 1, n * acc);
+}
+```
+
+This implementation uses tail recursion to compute the factorial of a given number, by passing an accumulator as a parameter that stores the partial result.
+
+### Analyzing the Performance of Recursive Algorithms
+
+Recursion can be a powerful tool for solving complex problems, but it can also be inefficient if not used properly. Recursive algorithms can have exponential time complexity, which means that the time required to solve a problem doubles with each additional input. For example, the recursive Fibonacci function has exponential time complexity, because it requires two recursive calls for each input. Here is an example of a recursive Fibonacci function in Java:
+
+```java
+public static int fibonacci(int n) {
+ if (n <= 1) {
+  return n;
+ }
+ return fibonacci(n - 1) + fibonacci(n - 2);
+}
+```
+
+This implementation uses recursion to compute the Fibonacci number of a given index, by repeatedly adding the two previous numbers in the sequence.
+
+## Conclusion
+
+In this lesson, we explored some practical applications of recursion, including recursive algorithms for sorting and searching, recursive mathematical functions, and tail recursion optimization. We also learned about the performance of recursive algorithms, and how they can have exponential time complexity. Now that you've completed this lesson, you should be able to analyze the performance of recursive algorithms, and determine when to use recursion in your programs.

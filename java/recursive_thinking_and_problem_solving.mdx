@@ -1,0 +1,77 @@
+# Module 10: Recursion
+
+## Lesson 2: Recursive Thinking and Problem Solving
+
+Welcome to lesson 2 of the Recursion module. In this lesson, we'll learn how to approach problem-solving using recursion.
+
+### Dividing Problems into Subproblems
+
+One of the most important skills in recursive problem-solving is being able to break down a problem into smaller subproblems. We can then use these subproblems to recursively solve the original problem. Let's take a look at an example:
+
+Suppose we want to write a method to compute the factorial of a given number. We know that the factorial of n is equal to n times the factorial of (n-1). Using this fact, we can write a recursive solution to compute the factorial of a number:
+
+```java
+public static int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n-1);
+    }
+}
+```
+
+Here, we break down the problem of computing the factorial of n into the subproblem of computing the factorial of (n-1). We then use the result of the subproblem to solve the original problem.
+
+### Backtracking and Recursive Backtracking
+
+Another useful technique in recursive problem-solving is backtracking. Backtracking is a general algorithm for finding all (or some) solutions to a problem that incrementally builds candidates to the solutions and abandons a candidate ("backtracks") as soon as it determines that the candidate cannot possibly be completed to a valid solution.
+
+One example of using backtracking is finding all the permutations of a given set of elements. We can use the following recursive solution to find all the permutations:
+
+```java
+public static void permute(int[] arr, int start, int end) {
+    if (start == end) {
+        System.out.println(Arrays.toString(arr));
+    } else {
+        for (int i = start; i <= end; i++) {
+            swap(arr, start, i);
+            permute(arr, start+1, end);
+            swap(arr, start, i);
+        }
+    }
+}
+
+public static void swap(int[] arr, int i, int j) {
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+}
+```
+
+Here, we recursively swap elements in the array and print the array once we reach the end of the array. By swapping elements, we are able to generate all possible permutations of the original array.
+
+### Recursive Data Structures: Linked Lists, Trees
+
+Recursive thinking is also important when working with recursive data structures such as linked lists and trees. Recursive algorithms for these data structures involve breaking down the problem into subproblems involving smaller substructures of the original data structure.
+
+For example, to traverse a binary tree in pre-order, we can use the following recursive algorithm:
+
+```java
+public void preOrderTraversal(Node node) {
+    if (node != null) {
+        System.out.print(node.data + " ");
+        preOrderTraversal(node.left);
+        preOrderTraversal(node.right);
+    }
+}
+```
+
+Here, we recursively visit the left subtree, then the right subtree, and finally the current node. By using this recursive algorithm, we are able to traverse the entire tree in pre-order.
+
+### Recursive vs. Non-Recursive Thinking
+
+In some cases, a problem may be better solved using a non-recursive approach. It's important to understand when to use recursion and when to use other techniques.
+
+## Conclusion
+
+In this lesson, we learned how to approach problem-solving using recursion. We learned how to divide problems into subproblems, use backtracking, and work with recursive data structures. We also learned when to use recursion and when to use other techniques. In the next lesson,

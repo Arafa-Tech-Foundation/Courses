@@ -1,0 +1,44 @@
+# Module 10: Recursion
+
+## Lesson 1: Introduction to Recursion
+
+Welcome to the first lesson of the Recursion module. In this lesson, we'll introduce you to the concept of recursion and how it's used in programming.
+
+### Understanding recursion and recursive methods
+
+Recursion is a technique in programming where a method calls itself repeatedly to solve a problem. It's a powerful concept that's used to solve complex problems that involve repeated sub-problems. Recursive methods are functions that call themselves with a smaller input or a simpler version of the problem, until it reaches a base case, which is the smallest possible version of the problem that can be solved directly.
+
+### Base case and recursive case
+
+The base case is the condition that terminates the recursion. It's the simplest version of the problem that can be solved directly, without calling the same method again. The recursive case is the condition that calls the same method again with a smaller input or a simpler version of the problem.
+
+### Recursive vs. iterative solutions
+
+Recursion and iteration are two common techniques used to solve problems in programming. Iteration involves using loops to repeat a block of code until a condition is met. Recursion involves calling a method repeatedly until a base case is reached. While both techniques can solve the same problems, recursion can be more elegant and concise than iteration in some cases.
+
+### Recursive algorithms
+
+Recursion is a powerful technique that can be used to solve a wide range of problems. Some common examples of recursive algorithms include:
+
+- Computing the factorial of a number
+- Computing Fibonacci numbers
+- Traversing a tree or a graph
+- Sorting an array using quicksort or mergesort
+
+Let's take a look at an example of a recursive method in Java that computes the factorial of a number:
+
+```java
+public static int factorial(int n) {
+    if (n == 0) {
+        return 1; // base case
+    } else {
+        return n * factorial(n - 1); // recursive case
+    }
+}
+```
+
+In this example, the `factorial` method calls itself with a smaller input `(n-1)` until it reaches the base case `(n=0)`.
+
+## Conclusion
+
+In this lesson, we introduced you to the concept of recursion and how it's used in programming. We explained the base case and recursive case, and how recursion compares to iterative solutions. We also showed you some common examples of recursive algorithms. In the next lesson, we'll dive deeper into recursive thinking and problem-solving.

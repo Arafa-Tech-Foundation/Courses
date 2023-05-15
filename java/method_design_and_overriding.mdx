@@ -1,0 +1,54 @@
+# Module 5: Writing Classes
+
+## Lesson 2: Method Design and Overriding
+
+Welcome to Lesson 2 of Module 5, where we'll be diving into method design and overriding in Java classes.
+
+### Method Design Principles
+
+When designing methods in Java classes, it's important to keep in mind the following principles:
+
+- **Method signature and return type**: The method signature is the method name and the types of its parameters. The return type is the type of value that the method returns.
+- **Single responsibility principle**: Each method should have a single responsibility.
+- **Cohesion**: The methods within a class should be related and work together to achieve the same goal.
+- **Coupling**: The degree of dependency between methods within a class should be minimal.
+
+### Method Overloading vs. Overriding
+
+In Java, methods can either be overloaded or overridden. Method overloading is when multiple methods in the same class have the same name but different parameters. Overriding, on the other hand, is when a subclass provides a different implementation for a method that is already defined in its superclass.
+
+Let's take a look at an example:
+
+```java
+public class Shape {
+    public void draw() {
+        System.out.println("Drawing a shape");
+    }
+}
+
+public class Circle extends Shape {
+    @Override
+    public void draw() {
+        System.out.println("Drawing a circle");
+    }
+}
+```
+
+In the above example, the `Circle` class extends the `Shape` class and overrides the `draw()` method to provide a different implementation. When we call the `draw()` method on an instance of the `Circle` class, it will print "Drawing a circle".
+
+### @Override Annotation
+
+When overriding a method in a subclass, it's good practice to use the `@Override` annotation to indicate that the method is intended to override a method in its superclass. This helps to catch errors at compile-time if the method signature in the subclass doesn't match the method signature in the superclass.
+
+```java
+public class Circle extends Shape {
+    @Override
+    public void draw() {
+        System.out.println("Drawing a circle");
+    }
+}
+```
+
+### Conclusion
+
+In this lesson, we learned about method design principles and the differences between method overloading and overriding in Java. We also saw an example of how to use the `@Override` annotation when overriding a method in a subclass. In the next lesson, we'll learn about static variables and methods in Java classes.

@@ -1,0 +1,89 @@
+# Module 8: 2D Array
+
+## Lesson 2: Manipulating 2D Arrays
+
+Welcome to lesson 2 of Module 8, where we will learn how to manipulate 2D arrays. In the previous lesson, we learned how to create and initialize 2D arrays, as well as how to access and modify their elements. In this lesson, we'll take it a step further and learn how to traverse, search, sort, transpose, and rotate 2D arrays.
+
+### Traversing Rows and Columns of a 2D Array
+
+To traverse a 2D array, we can use nested for loops to iterate over each element of the array. To traverse the rows of a 2D array, we can use the outer loop to iterate over each row, and the inner loop to iterate over each column of the current row. Similarly, to traverse the columns, we can swap the roles of the outer and inner loops. Here is an example of how to traverse a 2D array by rows:
+
+```java
+int[][] arr = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+
+// Traverse rows
+for (int i = 0; i < arr.length; i++) {
+    for (int j = 0; j < arr[i].length; j++) {
+        System.out.print(arr[i][j] + " ");
+    }
+    System.out.println(); // Move to the next row
+}
+```
+
+Output:
+
+```txt
+1 2 3
+4 5 6
+7 8 9
+```
+
+### Searching and Sorting 2D Arrays
+
+To search a 2D array, we can use nested for loops to iterate over each element of the array and compare it to the target value. Here is an example of how to search for a value in a 2D array:
+
+```java
+int[][] arr = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+
+// Search for value 5
+boolean found = false;
+for (int i = 0; i < arr.length; i++) {
+    for (int j = 0; j < arr[i].length; j++) {
+        if (arr[i][j] == 5) {
+            found = true;
+            break;
+        }
+    }
+    if (found) {
+        break;
+    }
+}
+
+if (found) {
+    System.out.println("Value 5 found!");
+} else {
+    System.out.println("Value 5 not found!");
+}
+```
+
+Output:
+
+```txt
+Value 5 found!
+```
+
+To sort a 2D array, we can use the `Arrays.sort()` method and provide a custom `Comparator` to compare the rows of the array. Here is an example of how to sort a 2D array by the sum of its rows:
+
+```java
+int[][] arr = {{3, 2, 1}, {6, 5, 4}, {9, 8, 7}};
+
+// Sort by row sums
+Arrays.sort(arr, Comparator.comparingInt(row -> Arrays.stream(row).sum()));
+
+// Print sorted array
+for (int[] row : arr) {
+    System.out.println(Arrays.toString(row));
+}
+```
+
+Output:
+
+```txt
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 9]
+```
+
+### Transposing a 2D Array
+
+To transpose a 2D array, we can create a new 2D array with the rows and columns swapped. Here is an example of how to

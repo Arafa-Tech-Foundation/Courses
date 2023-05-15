@@ -1,0 +1,69 @@
+# Module 5: Writing Classes
+
+## Lesson 1: Class Design and Object-Oriented Concepts
+
+Welcome to the first lesson of Module 5: Writing Classes. In this lesson, we will cover class design principles and object-oriented concepts such as inheritance, polymorphism, and abstraction.
+
+### Class Design Principles
+
+Class design principles are essential for writing maintainable and reusable code. Two key principles of class design are cohesion and coupling.
+
+- Cohesion refers to the degree to which the elements of a class are related to each other. A class with high cohesion contains elements that are closely related and work together to achieve a specific purpose.
+- Coupling refers to the degree to which one class depends on another class. Low coupling between classes means that changes in one class will have minimal impact on other classes.
+
+The single responsibility principle is another important class design principle. It states that a class should have only one reason to change. This principle helps to ensure that classes are focused and have clear responsibilities.
+
+### Object-Oriented Concepts
+
+Object-oriented programming is a programming paradigm that uses objects to represent real-world entities and concepts. Some key concepts in object-oriented programming include:
+
+- Inheritance: Inheritance allows a class to inherit properties and methods from a parent class.
+- Polymorphism: Polymorphism allows objects to take on different forms or behaviors based on their context.
+- Abstraction: Abstraction refers to the process of hiding unnecessary details and complexity from users.
+
+Let's take a look at an example class to illustrate these concepts:
+
+```java
+public class Animal {
+   private String name;
+
+   public Animal(String name) {
+      this.name = name;
+   }
+
+   public String getName() {
+      return name;
+   }
+
+   public void eat() {
+      System.out.println(name + " is eating.");
+   }
+}
+
+public class Dog extends Animal {
+   public Dog(String name) {
+      super(name);
+   }
+
+   @Override
+   public void eat() {
+      System.out.println(getName() + " is eating dog food.");
+   }
+}
+
+public class Main {
+   public static void main(String[] args) {
+      Animal animal = new Animal("Generic Animal");
+      animal.eat();
+
+      Dog dog = new Dog("Fido");
+      dog.eat();
+   }
+}
+```
+
+In this example, we have an Animal class that has a name field and an eat() method. We also have a Dog class that inherits from the Animal class and overrides the eat() method. The Main class creates instances of both Animal and Dog and calls their eat() methods.
+
+## Conclusion
+
+In this lesson, we covered class design principles and object-oriented concepts such as inheritance, polymorphism, and abstraction. Understanding these concepts is essential for writing maintainable and reusable code. In the next lesson, we will cover method design and overriding.

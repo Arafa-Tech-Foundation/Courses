@@ -1,0 +1,92 @@
+# Module 5: Writing Classes
+
+## Lesson 3: Static Variables and Methods
+
+Welcome to the third lesson of Module 5: Writing Classes! In this lesson, we'll learn about static variables and methods in Java.
+
+### Static Variables
+
+Static variables belong to a class, not an instance of the class. That means that all instances of a class share the same static variable. Static variables are declared using the static keyword.
+
+Let's take a look at an example:
+
+```java
+public class Person {
+    static int numOfPersons = 0;
+    String name;
+
+    public Person(String name) {
+        this.name = name;
+        numOfPersons++;
+    }
+}
+```
+
+In this example, the static variable `numOfPersons` is incremented each time a new `Person` object is created. Since `numOfPersons` is shared across all instances of the `Person` class, the value of `numOfPersons` will be the same for all objects of the `Person` class.
+
+### Static Methods
+
+Static methods are also associated with a class, not an instance of the class. Static methods can be called directly on the class, without creating an object instance. Static methods are declared using the static keyword.
+
+Let's take a look at an example:
+
+```java
+public class Calculator {
+    public static int add(int a, int b) {
+        return a + b;
+    }
+}
+```
+
+In this example, the `add` method is a static method. The `add` method can be called directly on the `Calculator` class, like this:
+
+```java
+int sum = Calculator.add(2, 3);
+```
+
+### Class-level vs. Instance-level Access
+
+Static variables and methods can be accessed at the class level or instance level. Class-level access means that the variable or method is accessed directly on the class, while instance-level access means that the variable or method is accessed on an instance of the class.
+
+Let's take a look at an example:
+
+```java
+public class Person {
+    static int numOfPersons = 0;
+    String name;
+
+    public Person(String name) {
+        this.name = name;
+        numOfPersons++;
+    }
+
+    public static int getNumOfPersons() {
+        return numOfPersons;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person person1 = new Person("John");
+        Person person2 = new Person("Jane");
+
+        // Accessing static variable at the class-level
+        int numOfPersons = Person.numOfPersons;
+        System.out.println(numOfPersons); // Output: 2
+
+        // Accessing static method at the class-level
+        int totalPersons = Person.getNumOfPersons();
+        System.out.println(totalPersons); // Output: 2
+
+        // Accessing static variable at the instance-level
+        int numOfPersons1 = person1.numOfPersons; // This works but is discouraged
+        int numOfPersons2 = person2.numOfPersons; // This works but is discouraged
+    }
+}
+```
+
+In this example, the static variable `numOfPersons` and static method `getNumOfPersons` are accessed at the class-level, while the static variable `numOfPersons` is also accessed at the instance-level.
+
+### Conclusion
+
+In this lesson, we learned about static variables and methods in Java. Static variables belong to a class and are shared across all instances of the class, while static methods can be called directly on the class. It's important to understand the difference between class-level and instance-level access to static variables and methods. In the next lesson, we'll learn about arrays in Java.

@@ -1,0 +1,54 @@
+# Module 9: Inheritance
+
+## Lesson 1: Inheritance and Superclasses
+
+Welcome to the first lesson of Module 9 on Inheritance! In this lesson, we will learn about inheritance, how to create subclasses and superclasses, and how to inherit attributes and methods from parent classes.
+
+### Introduction to Inheritance
+
+Inheritance is a concept in object-oriented programming that allows new classes to be based on existing classes, inheriting attributes and methods from the parent class. Inheritance is useful because it allows us to reuse code, organize our code into a hierarchy, and create more specialized classes from general ones.
+
+### Creating Superclasses and Subclasses
+
+In Java, a class can inherit from another class by using the `extends` keyword. The class that is being inherited from is called the superclass, and the class that inherits from it is called the subclass. Here's an example:
+
+```java
+public class Animal {
+    private String name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public void speak() {
+        System.out.println("Hello, I am " + name);
+    }
+}
+
+public class Dog extends Animal {
+    public Dog(String name) {
+        super(name);
+    }
+
+    @Override
+    public void speak() {
+        System.out.println("Woof!");
+    }
+}
+```
+
+In this example, the `Dog` class inherits from the `Animal` class using the `extends` keyword. The `Dog` class also overrides the `speak()` method inherited from the `Animal` class.
+
+### Inheriting Attributes and Methods
+
+When a subclass inherits from a superclass, it automatically inherits all of the superclass's public and protected attributes and methods. Private attributes and methods cannot be inherited.
+
+For example, in the `Dog` class above, the `name` attribute is private in the `Animal` class, but it can still be accessed and initialized through the constructor in the `Dog` class.
+
+### Overriding Inherited Methods
+
+A subclass can override a method inherited from a superclass by providing its own implementation of the method. This is useful when we want to provide a more specialized or customized implementation of a method. In the example above, the `Dog` class overrides the `speak()` method to print "Woof!" instead of "Hello, I am [name]".
+
+## Conclusion
+
+In this lesson, we learned about inheritance in Java, how to create subclasses and superclasses, how to inherit attributes and methods, and how to override inherited methods. In the next lesson, we'll learn about polymorphism and abstract classes.

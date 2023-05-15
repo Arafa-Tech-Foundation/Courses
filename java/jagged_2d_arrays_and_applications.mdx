@@ -1,0 +1,57 @@
+# Module 8: 2D Array
+
+## Lesson 3: Jagged 2D Arrays and Applications
+
+Welcome to lesson 3 of Module 8! In this lesson, we'll learn about jagged 2D arrays and explore their applications.
+
+### Understanding Jagged 2D Arrays
+
+A jagged 2D array is an array of arrays where each array can have a different number of elements. Unlike rectangular 2D arrays where each row has the same number of columns, jagged 2D arrays can have varying lengths for each row. Here's an example of a jagged 2D array:
+
+```java
+int[][] jaggedArray = new int[][]{
+    {1},
+    {2, 3},
+    {4, 5, 6}
+};
+```
+
+In this example, the first row has one element, the second row has two elements, and the third row has three elements.
+
+### Creating and Working with Jagged 2D Arrays
+
+To create a jagged 2D array, you can create an array of arrays and assign each inner array with a different number of elements. Here's an example:
+
+```java
+int[][] jaggedArray = new int[3][];
+jaggedArray[0] = new int[]{1};
+jaggedArray[1] = new int[]{2, 3};
+jaggedArray[2] = new int[]{4, 5, 6};
+```
+
+To work with a jagged 2D array, you can use nested loops to traverse its elements. Here's an example of how to print the elements of a jagged 2D array:
+
+```java
+for (int i = 0; i < jaggedArray.length; i++) {
+    for (int j = 0; j < jaggedArray[i].length; j++) {
+        System.out.print(jaggedArray[i][j] + " ");
+    }
+    System.out.println();
+}
+```
+
+This code will print the elements of the jagged array as follows:
+
+```txt
+1
+2 3
+4 5 6
+```
+
+### Applications of Jagged 2D Arrays
+
+Jagged 2D arrays are useful for representing data where the number of elements in each row can vary. For example, in a game where each player can have a different number of cards, a jagged 2D array can be used to represent the players' hands. Jagged 2D arrays can also be used to represent data structures such as trees and graphs.
+
+### Conclusion
+
+In this lesson, we learned about jagged 2D arrays and their applications. We saw how to create and work with jagged 2D arrays using nested loops. Jagged 2D arrays are useful for representing data where the number of elements in each row can vary, and they have applications in various fields such as game development and data structures.

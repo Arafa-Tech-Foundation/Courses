@@ -1,0 +1,91 @@
+# Module 7: ArrayList
+
+## Lesson 1: Introduction to ArrayList
+
+Welcome to the first lesson of the ArrayList module! In this lesson, we'll be introducing the ArrayList class in Java, which is a dynamic array implementation that allows you to store and manipulate objects of any type.
+
+### Understanding the ArrayList class
+
+The ArrayList class in Java is part of the java.util package and is a resizable-array implementation of the List interface. It allows for the insertion and deletion of elements at any position in the list and dynamically adjusts its size accordingly. ArrayList provides several methods to manipulate the elements in the list, such as add(), remove(), get(), set(), size(), and more.
+
+### Creating ArrayList objects
+
+To create an ArrayList object in Java, you first need to import the java.util.ArrayList class. You can then create a new ArrayList object using the default constructor or by passing an initial capacity as a parameter. Here's an example:
+
+```java
+import java.util.ArrayList;
+
+public class ArrayListDemo {
+   public static void main(String[] args) {
+      ArrayList<String> fruits = new ArrayList<String>();
+      fruits.add("Apple");
+      fruits.add("Banana");
+      fruits.add("Mango");
+      System.out.println(fruits);
+   }
+}
+```
+
+In the above example, we create a new ArrayList object called `fruits` and add three elements to it using the `add()` method. We then print out the contents of the ArrayList using the `println()` method.
+
+### Adding and removing elements
+
+ArrayList provides several methods to add and remove elements from the list. The `add()` method can be used to add elements to the end of the list, while the `remove()` method can be used to remove elements from the list by index or by value. Here's an example:
+
+```java
+import java.util.ArrayList;
+
+public class ArrayListDemo {
+   public static void main(String[] args) {
+      ArrayList<String> fruits = new ArrayList<String>();
+      fruits.add("Apple");
+      fruits.add("Banana");
+      fruits.add("Mango");
+
+      // add an element at a specific index
+      fruits.add(1, "Orange");
+      System.out.println(fruits);
+
+      // remove an element by value
+      fruits.remove("Banana");
+      System.out.println(fruits);
+
+      // remove an element by index
+      fruits.remove(0);
+      System.out.println(fruits);
+   }
+}
+```
+
+In the above example, we add an element to the ArrayList at index 1 using the `add()` method. We then remove an element from the list by value using the `remove()` method and another element by index using the same method.
+
+### Accessing and modifying elements
+
+ArrayList provides several methods to access and modify elements in the list. The `get()` method can be used to retrieve an element by index, while the `set()` method can be used to modify an element at a specific index. Here's an example:
+
+```java
+import java.util.ArrayList;
+
+public class ArrayListDemo {
+   public static void main(String[] args) {
+      ArrayList<String> fruits = new ArrayList<String>();
+      fruits.add("Apple");
+      fruits.add("Banana");
+      fruits.add("Mango");
+
+      // get an element by index
+      String fruit = fruits.get(1);
+      System.out.println(fruit);
+
+      // set an element at a specific index
+      fruits.set(0, "Orange");
+      System.out.println(fruits);
+   }
+}
+```
+
+In the above example, we retrieve an element from the ArrayList by index using the `get()` method and assign it to a variable called `fruit`. We then modify an element in the list at index 0 using the `set()` method.
+
+## Conclusion
+
+In this lesson, we introduced the ArrayList class in Java, which is a dynamic array implementation that allows you to store and manipulate objects of any type. We also learned how to create ArrayList objects, add and remove elements from the list, and access and modify elements in the list.
