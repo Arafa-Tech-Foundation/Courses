@@ -13,6 +13,17 @@
   "description": "Learn Java programming and prepare for the AP Computer Science A exam.",
   "modules": [
     {
+      "name": "Module 0: Installing Java / Setting up IDE",
+      "lessons": [
+        {
+          "name": "installation",
+          "video": "0-1.mp4"
+        },
+        { "name": "setting_up_ide", "video": "0-2.mp4" },
+				{ "name": "hello_world", "video": "0-3.mp4"}
+      ]
+    },
+    {
       "name": "Module 1: Primitive Types",
       "lessons": [
         {
