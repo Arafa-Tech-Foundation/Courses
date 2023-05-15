@@ -44,7 +44,7 @@
       "lessons": [
         { "name": "conditional_statements_if_else", "video": "4-1.mp4" },
         { "name": "switch_statements", "video": "4-2.mp4" },
-        { "name": "loops_for_while_do-while", "video": "4-3.mp4" }
+        { "name": "loops_for_while_do_while", "video": "4-3.mp4" }
       ]
     },
     {
