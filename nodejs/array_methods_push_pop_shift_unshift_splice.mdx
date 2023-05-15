@@ -1,0 +1,71 @@
+# Module 6: Arrays and Objects in Node.js
+
+## Lesson 2: Array Methods (push, pop, shift, unshift, splice)
+
+Welcome to Lesson 2 of Module 6! In this lesson, we'll learn about the different methods available for arrays in Node.js.
+
+### Arrays in Node.js
+
+An array is a collection of values or elements, represented by a single variable. In Node.js, arrays can be declared and initialized like so:
+
+```javascript
+let numbers = [1, 2, 3, 4, 5];
+```
+
+### Array Methods
+
+There are several built-in methods available for arrays in Node.js that allow for manipulation and retrieval of data within the array.
+
+#### push()
+
+The `push()` method adds one or more elements to the end of an array. Let's take a look at an example:
+
+```javascript
+let numbers = [1, 2, 3, 4, 5];
+numbers.push(6);
+console.log(numbers); // Output: [1, 2, 3, 4, 5, 6]
+```
+
+#### pop()
+
+The `pop()` method removes the last element of an array. Here's an example:
+
+```javascript
+let numbers = [1, 2, 3, 4, 5];
+numbers.pop();
+console.log(numbers); // Output: [1, 2, 3, 4]
+```
+
+#### shift()
+
+The `shift()` method removes the first element of an array. Let's take a look:
+
+```javascript
+let numbers = [1, 2, 3, 4, 5];
+numbers.shift();
+console.log(numbers); // Output: [2, 3, 4, 5]
+```
+
+#### unshift()
+
+The `unshift()` method adds one or more elements to the beginning of an array. Here's an example:
+
+```javascript
+let numbers = [1, 2, 3, 4, 5];
+numbers.unshift(0);
+console.log(numbers); // Output: [0, 1, 2, 3, 4, 5]
+```
+
+#### splice()
+
+The `splice()` method allows for adding or removing elements from an array at a specified index. Let's see an example:
+
+```javascript
+let numbers = [1, 2, 3, 4, 5];
+numbers.splice(2, 1); // Removes 1 element at index 2
+console.log(numbers); // Output: [1, 2, 4, 5]
+```
+
+### Conclusion
+
+In this lesson, we've learned about the different array methods available in Node.js, including `push()`, `pop()`, `shift()`, `unshift()`, and `splice()`. These methods are essential for manipulation and retrieval of data within arrays. In the next lesson, we'll learn about creating and accessing objects in Node.js.

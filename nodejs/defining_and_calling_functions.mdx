@@ -1,0 +1,53 @@
+# Module 5: Functions in Node.js
+
+## Lesson 1: Defining and calling functions
+
+Welcome to the first lesson of Module 5: Functions in Node.js! In this lesson, we'll learn about defining and calling functions in Node.js.
+
+### What are functions?
+
+Functions are blocks of code that perform a specific task. They can be used to avoid code duplication, increase code reusability, and improve code organization. Functions take input, called parameters, and return output, called return values.
+
+### Defining functions
+
+To define a function in Node.js, we use the `function` keyword followed by the function name, parameters (if any), and the function body enclosed in curly braces. Here's an example:
+
+```javascript
+function sayHello(name) {
+  console.log(`Hello, ${name}!`);
+}
+```
+
+In this example, we define a function called `sayHello` that takes one parameter called `name` and logs a greeting message to the console.
+
+### Calling functions
+
+To call a function in Node.js, we use the function name followed by parentheses and the arguments (if any) enclosed in parentheses. Here's an example:
+
+```javascript
+sayHello("John");
+```
+
+In this example, we call the `sayHello` function with the argument `'John'`.
+
+### Function example
+
+Let's look at a more practical example. Here's a function that calculates the area of a rectangle:
+
+```javascript
+function calculateArea(width, height) {
+  return width * height;
+}
+
+const width = 5;
+const height = 10;
+const area = calculateArea(width, height);
+
+console.log(`The area of the rectangle is ${area}`);
+```
+
+In this example, we define a function called `calculateArea` that takes two parameters, `width` and `height`, and returns the product of `width` and `height`. We then call the `calculateArea` function with the `width` and `height` variables and assign the result to the `area` variable. Finally, we log the result to the console.
+
+## Conclusion
+
+In this lesson, we learned about defining and calling functions in Node.js. Functions are essential building blocks in programming and can help make code more modular, reusable, and organized. In the next lesson, we'll learn about function parameters and return statements in Node.js.

@@ -1,0 +1,58 @@
+# Module 4: Control Structures in Node.js
+
+## Lesson 1: Conditional statements (if-else)
+
+Welcome to the first lesson of the Control Structures module! In this lesson, we'll learn about conditional statements in Node.js and how to use the `if-else` statement.
+
+### Conditional Statements
+
+Conditional statements are used to perform different actions based on different conditions. In Node.js, the most commonly used conditional statement is the `if-else` statement.
+
+The `if-else` statement has the following syntax:
+
+```javascript
+if (condition) {
+  // Code to execute if condition is true
+} else {
+  // Code to execute if condition is false
+}
+```
+
+The `condition` is an expression that evaluates to either `true` or `false`. If the `condition` is true, the code inside the curly braces following the `if` statement is executed. If the `condition` is false, the code inside the curly braces following the `else` statement is executed.
+
+Let's see an example:
+
+```javascript
+let x = 10;
+if (x > 5) {
+  console.log("x is greater than 5");
+} else {
+  console.log("x is less than or equal to 5");
+}
+```
+
+In this example, the `condition` is `x > 5`. Since `x` is equal to 10, which is greater than 5, the output of this code will be "x is greater than 5".
+
+### Nesting Conditional Statements
+
+You can also nest conditional statements inside each other. Here's an example:
+
+```javascript
+let x = 10;
+let y = 5;
+if (x > 5) {
+  if (y > 3) {
+    console.log("x is greater than 5 and y is greater than 3");
+  } else {
+    console.log("x is greater than 5 but y is less than or equal to 3");
+  }
+} else {
+  console.log("x is less than or equal to 5");
+}
+```
+
+In this example, we have nested an `if-else` statement inside another `if` statement. If `x` is greater than 5 and `y` is greater than 3, the output will be "x is greater than 5 and y is greater than 3". If `x` is greater than 5 but `y` is less than or equal to 3, the output will be "x is greater than 5 but y is less than or equal to 3". If `x` is less than or equal to 5, the output will be "x is less than or equal to 5".
+
+## Conclusion
+
+In this lesson, we learned about conditional statements in Node.js and how to use the `if-else` statement. We saw how to write simple conditional statements and how to nest them inside each other to create more complex logic. In the next lesson, we'll learn about switch statements, another type of conditional statement in Node.js.

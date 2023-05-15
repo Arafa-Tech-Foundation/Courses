@@ -1,0 +1,44 @@
+# Module 5: Functions in Node.js
+
+## Lesson 2: Function parameters and return statements
+
+Welcome to the second lesson of the Functions in Node.js module! In this lesson, we'll learn about function parameters and return statements, which are essential concepts in JavaScript programming.
+
+### Function Parameters
+
+Function parameters are variables that are passed into a function when it is called. They allow a function to receive input values and perform operations on them.
+
+In JavaScript, functions can have any number of parameters, and they are separated by commas. Here's an example:
+
+```javascript
+function addNumbers(num1, num2) {
+  return num1 + num2;
+}
+
+const sum = addNumbers(3, 5);
+console.log(sum); // Output: 8
+```
+
+In the example above, the `addNumbers` function takes two parameters `num1` and `num2`, and it returns their sum. When the function is called with arguments `3` and `5`, it returns the sum `8`, which is stored in the `sum` variable.
+
+### Return Statements
+
+A return statement is used to return a value from a function. When a return statement is executed, the function stops executing, and the value is returned to the caller.
+
+In JavaScript, functions can return any value, including strings, numbers, objects, and even other functions. Here's an example:
+
+```javascript
+function multiplyNumbers(num1, num2) {
+  const product = num1 * num2;
+  return product;
+}
+
+const result = multiplyNumbers(4, 6);
+console.log(result); // Output: 24
+```
+
+In the example above, the `multiplyNumbers` function takes two parameters `num1` and `num2`, calculates their product, and returns the result using the return statement. When the function is called with arguments `4` and `6`, it returns the product `24`, which is stored in the `result` variable.
+
+## Conclusion
+
+In this lesson, we learned about function parameters and return statements in JavaScript. Function parameters allow us to pass input values into a function, and return statements allow us to return values from a function. These are essential concepts in JavaScript programming and are used extensively in web development. In the next lesson, we'll learn about creating and accessing arrays in Node.js.

@@ -1,0 +1,50 @@
+# Module 9: Asynchronous Programming in Node.js
+
+## Lesson 2: Callback Functions
+
+Welcome to the second lesson of Module 9: Asynchronous Programming in Node.js. In this lesson, we'll be discussing callback functions in Node.js and how they are used in asynchronous programming.
+
+### What are Callback Functions?
+
+A callback function is a function that is passed as an argument to another function and is executed after the first function completes its operation. In Node.js, callback functions are commonly used for asynchronous programming.
+
+In asynchronous programming, a function does not wait for an operation to complete before moving on to the next line of code. Instead, it executes the operation in the background and moves on to the next line of code immediately. When the operation is complete, the callback function is called to handle the result.
+
+### How to Use Callback Functions in Node.js
+
+To use a callback function in Node.js, you pass it as an argument to a function that performs an asynchronous operation. The asynchronous operation runs in the background, and when it completes, the callback function is executed to handle the result.
+
+Here is an example of using a callback function to read a file asynchronously in Node.js:
+
+```javascript
+const fs = require("fs");
+
+fs.readFile("/path/to/file", (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
+```
+
+In the above example, `fs.readFile` is an asynchronous function that reads a file and returns its contents. The function takes two arguments: the path to the file and a callback function. If an error occurs while reading the file, the error is passed to the callback function as the first argument. If the operation is successful, the contents of the file are passed to the callback function as the second argument.
+
+### Nested Callback Functions
+
+In Node.js, it is common to use nested callback functions to perform multiple asynchronous operations. Here is an example:
+
+```javascript
+const fs = require("fs");
+
+fs.readFile("/path/to/file1", (err, data1) => {
+  if (err) throw err;
+  fs.readFile("/path/to/file2", (err, data2) => {
+    if (err) throw err;
+    console.log(data1 + data2);
+  });
+});
+```
+
+In the above example, we are reading the contents of two files asynchronously and concatenating their contents. Note that the second `fs.readFile` function is nested inside the callback function of the first `fs.readFile` function.
+
+## Conclusion
+
+In this lesson, we discussed callback functions in Node.js and how they are used in asynchronous programming. Callback functions are a powerful tool in Node.js and are commonly used to handle asynchronous operations. In the next lesson, we'll be discussing promises in Node.js.

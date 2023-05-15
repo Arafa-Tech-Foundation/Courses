@@ -1,0 +1,61 @@
+# Module 9: Asynchronous Programming in Node.js
+
+## Lesson 3: Promises
+
+Welcome to the third lesson of Module 9 of the Introduction to Node.js course! In the previous lessons, we learned about synchronous and asynchronous programming and callback functions. In this lesson, we will learn about Promises, which is another way of handling asynchronous operations in Node.js.
+
+### What are Promises?
+
+Promises are objects in JavaScript that represent a value that may not be available yet but will be resolved at some point in the future. Promises are used to handle asynchronous operations and to avoid callback hell, a situation where nested callbacks make code difficult to read and maintain.
+
+### Creating Promises
+
+In Node.js, we can create a Promise using the Promise constructor. The constructor takes a single argument, a function that takes two arguments: `resolve` and `reject`. The `resolve` function is called when the Promise is fulfilled, and the `reject` function is called when the Promise is rejected.
+
+```javascript
+const myPromise = new Promise((resolve, reject) => {
+  // Do some asynchronous operation
+  if (/* Operation is successful */) {
+    resolve(/* Return the value */);
+  } else {
+    reject(/* Return the error */);
+  }
+});
+```
+
+### Consuming Promises
+
+We can consume a Promise using the `.then()` and `.catch()` methods. The `.then()` method is called when the Promise is fulfilled, and the `.catch()` method is called when the Promise is rejected.
+
+```javascript
+myPromise
+  .then((value) => {
+    // Do something with the value
+  })
+  .catch((error) => {
+    // Handle the error
+  });
+```
+
+### Chaining Promises
+
+Promises can be chained together to execute multiple asynchronous operations sequentially. In a Promise chain, the output of one operation is passed as input to the next operation.
+
+```javascript
+myPromise
+  .then((value) => {
+    // Do something with the value
+    return anotherPromise;
+  })
+  .then((value) => {
+    // Do something with the value
+    return yetAnotherPromise;
+  })
+  .catch((error) => {
+    // Handle the error
+  });
+```
+
+## Conclusion
+
+In this lesson, we learned about Promises in Node.js. Promises are a powerful tool for handling asynchronous operations and avoiding callback hell. We learned how to create a Promise using the Promise constructor, how to consume a Promise using the `.then()` and `.catch()` methods, and how to chain Promises to execute multiple asynchronous operations sequentially. In the next lesson, we'll learn about `async`/`await`, a new feature in ECMAScript 2017 that simplifies asynchronous programming even further.

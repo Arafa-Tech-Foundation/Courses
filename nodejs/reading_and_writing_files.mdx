@@ -1,0 +1,39 @@
+# Module 7: File System in Node.js
+
+## Lesson 1: Reading and Writing Files
+
+Welcome to Module 7, Lesson 1 of the Introduction to Node.js course! In this lesson, we'll explore how to read and write files in Node.js.
+
+### Reading Files in Node.js
+
+Reading a file in Node.js is straightforward using the `fs` (file system) module. The `fs.readFile()` method is used to read a file's contents asynchronously. Let's take a look at an example:
+
+```javascript
+const fs = require("fs");
+
+fs.readFile("sample.txt", (err, data) => {
+  if (err) throw err;
+  console.log(data.toString());
+});
+```
+
+In the above example, we first import the `fs` module. We then call the `fs.readFile()` method and pass in the name of the file we want to read ('sample.txt') and a callback function that will be executed when the file is read. If an error occurs during the reading process, the callback function will throw the error. Otherwise, the contents of the file are logged to the console.
+
+### Writing Files in Node.js
+
+Writing a file in Node.js is also straightforward using the `fs` module. The `fs.writeFile()` method is used to write data to a file asynchronously. Let's take a look at an example:
+
+```javascript
+const fs = require("fs");
+
+fs.writeFile("newFile.txt", "Hello, world!", (err) => {
+  if (err) throw err;
+  console.log("File written successfully!");
+});
+```
+
+In the above example, we first import the `fs` module. We then call the `fs.writeFile()` method and pass in the name of the file we want to create ('newFile.txt'), the data we want to write to the file ('Hello, world!'), and a callback function that will be executed when the file is written. If an error occurs during the writing process, the callback function will throw the error. Otherwise, a message will be logged to the console indicating that the file was written successfully.
+
+## Conclusion
+
+In this lesson, we learned how to read and write files in Node.js using the `fs` module. Reading a file is done using the `fs.readFile()` method, while writing a file is done using the `fs.writeFile()` method. These methods are asynchronous and take a callback function that is executed when the file operation is complete. In the next lesson, we'll explore how to create and delete files and directories in Node.js.

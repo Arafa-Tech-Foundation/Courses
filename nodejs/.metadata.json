@@ -1,0 +1,116 @@
+{
+  "name": "nodejs",
+  "instructor": "Hazim O. Arafa",
+  "type": "essential",
+  "languages": ["JavaScript"],
+  "skills": [
+    "Learn the fundamentals of Node.js, including modules, event-driven programming, and asynchronous I/O.",
+    "Understand how to set up Node.js on your computer and create your first Hello World program.",
+    "Explore variables, data types, operators, expressions, control structures, and functions in Node.js.",
+    "Learn about arrays, objects, and file system operations in Node.js.",
+    "Discover how to use NPM to install and manage packages, as well as create and publish your own packages.",
+    "Master asynchronous programming in Node.js using callback functions, promises, and async/await.",
+    "Recap the course and learn best practices for Node.js development."
+  ],
+  "title": "Introduction to Node.js",
+  "minutes": 1200,
+  "description": "Learn Node.js, a popular JavaScript runtime, and build scalable network applications and web servers.",
+  "modules": [
+    {
+      "name": "Module 1: Introduction to Node.js",
+      "lessons": [
+        { "name": "overview", "video": "1-1.mp4" },
+        { "name": "setting_up_node.js_on_your_computer", "video": "1-2.mp4" },
+        { "name": "hello_world_program_in_node.js", "video": "1-3.mp4" }
+      ]
+    },
+    {
+      "name": "Module 2: Variables and Data Types in Node.js",
+      "lessons": [
+        { "name": "declaring_and_initializing_variables", "video": "2-1.mp4" },
+        { "name": "data_types_in_node.js", "video": "2-2.mp4" }
+      ]
+    },
+    {
+      "name": "Module 3: Operators and Expressions in Node.js",
+      "lessons": [
+        { "name": "arithmetic_operators", "video": "3-1.mp4" },
+        { "name": "comparison_operators", "video": "3-2.mp4" },
+        { "name": "logical_operators", "video": "3-3.mp4" }
+      ]
+    },
+    {
+      "name": "Module 4: Control Structures in Node.js",
+      "lessons": [
+        { "name": "conditional_statements_if_else", "video": "4-1.mp4" },
+        { "name": "switch_statements", "video": "4-2.mp4" },
+        { "name": "loops_for_while_do-while", "video": "4-3.mp4" }
+      ]
+    },
+    {
+      "name": "Module 5: Functions in Node.js",
+      "lessons": [
+        { "name": "defining_and_calling_functions", "video": "5-1.mp4" },
+        {
+          "name": "function_parameters_and_return_statements",
+          "video": "5-2.mp4"
+        }
+      ]
+    },
+    {
+      "name": "Module 6: Arrays and Objects in Node.js",
+      "lessons": [
+        { "name": "creating_and_accessing_arrays", "video": "6-1.mp4" },
+        {
+          "name": "array_methods_push_pop_shift_unshift_splice",
+          "video": "6-2.mp4"
+        },
+        { "name": "creating_and_accessing_objects", "video": "6-3.mp4" },
+        { "name": "object_methods_keys_values_entries", "video": "6-4.mp4" }
+      ]
+    },
+    {
+      "name": "Module 7: File System in Node.js",
+      "lessons": [
+        { "name": "reading_and_writing_files", "video": "7-1.mp4" },
+        {
+          "name": "creating_and_deleting_files_and_directories",
+          "video": "7-2.mp4"
+        }
+      ]
+    },
+    {
+      "name": "Module 8: NPM in Node.js",
+      "lessons": [
+        { "name": "installing_and_using_packages", "video": "8-1.mp4" },
+        { "name": "creating_and_publishing_packages", "video": "8-2.mp4" }
+      ]
+    },
+    {
+      "name": "Module 9: Asynchronous Programming in Node.js",
+      "lessons": [
+        {
+          "name": "synchronous_vs_asynchronous_programming",
+          "video": "9-1.mp4"
+        },
+        { "name": "callback_functions", "video": "9-2.mp4" },
+        { "name": "promises", "video": "9-3.mp4" },
+        { "name": "async_await", "video": "9-4.mp4" }
+      ]
+    },
+    {
+      "name": "Module 10: Conclusion",
+      "lessons": [
+        { "name": "recap_of_the_course", "video": "10-1.mp4" },
+        {
+          "name": "best_practices_in_node.js_development",
+          "video": "10-2.mp4"
+        },
+        {
+          "name": "resources_for_further_learning_and_development",
+          "video": "10-3.mp4"
+        }
+      ]
+    }
+  ]
+}

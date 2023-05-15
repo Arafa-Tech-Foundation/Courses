@@ -1,0 +1,55 @@
+# Module 4: Control Structures in Node.js
+
+## Lesson 2: Switch statements
+
+Welcome to Lesson 2 of Module 4: Control Structures in Node.js. In this lesson, we'll be discussing Switch Statements, another conditional statement in JavaScript.
+
+### Switch Statements
+
+Switch statements allow you to compare a value against multiple options and execute code based on which option matches the value. The switch statement takes in a value and evaluates it against multiple cases. If a case matches the value, the corresponding code block is executed.
+
+```javascript
+switch(expression) {
+  case option1:
+    // Code block for option 1
+    break;
+  case option2:
+    // Code block for option 2
+    break;
+  case option3:
+    // Code block for option 3
+    break;
+  default:
+    // Default code block
+}
+```
+
+In the switch statement, the expression is the value being compared to the cases. Each case is a possible value that the expression may match. If none of the cases match, the code block in the default statement is executed.
+
+### Example
+
+Let's take a look at an example of a switch statement:
+
+```javascript
+let day = "Monday";
+
+switch(day) {
+  case "Monday":
+    console.log("It's Monday!");
+    break;
+  case "Tuesday":
+    console.log("It's Tuesday!");
+    break;
+  case "Wednesday":
+    console.log("It's Wednesday!");
+    break;
+  default:
+    console.log("It's not Monday, Tuesday, or Wednesday.");
+}
+```
+
+In this example, we are using the switch statement to evaluate the value of the `day` variable. If the value matches one of the cases, the corresponding code block is executed. In this case, the value of `day` is "Monday", so the first case is executed, and "It's Monday!" is logged to the console.
+
+### Conclusion
+
+In this lesson, we covered Switch Statements, which allow us to compare a value against multiple options and execute code based on which option matches the value. We also saw an example of how to use a switch statement in JavaScript. In the next lesson, we'll be discussing Loops in Node.js.

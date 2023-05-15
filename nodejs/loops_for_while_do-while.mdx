@@ -1,0 +1,96 @@
+# Module 4: Control Structures in Node.js
+
+## Lesson 3: Loops (for, while, do-while)
+
+Welcome to the third lesson of Module 4, where we'll learn about loops in Node.js. Loops are a fundamental part of programming that allows us to execute a block of code repeatedly.
+
+### For Loop
+
+A for loop is used when we know the number of times we need to execute a block of code. The basic syntax of a for loop is as follows:
+
+```javascript
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+```
+
+In the example above, the loop will execute five times, with the value of i incrementing by one on each iteration.
+
+### While Loop
+
+A while loop is used when we don't know how many times we need to execute a block of code. The loop will continue to execute until the condition becomes false. The basic syntax of a while loop is as follows:
+
+```javascript
+let i = 0;
+
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+```
+
+### Do-While Loop
+
+A do-while loop is similar to a while loop, but it will execute at least once even if the condition is false. The basic syntax of a do-while loop is as follows:
+
+```javascript
+let i = 0;
+
+do {
+  console.log(i);
+  i++;
+} while (i < 5);
+```
+
+### Loop Control Statements
+
+Loop control statements allow us to control the flow of the loop. The three loop control statements are break, continue, and return.
+
+#### Break Statement
+
+The break statement is used to exit a loop prematurely. When the break statement is encountered, the loop immediately terminates, and the control is transferred to the statement following the loop.
+
+```javascript
+for (let i = 0; i < 5; i++) {
+  if (i === 3) {
+    break;
+  }
+  console.log(i);
+}
+```
+
+#### Continue Statement
+
+The continue statement is used to skip an iteration of the loop. When the continue statement is encountered, the current iteration is skipped, and the control is transferred to the next iteration.
+
+```javascript
+for (let i = 0; i < 5; i++) {
+  if (i === 3) {
+    continue;
+  }
+  console.log(i);
+}
+```
+
+#### Return Statement
+
+The return statement is used to exit a function. When the return statement is encountered inside a loop, the loop is terminated, and the function returns the value specified in the return statement.
+
+```javascript
+function sum() {
+  let result = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    result += arguments[i];
+    if (arguments[i] === 0) {
+      return result;
+    }
+  }
+  return result;
+}
+
+console.log(sum(1, 2, 3, 0, 4, 5)); // Output: 6
+```
+
+## Conclusion
+
+In this lesson, we learned about loops in Node.js. Loops are an essential part of programming that allow us to execute a block of code repeatedly. We covered the syntax and usage of for, while, and do-while loops, as well as loop control statements like break, continue, and return. In the next lesson, we'll learn about defining and calling functions in Node.js.

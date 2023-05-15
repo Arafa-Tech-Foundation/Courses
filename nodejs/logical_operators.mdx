@@ -1,0 +1,46 @@
+# Module 3: Operators and Expressions in Node.js
+
+## Lesson 3: Logical Operators
+
+Welcome to the third lesson of Module 3: Operators and Expressions in Node.js. In this lesson, we'll learn about logical operators in Node.js and how to use them in our code.
+
+### Logical Operators
+
+Logical operators are used to evaluate multiple conditions in an expression. In Node.js, we have three logical operators:
+
+- **&&** (AND): Returns true if both conditions are true.
+- **||** (OR): Returns true if at least one of the conditions is true.
+- **!** (NOT): Returns the opposite of the condition.
+
+### Example
+
+Let's take a look at an example to better understand how logical operators work:
+
+```javascript
+let x = 10;
+let y = 5;
+
+if (x > 5 && y > 3) {
+  console.log("Both conditions are true");
+}
+
+if (x > 5 || y > 7) {
+  console.log("At least one condition is true");
+}
+
+if (!(x > 5)) {
+  console.log("The condition is false");
+}
+```
+
+In this example, we have two variables, `x` and `y`. We're using the logical operators `&&`, `||`, and `!` to evaluate conditions based on the values of these variables.
+
+### Order of Precedence
+
+It's important to note that logical operators have a specific order of precedence in Node.js, which determines the order in which they're evaluated in an expression.
+
+The order of precedence is as follows: `!` (NOT), `&&` (AND), `||` (OR). If an expression contains multiple logical operators, they're evaluated in this order from left to right.
+
+### Conclusion
+
+In this lesson, we learned about logical operators in Node.js and how to use them in our code. Logical operators are useful for evaluating multiple conditions in an expression and can help us make more complex decisions in our code. In the next lesson, we'll learn about conditional statements in Node.js, which allow us to execute code based on certain conditions.

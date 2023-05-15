@@ -1,0 +1,70 @@
+# Module 6: Arrays and Objects in Node.js
+
+## Lesson 4: Object methods (keys, values, entries)
+
+Welcome to the fourth lesson of Module 6! In this lesson, we'll learn about Object methods in Node.js, specifically `Object.keys()`, `Object.values()`, and `Object.entries()`. These methods are used to retrieve information about objects and their properties.
+
+### Object.keys()
+
+`Object.keys()` is a method that returns an array of a given object's own property names. It takes an object as an argument and returns an array containing the keys of that object.
+
+Here's an example:
+
+```javascript
+const person = {
+  name: "John Doe",
+  age: 30,
+  gender: "male",
+};
+
+const keys = Object.keys(person);
+
+console.log(keys); // Output: ['name', 'age', 'gender']
+```
+
+In the example above, we defined an object called `person` with three properties: `name`, `age`, and `gender`. We then used the `Object.keys()` method to retrieve an array of the object's property names and assigned it to the `keys` variable. Finally, we logged the `keys` array to the console.
+
+### Object.values()
+
+`Object.values()` is a method that returns an array of a given object's own enumerable property values. It takes an object as an argument and returns an array containing the values of that object.
+
+Here's an example:
+
+```javascript
+const person = {
+  name: "John Doe",
+  age: 30,
+  gender: "male",
+};
+
+const values = Object.values(person);
+
+console.log(values); // Output: ['John Doe', 30, 'male']
+```
+
+In the example above, we defined an object called `person` with three properties: `name`, `age`, and `gender`. We then used the `Object.values()` method to retrieve an array of the object's property values and assigned it to the `values` variable. Finally, we logged the `values` array to the console.
+
+### Object.entries()
+
+`Object.entries()` is a method that returns an array of a given object's own enumerable property `[key, value]` pairs. It takes an object as an argument and returns an array containing arrays, where each inner array contains two items: the key and value of each property.
+
+Here's an example:
+
+```javascript
+const person = {
+  name: "John Doe",
+  age: 30,
+  gender: "male",
+};
+
+const entries = Object.entries(person);
+
+console.log(entries);
+// Output: [['name', 'John Doe'], ['age', 30], ['gender', 'male']]
+```
+
+In the example above, we defined an object called `person` with three properties: `name`, `age`, and `gender`. We then used the `Object.entries()` method to retrieve an array of the object's property `[key, value]` pairs and assigned it to the `entries` variable. Finally, we logged the `entries` array to the console.
+
+## Conclusion
+
+In this lesson, we learned about Object methods in Node.js, specifically `Object.keys()`, `Object.values()`, and `Object.entries()`. These methods are used to retrieve information about objects and their properties. `Object.keys()` returns an array of an object's property names, `Object.values()` returns an array of an object's property values, and `Object.entries()` returns an array of an object's `[key, value]` pairs. In the next lesson, we'll learn about the File System module in Node.js and how to read and write files.

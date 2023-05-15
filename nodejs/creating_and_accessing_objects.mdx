@@ -1,0 +1,66 @@
+# Module 6: Arrays and Objects in Node.js
+
+## Lesson 3: Creating and Accessing Objects
+
+Welcome to Lesson 3 of Module 6! In this lesson, we'll learn about objects in Node.js, including how to create and access them.
+
+### What are Objects?
+
+In JavaScript, an object is a collection of properties that can be used to store and manipulate data. Objects can be created using object literals or the `Object()` constructor.
+
+```javascript
+// Creating an object using object literals
+const person = { name: "John", age: 30 };
+
+// Creating an object using the Object() constructor
+const car = new Object();
+car.make = "Toyota";
+car.model = "Camry";
+```
+
+### Accessing Object Properties
+
+Object properties can be accessed using dot notation or bracket notation.
+
+```javascript
+// Accessing object properties using dot notation
+console.log(person.name); // Output: John
+
+// Accessing object properties using bracket notation
+console.log(car["make"]); // Output: Toyota
+```
+
+### Object Methods
+
+Objects in JavaScript can also have methods, which are functions that can be called on the object.
+
+```javascript
+const person = {
+  name: "John",
+  age: 30,
+  greet: function () {
+    console.log(
+      `Hello, my name is ${this.name} and I'm ${this.age} years old.`,
+    );
+  },
+};
+
+person.greet(); // Output: Hello, my name is John and I'm 30 years old.
+```
+
+### Object Destructuring
+
+Object destructuring is a convenient way to extract properties from an object and assign them to variables.
+
+```javascript
+const person = { name: "John", age: 30 };
+
+const { name, age } = person;
+
+console.log(name); // Output: John
+console.log(age); // Output: 30
+```
+
+## Conclusion
+
+In this lesson, we learned about objects in Node.js, including how to create and access them, define object methods, and use object destructuring to extract object properties. In the next lesson, we'll cover object methods in Node.js and how they can be used to manipulate object properties and values.
