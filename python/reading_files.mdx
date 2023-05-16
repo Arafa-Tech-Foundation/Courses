@@ -1,0 +1,80 @@
+# Module 5: File Input/Output in Python
+
+## Lesson 1: Reading Files
+
+In Python, file input/output (I/O) allows us to work with external files stored on the computer's disk. We can read data from files, modify the data, and write data back to files. In this lesson, we will focus on reading files in Python.
+
+## Opening a File
+
+Before we can read data from a file, we need to open the file in read mode using the `open()` function. The `open()` function takes the file name as a parameter and returns a file object that we can use to access the file's contents. For example:
+
+```python
+file = open("example.txt", "r")
+```
+
+In this example, we open the file named "example.txt" in read mode (`"r"`) and assign the file object to the variable `file`.
+
+## Reading the Entire File
+
+Once we have opened a file, we can read its contents using the `read()` method of the file object. The `read()` method returns a string containing the file's entire contents. For example:
+
+```python
+file_contents = file.read()
+```
+
+In this example, we read the contents of the file object `file` and assign it to the variable `file_contents`.
+
+## Reading a Line
+
+To read a single line from a file, we can use the `readline()` method. The `readline()` method reads the next line in the file and returns it as a string. For example:
+
+```python
+line = file.readline()
+```
+
+In this example, we read the next line from the file object `file` and assign it to the variable `line`.
+
+## Reading Multiple Lines
+
+If we want to read multiple lines from a file, we can use a loop to repeatedly call the `readline()` method. The loop continues until the `readline()` method returns an empty string, indicating that there are no more lines to read. For example:
+
+```python
+lines = []
+line = file.readline()
+while line != "":
+    lines.append(line)
+    line = file.readline()
+```
+
+In this example, we read multiple lines from the file object `file` and store them in a list named `lines`.
+
+## Closing the File
+
+After we have finished reading from a file, it is important to close the file using the `close()` method of the file object. Closing the file frees up system resources and ensures that any changes made to the file are saved. For example:
+
+```python
+file.close()
+```
+
+In this example, we close the file object `file`.
+
+## Handling Exceptions
+
+When working with files, it is good practice to handle exceptions that may occur. For example, if the file does not exist or cannot be opened, a `FileNotFoundError` will be raised. To handle such exceptions, we can use a `try-except` block. For example:
+
+```python
+try:
+    file = open("example.txt", "r")
+    file_contents = file.read()
+    # Process the file contents
+except FileNotFoundError:
+    print("The file does not exist.")
+finally:
+    file.close()
+```
+
+In this example, we open the file "example.txt" and read its contents within a `try` block. If a `FileNotFoundError` occurs, we print an error message. The `finally` block ensures that the file is closed, regardless of whether an exception was raised or not.
+
+## Conclusion
+
+In this lesson, we've learned how to read files in Python. We explored opening a file, reading the entire file, reading a line, reading multiple lines using a loop, closing the file, and handling exceptions. File input is an important skill in programming, and it allows

@@ -1,0 +1,62 @@
+# Module 5: File Input/Output in Python
+
+## Lesson 3: Deleting Files
+
+In Python, file input/output (I/O) operations allow us to work with files on our computer. We can perform various operations such as reading from files, writing to files, and deleting files. In this lesson, we'll focus on the process of deleting files in Python.
+
+## Deleting Files
+
+To delete a file in Python, we can use the `os` module, which provides a way to interact with the operating system. The `os` module contains a function called `remove()` that allows us to delete a file.
+
+Here's an example of how to delete a file using the `os.remove()` function:
+
+```python
+import os
+
+# Specify the file path
+file_path = "path/to/file.txt"
+
+# Check if the file exists
+if os.path.exists(file_path):
+    # Delete the file
+    os.remove(file_path)
+    print("File deleted successfully.")
+else:
+    print("File not found.")
+```
+
+In this example, we first import the `os` module. Then we specify the file path of the file we want to delete. We use the `os.path.exists()` function to check if the file exists. If the file exists, we call the `os.remove()` function and pass in the file path to delete the file. Finally, we print a success message if the file is deleted or a "File not found" message if the file doesn't exist.
+
+**Note:** Be careful when deleting files, as the operation is irreversible. Make sure you have a backup or confirm that you no longer need the file before deleting it.
+
+## Handling Errors
+
+When deleting files, it's important to handle errors properly. If the file doesn't exist or there are permission issues, an error may occur. To handle such situations, we can use a `try-except` block to catch and handle any exceptions that occur during the deletion process.
+
+Here's an example that demonstrates error handling when deleting a file:
+
+```python
+import os
+
+file_path = "path/to/nonexistent_file.txt"
+
+try:
+    os.remove(file_path)
+    print("File deleted successfully.")
+except FileNotFoundError:
+    print("File not found.")
+except PermissionError:
+    print("Permission denied. Unable to delete the file.")
+except Exception as e:
+    print(f"An error occurred: {e}")
+```
+
+In this example, we attempt to delete a file that doesn't exist. If a `FileNotFoundError` exception is raised, we catch it and print a "File not found" message. If a `PermissionError` exception occurs due to insufficient permissions to delete the file, we catch it and print a "Permission denied" message. Finally, if any other exception occurs, we catch it and print an error message with the specific exception details.
+
+It's important to handle errors gracefully to provide informative feedback to the user and prevent program crashes.
+
+## Conclusion
+
+In this lesson, we learned how to delete files in Python using the `os.remove()` function from the `os` module. We also explored error handling techniques to handle different scenarios when deleting files. Remember to exercise caution when deleting files and ensure that you have appropriate permissions and backups in place. File deletion is an irreversible operation, so make sure you double-check before proceeding.
+
+Understanding file deletion in Python expands your ability to manage files and organize your data effectively. With these skills, you can confidently work with files and perform file I/O operations in your Python programs.

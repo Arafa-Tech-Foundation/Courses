@@ -4,13 +4,13 @@
 
 Lesson 1: Overview
 Lesson 2: Installation
-Lesson 3: Hello World program in Python
+Lesson 3: First Program
 
 ## Module 2: Basics of Python
 
 Lesson 1: Data types
 Lesson 2: Declaring and initializing variables
-Lesson 3: Operators
+Lesson 3: Basic Operators
 Lesson 4: Conditional statements (if-else)
 Lesson 5: Loops (for, while)
 

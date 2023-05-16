@@ -23,9 +23,9 @@
       "name": "Module 2: Basics of Python",
       "lessons": [
         { "name": "data_types", "video": "2-1.mp4" },
-        { "name": "variables", "video": "2-2.mp4" },
+        { "name": "declaring_and_initializing_variables", "video": "2-2.mp4" },
         { "name": "basic_operations", "video": "2-3.mp4" },
-        { "name": "conditionals", "video": "2-4.mp4" },
+        { "name": "conditional_statements", "video": "2-4.mp4" },
         { "name": "loops", "video": "2-5.mp4" }
       ]
     },

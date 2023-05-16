@@ -1,0 +1,62 @@
+# Module 5: File Input/Output in Python
+
+## Lesson 2: Writing Files
+
+In Python, file input/output (I/O) allows you to work with external files. In this lesson, we'll focus on writing files and learn how to create and write data to a file.
+
+## Creating a File
+
+Before we can write data to a file, we need to create it. Python provides a built-in function called `open()` that allows us to create a file object for writing.
+
+To create a new file, we specify the file name and the mode in which we want to open it. For writing, we use the mode `'w'`. Here's an example:
+
+```python
+file = open('example.txt', 'w')
+```
+
+In this example, we create a new file named `example.txt` and open it in write mode.
+
+## Writing to a File
+
+Once we have a file object, we can use various methods to write data to the file. The most common method is `write()`, which writes a string of characters to the file.
+
+Here's an example that demonstrates writing data to a file:
+
+```python
+file = open('example.txt', 'w')
+file.write("Hello, world!")
+file.close()
+```
+
+In this example, we write the string `"Hello, world!"` to the file `example.txt` and then close the file using the `close()` method. It's essential to close the file after writing to ensure that all data is properly saved.
+
+## Writing Multiple Lines to a File
+
+To write multiple lines to a file, you can use the `write()` method multiple times, adding a newline character (`'\n'`) at the end of each line. Here's an example:
+
+```python
+file = open('example.txt', 'w')
+file.write("Line 1\n")
+file.write("Line 2\n")
+file.write("Line 3\n")
+file.close()
+```
+
+In this example, we write three lines of text to the file `example.txt`, with each line followed by a newline character (`'\n'`).
+
+## Context Managers and Automatic File Closure
+
+To ensure that a file is properly closed even if an exception occurs, it's recommended to use a context manager. Python's `with` statement provides a convenient way to work with files.
+
+Here's an example of using a context manager to write data to a file:
+
+```python
+with open('example.txt', 'w') as file:
+    file.write("Hello, world!")
+```
+
+In this example, the `with` statement automatically takes care of closing the file, even if an exception occurs within the block.
+
+## Conclusion
+
+In this lesson, we've learned how to write data to a file in Python. We explored creating a file using the `open()` function, writing to a file using the `write()` method, and ensuring proper file closure with context managers. Writing files is an essential skill for working with external data in your Python programs.

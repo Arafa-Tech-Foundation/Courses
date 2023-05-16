@@ -1,0 +1,92 @@
+# Module 5: Modules and Packages in Python
+
+## Lesson 1: Creating Your Own Modules and Packages
+
+In Python, modules and packages provide a way to organize and reuse code. In this lesson, we'll explore how to create your own modules and packages.
+
+## Modules
+
+A module is a file containing Python code that can be imported and used in other programs. Modules allow you to organize your code into logical units and promote code reusability.
+
+To create a module, follow these steps:
+
+1. Create a new file with a `.py` extension, e.g., `my_module.py`.
+2. Write your Python code inside the file, defining functions, classes, and variables as needed.
+3. Save the file in the same directory as your program or in a directory listed in the Python module search path.
+
+For example, let's create a module named `my_module.py` with a function `greet()`:
+
+```python
+# my_module.py
+
+def greet(name):
+    print(f"Hello, {name}!")
+```
+
+Once you have created the module, you can import it in other Python programs using the `import` statement:
+
+```python
+import my_module
+
+my_module.greet("Alice")
+```
+
+This will print `Hello, Alice!`.
+
+## Packages
+
+A package is a directory that contains one or more modules. Packages provide a way to organize related modules and sub-packages.
+
+To create a package, follow these steps:
+
+1. Create a new directory with a meaningful name for your package.
+2. Inside the package directory, create one or more module files (`.py` files).
+3. Optionally, you can include an `__init__.py` file, which is executed when the package is imported. This file can be left empty or can contain initialization code for the package.
+
+For example, let's create a package named `my_package` with two modules, `module1.py` and `module2.py`:
+
+```txt
+my_package/
+    __init__.py
+    module1.py
+    module2.py
+```
+
+Inside `module1.py`, we define a function `hello()`:
+
+```python
+# module1.py
+
+def hello():
+    print("Hello from module 1!")
+```
+
+Inside `module2.py`, we define a function `goodbye()`:
+
+```python
+# module2.py
+
+def goodbye():
+    print("Goodbye from module 2!")
+```
+
+To use the modules from the package, you can import them like this:
+
+```python
+import my_package.module1
+import my_package.module2
+
+my_package.module1.hello()
+my_package.module2.goodbye()
+```
+
+This will print:
+
+```txt
+Hello from module 1!
+Goodbye from module 2!
+```
+
+## Conclusion
+
+In this lesson, we've learned how to create your own modules and packages in Python. Modules and packages are powerful tools for organizing and reusing code, making your programs more modular and maintainable.
