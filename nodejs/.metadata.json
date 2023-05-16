@@ -26,8 +26,8 @@
     {
       "name": "Module 2: Variables and Data Types in Node.js",
       "lessons": [
-        { "name": "declaring_and_initializing_variables", "video": "2-1.mp4" },
-        { "name": "data_types_in_node.js", "video": "2-2.mp4" }
+        { "name": "data_types_in_node.js", "video": "2-1.mp4" },
+        { "name": "declaring_and_initializing_variables", "video": "2-2.mp4" }
       ]
     },
     {
@@ -95,20 +95,6 @@
         { "name": "callback_functions", "video": "9-2.mp4" },
         { "name": "promises", "video": "9-3.mp4" },
         { "name": "async_await", "video": "9-4.mp4" }
-      ]
-    },
-    {
-      "name": "Module 10: Conclusion",
-      "lessons": [
-        { "name": "recap_of_the_course", "video": "10-1.mp4" },
-        {
-          "name": "best_practices_in_node.js_development",
-          "video": "10-2.mp4"
-        },
-        {
-          "name": "resources_for_further_learning_and_development",
-          "video": "10-3.mp4"
-        }
       ]
     }
   ]

@@ -8,8 +8,8 @@ Lesson 3: Hello World program in Node.js
 
 ## Module 2: Variables and Data Types in Node.js
 
-Lesson 1: Declaring and initializing variables
-Lesson 2: Data types in Node.js
+Lesson 1: Data types in Node.js
+Lesson 2: Declaring and initializing variables
 
 ## Module 3: Operators and Expressions in Node.js
 

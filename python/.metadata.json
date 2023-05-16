@@ -12,15 +12,15 @@
   "description": "Learn Python, the most popular programming language in the world.",
   "modules": [
     {
-      "name": "Module 1: Introduction",
+      "name": "Module 1: Introduction to Python",
       "lessons": [
-        { "name": "overview", "video": "1-1.mp4" },
+        { "name": "course_overview", "video": "1-1.mp4" },
         { "name": "installation", "video": "1-2.mp4" },
         { "name": "first_program", "video": "1-3.mp4" }
       ]
     },
     {
-      "name": "Module 2: Basic Syntax",
+      "name": "Module 2: Basics of Python",
       "lessons": [
         { "name": "data_types", "video": "2-1.mp4" },
         { "name": "variables", "video": "2-2.mp4" },
@@ -30,16 +30,16 @@
       ]
     },
     {
-      "name": "Module 3: Functions",
+      "name": "Module 3: Functions in Python",
       "lessons": [
-        { "name": "creating_functions", "video": "3-1.mp4" },
+        { "name": "creating_and_calling_functions", "video": "3-1.mp4" },
         { "name": "parameters_and_arguments", "video": "3-2.mp4" },
         { "name": "return_values", "video": "3-3.mp4" },
         { "name": "variable_scope", "video": "3-4.mp4" }
       ]
     },
     {
-      "name": "Module 4: Lists and Dictionaries",
+      "name": "Module 4: Lists and Dictionaries in Python",
       "lessons": [
         { "name": "creating_and_accessing_lists" },
         { "name": "list_methods" },
@@ -48,37 +48,27 @@
       ]
     },
     {
-      "name": "Module 5: File Input/Output",
+      "name": "Module 5: File Input/Output in Python",
       "lessons": [
-        { "name": "reading_writing_files" },
-        { "name": "with_statement" },
-        { "name": "handling_file_exceptions" }
+        { "name": "reading_files" },
+        { "name": "writing_files" },
+        { "name": "deleting_files" }
       ]
     },
     {
-      "name": "Module 6: Modules and Packages",
+      "name": "Module 6: Modules and Packages in Python",
       "lessons": [
-        { "name": "importing_modules_and_packages" },
-        { "name": "creating_own_modules" },
-        { "name": "install_and_use_external_packages" }
+        { "name": "installing_and_importing_external_modules_and_packages" },
+        { "name": "creating_your_own_modules_and_packages" }
       ]
     },
     {
-      "name": "Module 7: Object-Oriented Programming (OOP)",
+      "name": "Module 7: Object-Oriented Programming (OOP) in Python",
       "lessons": [
         { "name": "introduction_to_OOP" },
         { "name": "classes_and_objects" },
         { "name": "methods_and_attributes" },
         { "name": "inheritance_and_polymorphism" }
-      ]
-    },
-    {
-      "name": "Module 8: Advanced Topics",
-      "lessons": [
-        { "name": "regular_expressions" },
-        { "name": "lambda_functions" },
-        { "name": "decorators" },
-        { "name": "generators" }
       ]
     }
   ]
