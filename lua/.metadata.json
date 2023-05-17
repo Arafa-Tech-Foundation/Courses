@@ -12,11 +12,11 @@
     "Master Lua libraries and advanced Lua scripting techniques.",
     "Recap the course and learn best practices for Lua scripting development."
   ],
-  "title": "Introduction to Lua Scripting",
+  "title": "Introduction to Lua",
   "description": "Learn Lua scripting, a lightweight and powerful scripting language, and create your own programs and scripts.",
   "modules": [
     {
-      "name": "Module 1: Introduction to Lua Scripting",
+      "name": "Module 1: Introduction to Lua",
       "lessons": [
         { "name": "overview", "video": "1-1.mp4" },
         { "name": "setting_up_lua_on_your_computer", "video": "1-2.mp4" },

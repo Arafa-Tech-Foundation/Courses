@@ -12,7 +12,7 @@
     "Master functional programming concepts with practical examples and assignments in Haskell.",
     "Recap the course and learn best practices for functional programming with Haskell."
   ],
-  "title": "Introduction to Functional Programming with Haskell",
+  "title": "Introduction to Haskell",
   "description": "Learn functional programming the Haskell way, and dive into the world of pure functions, functional composition, and more.",
   "modules": [
     {
