@@ -1,7 +1,7 @@
 {
   "name": "haskell",
   "instructor": "Josef Macera",
-  "type": "essentials",
+  "type": "essential",
   "languages": ["Haskell"],
   "skills": [
     "Learn the fundamentals of functional programming with Haskell, including pure functions, immutability, and composition.",
