@@ -1,0 +1,108 @@
+# Module 3: Loops and Functions in Shell Scripting
+
+## Lesson: While Loops in Bash
+
+Welcome to the lesson on while loops in Bash! In this lesson, we will learn about while loops and how they can be used in Bash scripts.
+
+### What are while loops?
+
+A while loop is a control flow statement that allows code to be executed repeatedly based on a given condition. The loop will continue to execute as long as the condition is true. 
+
+The basic syntax of a while loop in Bash is as follows:
+
+```
+while [ condition ]
+do
+  statement(s)
+done
+```
+
+Here, the `condition` is evaluated before each iteration of the loop. If the condition is true, the statements inside the loop are executed. This process repeats until the condition becomes false.
+
+### Example of while loop
+
+Let's take a look at a simple example to illustrate how a while loop works in Bash:
+
+```
+#!/bin/bash
+
+i=1
+
+while [ $i -le 5 ]
+do
+  echo "i is $i"
+  i=$((i+1))
+done
+
+echo "Loop finished"
+```
+
+In this example, we initialize a variable `i` to 1. The while loop then checks if `i` is less than or equal to 5. Since this condition is true, the statements inside the loop are executed. The `echo` statement prints out the value of `i`, and `i` is incremented by 1 using `i=$((i+1))`. This process repeats until `i` becomes 6, at which point the condition becomes false and the loop exits. The final `echo` statement is then executed.
+
+### Infinite loops
+
+Be careful when using while loops, as it's possible to create an infinite loop if the condition inside the loop is always true. For example:
+
+```
+#!/bin/bash
+
+while true
+do
+  echo "Hello, World!"
+done
+```
+
+This script will repeatedly print "Hello, World!" without stopping, since the condition `true` is always true.
+
+### Halt execution using break
+
+You can halt the execution of a loop using the `break` statement. This statement can be used to exit a loop before the condition is false. Here's an example:
+
+```
+#!/bin/bash
+
+i=1
+
+while true
+do
+  echo "i is $i"
+  i=$((i+1))
+  if [ $i -gt 5 ]
+  then
+    break
+  fi
+done
+
+echo "Loop finished"
+```
+
+In this updated example, we use an infinite loop, but we use an `if` statement to check if `i` is greater than 5. If it is, we exit the loop using `break`. The final `echo` statement is then executed.
+
+### Exercise
+
+Write a Bash script that prints out the first 10 numbers in the Fibonacci sequence using a while loop. The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding numbers.
+
+### Solution
+
+```
+#!/bin/bash
+
+n1=0
+n2=1
+i=0
+
+while [ $i -lt 10 ]
+do
+  echo $n1
+  n3=$((n1+n2))
+  n1=$n2
+  n2=$n3
+  i=$((i+1))
+done
+```
+
+In this example, we set `n1` to 0 and `n2` to 1 to initialize the first two numbers in the Fibonacci sequence. We then use a while loop to print out the first 10 numbers in the sequence. The loop runs as long as `i` is less than 10. Inside the loop, we print out `n1`, calculate the next number in the sequence (`n3`), and update `n1`, `n2`, and `i` accordingly.
+
+## Conclusion
+
+In this lesson, we learned about while loops in Bash and how they can be used to execute code repeatedly based on a given condition. We also learned about infinite loops and how to halt the execution of a loop using `break`. Finally, we practiced writing a Bash script using a while loop to generate the first 10 numbers in the Fibonacci sequence.

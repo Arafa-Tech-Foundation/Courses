@@ -1,0 +1,74 @@
+# Module 4: File System Operations and Text Processing in Bash
+
+## Lesson: File System Operations in Bash
+
+Welcome to Module 4! In this lesson, we will learn about some essential file system operations in Bash. Working with files and directories is an important aspect of Bash scripting. We will go over commands to manipulate and edit file systems, such as creating, navigating, and deleting directories and files. 
+
+### File Navigation
+
+`cd` is the command we use to change the working directory. Changing directories is one of the fundamental operations in Bash. The following are some useful directory navigation commands:
+
+```
+$ cd /mydir/subdir/newdir    # Change the current directory to /mydir/subdir/newdir
+$ cd ..                      # Move up one directory
+$ cd                        # Move to the home directory of the user
+```
+
+### Creating and Removing Directories
+
+`mkdir` is used to create directories. The following command creates a directory named "mydir" in the current working directory:
+
+```
+$ mkdir mydir  
+```
+
+To remove a directory, we use `rmdir`. Note that this can only remove empty directories.
+
+```
+$ rmdir mydir                
+```
+
+If you want to remove a directory and all its subdirectories and files, we can use `rm`. The `-r` option tells `rm` to remove directories recursively.
+
+```
+$ rm -r mydir                 
+```
+
+### Creating and Editing Files
+
+`touch` is used to create an empty file with the specified name. If the file already exists, its modified timestamp is updated. 
+
+```
+$ touch myfile.txt            
+```
+
+`nano` is a popular text editor in Bash. To create a new file using nano, type:
+
+```
+$ nano myfile.txt             
+```
+
+To open an existing file with nano:
+
+```
+$ nano /mydir/myfile.txt      
+``` 
+
+### Copy, Move, and Rename Files
+
+The `cp` command is used to copy files. Here’s how to use it:
+
+```
+$ cp source_file.txt destination_directory/
+```
+
+To move a file, we use the `mv` command. We can move a file to another directory by specifying the target directory or rename the file by changing its name.
+
+```
+$ mv old_file.txt new_file.txt        # Renaming a file
+$ mv source.txt /mydir/destination.txt  # Moving a file
+```
+
+### Conclusion
+
+In this lesson, we learned some fundamental file system operations in Bash. We discussed file navigation, creating and removing directories, creating and editing files, and copying, moving, and renaming files. Understanding these commands is essential when working with file systems in Bash. Keep practicing these operations to gain more familiarity with them. Good luck!

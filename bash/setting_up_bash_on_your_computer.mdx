@@ -1,0 +1,63 @@
+# Module 1: Introduction to Shell Scripting
+
+## Lesson 1: Setting up Bash on your Computer
+
+Welcome to the first lesson of the Introduction to Shell Scripting module! In this lesson, you'll learn how to set up Bash on your computer and write your first shell script.
+
+## What is Bash?
+
+Bash is a Unix shell and command language. It is a popular choice for writing shell scripts because it is a powerful and flexible scripting language. Bash is available on many different operating systems, including Linux, macOS, and Windows (via the Windows Subsystem for Linux).
+
+## Setting up Bash on macOS and Linux
+
+If you're using macOS or Linux, chances are you already have Bash installed on your computer. You can open a terminal window and type "bash" to start the Bash shell. If you want to make Bash your default shell, you can add the following to your .bash_profile file:
+
+```bash
+export SHELL=/bin/bash
+```
+
+## Setting up Bash on Windows
+
+If you're using Windows, you'll need to install the Windows Subsystem for Linux (WSL) to use Bash. Here's how to do it:
+
+1. Open the Microsoft Store app on your Windows computer.
+2. Search for "Ubuntu" and select "Ubuntu" from the search results.
+3. Click the "Get" button to download and install Ubuntu.
+4. Once Ubuntu is installed, open it from the Start menu.
+5. Follow the prompts to set up your Ubuntu environment.
+6. Once Ubuntu is set up, you can open a Bash shell by opening the Ubuntu app.
+
+## Your First Shell Script
+
+Now that you have Bash set up on your computer, it's time to write your first shell script! Here's a simple "Hello, World!" script to get you started:
+
+```bash
+#!/bin/bash
+echo "Hello, World!"
+```
+
+This script uses the "echo" command to print the string "Hello, World!" to the terminal. The "#!/bin/bash" line at the beginning of the script tells the system to use Bash to interpret the script.
+
+Save this script in a file called "hello.sh" and make it executable by running the following command:
+
+```bash
+chmod +x hello.sh
+```
+
+You can then run the script by typing:
+
+```bash
+./hello.sh
+```
+
+And you should see the following output:
+
+```
+Hello, World!
+```
+
+Congratulations, you just wrote and ran your first shell script!
+
+## Conclusion
+
+In this lesson, we learned how to set up Bash on your computer and how to write your first shell script. We covered the basics of shell scripting and how to run a script using Bash. From here, you can start exploring more advanced Bash commands and scripting techniques to automate your workflow.

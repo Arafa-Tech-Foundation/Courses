@@ -1,0 +1,59 @@
+# Module 2: Variables, Operators and Control Structures in Shell Scripting 
+
+## Lesson: Case Statements in Bash
+
+In this lesson, we'll learn about case statements in bash. Case statements are useful when you need to test multiple values against the same pattern. 
+
+### Syntax
+
+The syntax for a case statement in bash is:
+
+```
+case expression in
+  pattern1)
+    statements ;;
+  pattern2)
+    statements ;;
+  pattern3)
+    statements ;;
+  ...
+  *)
+    default statements ;;
+esac
+```
+
+Here, the expression is matched against each pattern until a match is found. If no match is found, the default statements are executed. 
+
+Each pattern can use wildcards such as * to match any text. You can also use multiple patterns for a single set of statements by separating them with |.
+
+### Example
+
+Let's take a look at an example that demonstrates the use of case statements in bash:
+
+```bash
+#!/bin/bash
+
+echo "Enter a number between 1 and 3: "
+read num
+
+case $num in
+  1)
+    echo "One" ;;
+  2)
+    echo "Two" ;;
+  3)
+    echo "Three" ;;
+  *)
+    echo "Invalid input" ;;
+esac
+```
+
+In this example, we prompt the user to enter a number between 1 and 3. We then use a case statement to match the input against each number. If the input matches one of the patterns, the corresponding statement is executed. Otherwise, the default statement is executed.
+
+### Use Cases
+
+Case statements can be used in a variety of situations. For example, you can use case statements to perform different actions based on the user's input, or to perform different actions based on the type of file you are working with.
+
+### Conclusion
+
+In this lesson, we learned about case statements in bash and how they can be used to test multiple values against the same pattern. We looked at the syntax for case statements, as well as a simple example that demonstrated their use. Case statements can be a useful tool when working with bash scripts, and can help simplify complex conditional logic.

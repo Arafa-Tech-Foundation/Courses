@@ -1,0 +1,124 @@
+# Module 2: Variables, Operators, and Control Structures in Shell Scripting
+## Lesson 2: Operators in Shell Scripting
+
+Welcome to Lesson 2 of the Variables, Operators, and Control Structures module! In this lesson, we will learn about the different kinds of operators in Shell Scripting.
+
+## Arithmetic Operators
+
+Arithmetic operators are used to perform mathematical operations on variables. The following are the arithmetic operators available in Shell Scripting:
+
+| Operator | Description |
+| --- | --- |
+| + | Addition |
+| - | Subtraction |
+| * | Multiplication |
+| / | Division |
+| % | Modulus (remainder of division) |
+
+### Arithmetic Operator Examples
+
+Let's take a look at some examples of using arithmetic operators in Shell Scripting:
+
+```Shell
+#Assigning values to two variables
+num1=10
+num2=5
+
+#Performing arithmetic operations
+sum=$((num1 + num2))
+difference=$((num1 - num2))
+product=$((num1 * num2))
+quotient=$((num1 / num2))
+remainder=$((num1 % num2))
+
+#Printing results
+echo "Sum: $sum"
+echo "Difference: $difference"
+echo "Product: $product"
+echo "Quotient: $quotient"
+echo "Remainder: $remainder"
+```
+
+In this example, we assign two variables num1 and num2 with values 10 and 5 respectively. Then we perform addition, subtraction, multiplication, division, and modulus operations on these variables. Finally, we print the results.
+
+## Comparison Operators
+
+Comparison operators are used to compare two values and return a boolean value (true or false). The following comparison operators are available in Shell Scripting:
+
+| Operator | Description |
+| --- | --- |
+| -eq | Equal to |
+| -ne | Not equal to |
+| -gt | Greater than |
+| -ge | Greater than or equal to |
+| -lt | Less than |
+| -le | Less than or equal to |
+
+### Comparison Operator Examples
+
+Let's take a look at some examples of comparison operators in action:
+
+```Shell
+#Assigning values to two variables
+num1=10
+num2=5
+
+#Performing comparison operations and using the results in if statements
+if [ "$num1" -eq "$num2" ]; then
+   echo "num1 is equal to num2"
+else
+   echo "num1 is not equal to num2"
+fi
+
+if [ "$num1" -gt "$num2" ]; then
+   echo "num1 is greater than to num2"
+else
+   echo "num1 is not greater than num2"
+fi
+```
+
+In this example, we use comparison operators to compare the values of num1 and num2. We use the results of the comparison in 'if' statements and print the corresponding messages.
+
+## Logical Operators
+
+Logical operators are used to combine conditions or values. The following logical operators are available in Shell Scripting:
+
+| Operator | Description |
+| --- | --- |
+| && | Logical AND |
+| \|\| | Logical OR |
+| ! | Logical NOT |
+
+### Logical Operator Examples
+
+Let's take a look at some examples of using logical operators in Shell Scripting:
+
+```Shell
+#Assigning values to three variables
+num1=10
+num2=5
+num3=15
+
+#Performing logical operations
+if [ "$num1" -gt "$num2" ] && [ "$num1" -lt "$num3" ]; then
+   echo "num1 is between num2 and num3"
+else
+   echo "num1 is not between num2 and num3"
+fi
+
+if [ "$num2" -gt "$num1" ] \|\| [ "$num2" -gt "$num3" ]; then
+   echo "At least one of the conditions is true"
+else
+   echo "Both the conditions are false"
+fi
+
+if ! [ "$num1" -eq "$num3" ]; then
+   echo "num1 is not equal to num3"
+fi
+```
+
+In this example, we perform logical operations on three variables num1, num2 and num3. We use these logical operations in 'if' statements and print the corresponding messages.
+
+## Conclusion
+
+In this lesson, we learned about different types of operators available in Shell Scripting and performed various mathematical, comparison, and logical operations on variables. These operations can be used to make decisions in Shell Scripting programs. In the next lesson, we will learn about Control Structures.

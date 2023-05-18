@@ -1,0 +1,55 @@
+# Module 1: Introduction to Shell Scripting
+
+## Lesson 1: What is Shell Scripting?
+
+Welcome to the first lesson of the Introduction to Shell Scripting module! In this lesson, we'll learn about what shell scripting is and why it's useful.
+
+### What is Shell Scripting?
+
+Shell scripting is the process of writing scripts that are interpreted by the command line shell of an operating system. The shell, also known as the command interpreter, is a program that executes commands read from a terminal or a file.
+
+Shell scripts are used for a variety of purposes, such as automating repetitive tasks, managing system configurations, and performing backups. They are written in a variety of shell scripting languages, such as Bourne shell (sh), Bourne-Again shell (bash), C shell (csh), and Korn shell (ksh).
+
+### Why Use Shell Scripting?
+
+Shell scripting is a powerful tool for managing and automating complex tasks. Here are some reasons why you might use shell scripting:
+
+- Automation: Shell scripting allows you to automate repetitive tasks, such as backups, system configurations, and application deployments.
+- Portability: Shell scripts can be run on any system that has a shell interpreter installed, making them highly portable.
+- Flexibility: Shell scripting allows you to perform a variety of tasks, such as file management, text processing, and system administration, using a simple and consistent syntax.
+
+### Shell Scripting Examples
+
+Let's take a look at some examples of shell scripting in action:
+
+```bash
+#!/bin/bash
+
+# This is a script to backup a directory
+# Usage: ./backup.sh directory destination
+
+DIR=$1
+DEST=$2
+
+# Check if arguments are correct
+if [ -z "$DIR" ] || [ -z "$DEST" ]
+then
+    echo "Usage: ./backup.sh directory destination"
+    exit 1
+fi
+
+# Create backup directory if it doesn't exist
+if [ ! -d "$DEST" ]
+then
+    mkdir -p "$DEST"
+fi
+
+# Backup the directory
+tar czf "$DEST/$(date '+%Y-%m-%d_%H-%M-%S').tar.gz" "$DIR"
+```
+
+In this example, we have written a script to backup a directory. The script takes two arguments: the directory to backup and the destination directory for the backup. It then checks if the arguments are correct and creates the destination directory if it doesn't exist. Finally, it creates a compressed backup of the directory using the tar command.
+
+### Conclusion
+
+In this lesson, we learned about what shell scripting is and why it's useful. We saw that shell scripts can be used for automation, portability, and flexibility. We also looked at an example of a shell script for backing up a directory. In the next lesson, we'll learn about the basic syntax of shell scripting and how to write simple shell scripts.

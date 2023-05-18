@@ -1,0 +1,74 @@
+# Module 2: Variables, Operators, and Control Structures in Shell Scripting
+
+## Lesson: Setting Variables in Bash
+
+In this lesson, we will learn about variables and how to set them in bash shell scripting. Variables allow us to store and manipulate data in our scripts.
+
+### Variable naming conventions
+
+In bash shell scripting, variables are named using alphanumeric characters and underscores. Variable names cannot start with a number, and they cannot contain spaces. It is convention to use all-caps for variable names to differentiate them from other text in our scripts.
+
+### Setting variables
+
+Variables can be set in bash using the following syntax:
+
+```
+variable_name=value
+```
+
+For example, to set a variable named "name" to a value of "John", we would use:
+
+```bash
+name=John
+```
+
+### Using variables
+
+Once a variable is set, we can use its value by putting a `$` before the variable name. For example, to print the value of the "name" variable, we would use:
+
+```bash
+echo $name
+```
+
+This would output:
+
+```
+John
+```
+
+### Example script
+
+Let's take a look at an example script that uses variables:
+
+```bash
+#!/bin/bash
+
+# Set some variables
+name=John
+age=25
+
+# Print out some information
+echo "My name is $name and I am $age years old."
+```
+
+When we run this script, we get the following output:
+
+```
+My name is John and I am 25 years old.
+```
+
+### Special variables
+
+Bash shell scripting also has some special variables that are predefined for us. These variables provide information about the script, environment, and arguments passed to the script. Here are some examples:
+
+- `$0`: The name of the script
+- `$1`, `$2`, ...: The first, second, etc. arguments passed to the script
+- `$#`: The number of arguments passed to the script
+- `$$`: The process ID of the current shell
+- `$?`: The exit status of the last command executed
+
+We can use these variables in our scripts to make them more dynamic and adaptable.
+
+## Conclusion
+
+In this lesson, we learned about variables and how to set them in bash shell scripting. We also learned about naming conventions and how to use variables in our scripts. Lastly, we learned about special variables that are predefined in bash and can be used to make our scripts more dynamic.

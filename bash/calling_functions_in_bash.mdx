@@ -1,0 +1,100 @@
+# Module 3: Loops and Functions in Shell Scripting
+
+## Lesson 2: Calling Functions in Bash
+
+Welcome to the second lesson in the Loops and Functions module. In this lesson, we'll learn how to call functions in Bash scripts.
+
+### Defining a Function
+
+Before we can call a function, we have to define it. A function in Bash is defined using the following syntax:
+
+```bash
+function_name () {
+    # function code goes here
+}
+```
+
+Here's an example of a function that echoes "Hello, world!":
+
+```bash
+hello () {
+    echo "Hello, world!"
+}
+```
+
+### Calling a Function
+
+Once we've defined a function, we can call it in our Bash script. To call a function, we simply use its name and parentheses:
+
+```bash
+function_name
+```
+
+Here's an example of calling the "hello" function we defined earlier:
+
+```bash
+hello
+```
+
+When we run this script, it will output "Hello, world!" to the console.
+
+### Functions with Parameters
+
+Functions can also take parameters, which we can use in the function code. To define a function with parameters, we include the parameter names in the function definition:
+
+```bash
+function_name () {
+    parameter1=$1
+    parameter2=$2
+    # function code that uses parameter1 and parameter2 goes here
+}
+```
+
+Here's an example of a function that takes two parameters and echoes them to the console:
+
+```bash
+greet () {
+    echo "Hello, $1 and $2!"
+}
+```
+
+To call this function, we simply include the parameter values in the function call:
+
+```bash
+greet Alice Bob
+```
+
+When we run this script, it will output "Hello, Alice and Bob!" to the console.
+
+### Returning Values from Functions
+
+Functions can also return values, which we can use in our Bash script. To return a value from a function, we simply use the "return" keyword followed by the value we want to return:
+
+```bash
+function_name () {
+    # function code goes here
+    return value
+}
+```
+
+Here's an example of a function that returns the sum of two numbers:
+
+```bash
+sum () {
+    num1=$1
+    num2=$2
+    total=$((num1 + num2))
+    return $total
+}
+```
+
+To use the returned value, we can store it in a variable:
+
+```bash
+result=$(sum 5 7)
+echo $result # Output: 12
+```
+
+### Conclusion
+
+In this lesson, we learned how to call functions in Bash scripts. We learned how to define functions, call functions with and without parameters, and return values from functions. By using functions, we can break our scripts down into smaller, more manageable pieces of code.

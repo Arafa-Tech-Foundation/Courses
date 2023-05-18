@@ -1,0 +1,84 @@
+# Module 7: Conclusion 
+## Lesson: Best Practices in Shell Scripting with Bash
+
+Welcome to the Best Practices in Shell Scripting with Bash lesson in the Conclusion module. In this lesson, we'll look at some best practices that should be followed while scripting with Unix/Linux Shell.
+
+### Use Appropriate Shebang
+
+The shebang line is the first line of a script file, which tells the system the interpreter to be used. It's important to use the appropriate shebang line. The shebang line for bash scripts is typically:
+
+```bash
+#!/bin/bash
+```
+
+This indicates that the script should be executed with bash as the interpreter.
+
+### Error Handling
+
+Error handling is important in any programming language and is particularly important in shell scripts as they might be used to automate critical tasks. The two most common ways to handle errors in shell scripts are:
+
+- `set -e`: This variable, when set, causes bash to exit the script immediately if any command exits with a nonzero status.
+- `trap`: You can also use the trap command to execute a command whenever an error occurs in the script.
+
+For example:
+
+```bash
+#!/bin/bash
+set -e
+if ! command_exists "something"; then
+  echo "Error: could not find command 'something'" >&2
+  exit 1
+fi
+```
+
+### Use Double Quotes Instead of Single Quotes
+
+It's best practice to use double quotes instead of single quotes while defining variables. Double quotes allow for variable expansion, whereas single quotes do not.
+
+```bash
+# Wrong usage
+text='Hello World'
+echo '$text'
+
+# Correct usage
+text="Hello World"
+echo "$text"
+```
+
+### Use Functions
+
+Bash functions are a powerful way to reuse code and make your scripts more modular. They can also improve readability and simplify debugging.
+
+```bash
+# Example function
+say_hello() {
+  local name=$1
+  echo "Hello, $name!"
+}
+
+# Call function
+say_hello "World"
+```
+
+### Comment your Code
+
+Commenting your code is essential, especially when working in a team. Comment every block of related code and include information about what the code block does.
+
+```bash
+# Print the current working directory
+echo "Current working directory: $(pwd)"
+```
+
+### Use Default Values
+
+If a variable is not defined, or it contains an empty string, you can set a default value using the `${variable:-defaultValue}` syntax.
+
+```bash
+# Set default value
+name="${1:-Default Name}"
+echo "Hello, $name!"
+```
+
+### Conclusion
+
+In this lesson, we looked at some best practices that should be followed while scripting with Unix/Linux Shell. We discussed the shebang line, error handling, the usage of double quotes instead of single quotes, functions, commenting code, and the usage of default values. Keep these best practices in mind while writing scripts to make them more readable, efficient, and reusable.

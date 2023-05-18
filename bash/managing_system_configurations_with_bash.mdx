@@ -1,0 +1,72 @@
+# Module 6: Automation and System Configuration in Bash 
+
+## Lesson: Managing System Configurations with Bash
+
+Welcome to the Managing System Configurations with Bash lesson of the Automation and System Configuration module! In this lesson, we'll learn how to use Bash shell scripts to manage system configurations.
+
+## Introduction
+
+When managing a system, whether it's a single machine or multiple machines, it's important to have consistent and predictable configurations. Bash shell scripts can be used to automate the process of configuring a system, making it fast and easy to deploy new machines and ensure that they all have the same configurations.
+
+## Managing User Accounts with Bash
+
+One common task when configuring a new system is setting up user accounts. Bash shell scripts can be used to automate this process, ensuring that all user accounts are created in a consistent and predictable way. Here's an example of a Bash script that creates a new user account:
+
+```bash
+#!/bin/bash
+
+# Define the username and home directory
+USERNAME=jdoe
+HOMEDIR=/home/$USERNAME
+
+# Create the user account
+useradd -m -d $HOMEDIR -s /bin/bash $USERNAME
+
+# Set the password for the user
+echo "$USERNAME:password" | chpasswd
+```
+
+In this script, we define the username and home directory as variables, then use the `useradd` command to create the user account with the specified username, home directory, and shell. We then use the `chpasswd` command to set the password for the user.
+
+## Managing Packages with Bash
+
+Another common task when configuring a system is installing and configuring packages. Bash shell scripts can be used to automate this process, ensuring that all necessary packages are installed and configured correctly. Here's an example Bash script that installs the `nginx` web server:
+
+```bash
+#!/bin/bash
+
+# Install the nginx package
+apt-get update
+apt-get install -y nginx
+
+# Copy the configuration file to the appropriate directory
+cp nginx.conf /etc/nginx/nginx.conf
+
+# Restart the nginx service
+systemctl restart nginx
+```
+
+In this script, we use the `apt-get` command to install the `nginx` package and update the package list. We then copy the `nginx.conf` configuration file to the appropriate directory and restart the `nginx` service.
+
+## Managing System Configuration Files with Bash
+
+System configuration files are often modified manually, which can result in inconsistent configurations across multiple machines. Bash shell scripts can be used to manage system configuration files, ensuring that they are consistent across all machines. Here's an example of a Bash script that modifies the `sshd_config` file:
+
+```bash
+#!/bin/bash
+
+# Define variables for the sshd_config options
+OPTIONS="Port 2222\nProtocol 2\nPermitRootLogin no\nPasswordAuthentication no"
+
+# Backup the original sshd_config file
+cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
+
+# Modify the sshd_config file with the new options
+echo -e $OPTIONS > /etc/ssh/sshd_config
+```
+
+In this script, we define variables for the `Port`, `Protocol`, `PermitRootLogin`, and `PasswordAuthentication` options in the `sshd_config` file. We then use the `cp` command to create a backup of the original `sshd_config` file, and the `echo` command to overwrite the file with the new options.
+
+## Conclusion
+
+In this lesson, we learned how to use Bash shell scripts to manage system configurations. We covered managing user accounts, managing packages, and managing system configuration files. By automating these tasks, we can ensure that our systems have consistent and predictable configurations, making it easy to deploy new machines and maintain existing ones.

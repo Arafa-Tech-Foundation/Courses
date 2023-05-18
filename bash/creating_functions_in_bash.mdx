@@ -1,0 +1,60 @@
+# Module 3: Loops and Functions in Shell Scripting
+
+## Lesson 2: Creating Functions in Bash
+
+Welcome to the second lesson of the Loops and Functions module! In this lesson, we will learn how to create functions in Bash.
+
+### What is a Bash Function?
+
+A Bash function is a block of code that can be reused throughout a script. Functions are similar to scripts, except they are not standalone files. Functions can take input and output data, just like scripts.
+
+### Syntax for Creating a Bash Function
+
+The syntax for creating a Bash function is as follows:
+
+```bash
+function_name () {
+  # function code goes here
+}
+```
+
+Here, `function_name` is the name of the function. The code between the `{}` braces is the function code.
+
+### Example of a Bash Function
+
+Let's take a look at an example of a Bash function:
+
+```bash
+greet() {
+  echo "Hello, $1!"
+}
+```
+
+Here, `greet` is the name of the function, and `$1` is the first argument passed to the function. The function will greet the user by name when it is called.
+
+### Calling a Bash Function
+
+To call a Bash function, simply write its name and any arguments (if applicable) after it, like so:
+
+```bash
+greet "John"
+```
+
+This will call the `greet` function and pass it the argument `"John"`. The function will output: `Hello, John!`.
+
+### Returning Values from a Bash Function
+
+You can return values from a Bash function using the `return` keyword. Here's an example:
+
+```bash
+add() {
+  local sum=$(($1 + $2))
+  return $sum
+}
+```
+
+In this example, `add` is a function that takes two arguments and returns their sum. We use the `local` keyword to define `sum` as a local variable. Then, we use `$1` and `$2` to extract the two arguments passed to the function. Finally, we use the `return` keyword to return the sum.
+
+### Conclusion
+
+In this lesson, we learned what functions are in Bash, how to create them, call them, and return values from them. Functions are useful for breaking your code into smaller, reusable pieces, which can make your scripts easier to read and maintain.

@@ -1,0 +1,103 @@
+# Module 6: Automation and System Configuration in Bash
+
+## Lesson: Automating Tasks in Bash
+
+Welcome to the lesson on automating tasks in Bash, where we will learn about how Bash can help automate repetitive tasks.
+
+### What is Task Automation?
+
+Task automation is the process of using software to complete routine or repetitive tasks automatically with little or no human intervention. In Bash, we can automate tasks using scripts that are built to handle specific tasks.
+
+### Bash Variables
+
+Before we start writing scripts, let's first take a look at Bash variables. In Bash, variables can be declared and assigned values using the following syntax:
+
+```bash
+my_var="Hello World!"
+```
+
+Here, `my_var` is the name of the variable and `"Hello World!"` is the value assigned to that variable. We can then access the value of the variable using the name:
+
+```bash
+echo $my_var
+```
+
+This will output `"Hello World!"` to the console.
+
+### Bash Scripts
+
+A Bash script is a file containing a series of commands that are interpreted and executed by Bash. Bash scripts can be written to automate tasks by defining the commands required to complete the task.
+
+To create a Bash script, we first need to create a new file and give it a `.sh` extension to indicate that it is a Bash script. We can then add commands to the file starting with a shebang line, which specifies the interpreter to use, and ending with the exit status.
+
+Here's an example of a simple Bash script that prints "Hello World!" to the console:
+
+```bash
+#!/bin/bash
+
+echo "Hello World!"
+
+exit 0
+```
+
+Here, the shebang line tells Bash to use the Bash interpreter to execute the script. The `echo` command is used to print the string "Hello World!" to the console. The `exit` command is used to set the exit status of the script to 0, indicating that the script executed successfully.
+
+### Command Line Arguments
+
+We can also pass arguments to a Bash script when it is executed. These arguments can be accessed within the script using special variables:
+
+- `$0`: The name of the script itself.
+- `$1`, `$2`, `$3`, etc.: The first, second, third, etc. arguments passed to the script.
+
+Here's an example of a script that takes an argument and prints it to the console:
+
+```bash
+#!/bin/bash
+
+echo "The first argument is: $1"
+
+exit 0
+```
+
+If we execute this script with the command `./script.sh "Hello World!"`, the output will be `"The first argument is: Hello World!"`.
+
+### Bash Loops
+
+Bash provides several types of loops that can be used to iterate over lists of data or repeat commands a specific number of times.
+
+The `for` loop is used to iterate over a list of items:
+
+```bash
+#!/bin/bash
+
+for i in 1 2 3 4 5
+do
+    echo "The value of i is: $i"
+done
+
+exit 0
+```
+
+This script will output the value of `i` for each iteration of the loop.
+
+The `while` loop is used to repeat commands as long as a certain condition is met:
+
+```bash
+#!/bin/bash
+
+i=1
+
+while [ $i -le 5 ]
+do
+    echo "The value of i is: $i"
+    i=$((i+1))
+done
+
+exit 0
+```
+
+This script will output the value of `i` until it reaches 5.
+
+### Conclusion
+
+In this lesson, we learned how to automate tasks in Bash using scripts, variables, command-line arguments, and loops. With this knowledge, you can now start writing your own Bash scripts to automate your tasks and make your work more efficient.

@@ -1,0 +1,89 @@
+# Module 2: Variables, Operators and Control Structures in Shell Scripting
+
+## Lesson: Understanding Control Structures in Bash
+
+Welcome to the Understanding Control Structures lesson of the Variables, Operators and Control Structures module in Shell Scripting. In this lesson, we will learn about control structures in bash scripting and how we can use them to control the flow of programs.
+
+### What are Control Structures?
+
+Control Structures are programming constructs that control the order in which statements are executed. These structures allow us to write logic to execute a particular set of instructions based on the value of a condition.
+
+### Conditional Statements
+
+The most common types of control structures are conditional statements. Bash provides two types of conditional statements: if statements and case statements.
+
+#### If Statements
+
+The if statement is used to execute a block of code if a condition is true.
+
+```
+if [ condition ]; then
+   # code to execute if condition is true
+fi
+```
+
+Here, the condition is a command that returns a true or false value. If the condition is true, the code block following the if statement will be executed. Otherwise, the code block will be skipped.
+
+We can also use an else clause to execute a different block of code if the condition is false.
+
+```
+if [ condition ]; then
+   # code to execute if condition is true
+else
+   # code to execute if condition is false
+fi
+```
+
+#### Case Statements
+
+The case statement is used to execute different blocks of code based on the value of a variable.
+
+```
+case $variable in
+   pattern1)
+      # code to execute when variable matches pattern1
+   ;;
+   pattern2)
+      # code to execute when variable matches pattern2
+   ;;
+   *)
+      # code to execute when variable doesn't match any pattern
+   ;;
+esac
+```
+
+Here, the case statement checks the value of the variable against each pattern and executes the corresponding block of code.
+
+### Looping Statements
+
+Another type of control structure is the looping statement. Bash provides two types of looping statements: for loops and while loops.
+
+#### For Loops
+
+The for loop is used to iterate over a list of values.
+
+```
+for variable in value1 value2 ... valuen
+do
+   # code to execute for each value in the list
+done
+```
+
+Here, the for loop iterates over the list of values and executes the code block for each value.
+
+#### While Loops
+
+The while loop is used to execute a block of code repeatedly while a condition is true.
+
+```
+while [ condition ]
+do
+   # code to execute while condition is true
+done
+```
+
+Here, the while loop executes the code block repeatedly while the condition is true.
+
+### Conclusion
+
+In this lesson, we learned about control structures in bash scripting. We covered conditional statements, including if statements and case statements, as well as looping statements, including for loops and while loops. These control structures allow us to write logic to execute a particular set of instructions based on the value of a condition.

@@ -1,0 +1,84 @@
+{
+  "name": "bash",
+  "instructor": "Josef Macera",
+  "type": "essential",
+  "languages": ["Bash"],
+  "skills": [
+    "Learn the fundamentals of Shell Scripting with Bash, including variables, control structures, loops and functions.",
+    "Understand how to set up Bash on your computer and create your first script.",
+    "Explore file system operations, text processing and command line interface.",
+    "Discover how to use Bash to automate tasks and manage system configurations.",
+    "Master shell scripting programming using Bash for everyday task."
+  ],
+  "title": "Introduction to Shell Scripting with Bash",
+  "description": "Learn how to write basic scripts in Bash to automate tasks and manage system configurations.",
+  "modules": [
+    {
+      "name": "Module 1: Introduction to Shell Scripting",
+      "lessons": [
+        { "name": "what_is_shell_scripting", "video": "1-1.mp4" },
+        { "name": "setting_up_bash_on_your_computer", "video": "1-2.mp4" },
+        { "name": "running_your_first_script_in_bash", "video": "1-3.mp4" }
+      ]
+    },
+    {
+      "name": "Module 2: Variables, Operators and Control Structures in Shell Scripting",
+      "lessons": [
+        { "name": "setting_variables_in_bash", "video": "2-1.mp4" },
+        { "name": "operators_in_shell_scripting", "video": "2-2.mp4" },
+        {
+          "name": "understanding_control_structures_in_bash",
+          "video": "2-3.mp4"
+        },
+        { "name": "case_statements_in_bash", "video": "2-4.mp4" }
+      ]
+    },
+    {
+      "name": "Module 3: Loops and Functions in Shell Scripting",
+      "lessons": [
+        { "name": "for_loops_in_bash", "video": "3-1.mp4" },
+        { "name": "while_loops_in_bash", "video": "3-2.mp4" },
+        { "name": "creating_functions_in_bash", "video": "3-3.mp4" },
+        { "name": "calling_functions_in_bash", "video": "3-4.mp4" }
+      ]
+    },
+    {
+      "name": "Module 4: File System Operations and Text Processing in Bash",
+      "lessons": [
+        { "name": "file_system_operations_in_bash", "video": "4-1.mp4" },
+        { "name": "text_processing_in_bash", "video": "4-2.mp4" }
+      ]
+    },
+    {
+      "name": "Module 5: Command Line Interface in Bash",
+      "lessons": [
+        { "name": "command_line_interface_in_bash", "video": "5-1.mp4" },
+        { "name": "command_line_arguments_in_bash", "video": "5-2.mp4" }
+      ]
+    },
+    {
+      "name": "Module 6: Automation and System Configuration in Bash",
+      "lessons": [
+        { "name": "automating_tasks_in_bash", "video": "6-1.mp4" },
+        {
+          "name": "managing_system_configurations_with_bash",
+          "video": "6-2.mp4"
+        }
+      ]
+    },
+    {
+      "name": "Module 7: Conclusion",
+      "lessons": [
+        { "name": "recap_of_the_course", "video": "7-1.mp4" },
+        {
+          "name": "best_practices_in_shell_scripting_with_bash",
+          "video": "7-2.mp4"
+        },
+        {
+          "name": "resources_for_further_learning_and_development",
+          "video": "7-3.mp4"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+# Module 4: File System Operations and Text Processing in Bash
+
+## Lesson: Text Processing in Bash
+
+In this lesson, we will learn how to manipulate text in bash using some common text processing tools.
+
+### Printing Text
+
+To print text in bash, we can use the `echo` command. For example, to print the string "Hello, World!" to the console, we can run:
+
+```bash
+echo "Hello, World!"
+```
+
+We can also create variables and print their values:
+
+```bash
+my_var="Some Text"
+echo $my_var
+```
+
+It's important to note that when referencing a variable, we need to use the `$` symbol before the variable name.
+
+### Using Sed
+
+`sed` is a text editor used to perform basic text transformations. Here are some examples of how to use `sed`:
+
+```bash
+# replace the first occurrence of "apple" with "banana"
+sed 's/apple/banana/' fruits.txt
+
+# replace all occurrences of "apple" with "banana"
+sed 's/apple/banana/g' fruits.txt
+
+# delete the first line of a file
+sed '1d' file.txt
+
+# delete a specific line number (ex: line 4)
+sed '4d' file.txt
+
+# remove all blank lines in a file
+sed '/^$/d' file.txt
+```
+
+### Using Awk
+
+`awk` is a versatile tool used for formatting and processing text data. Here are some examples of using `awk`:
+
+```bash
+# print the first column of a file
+awk '{print $1}' file.txt
+
+# print the last column of a file
+awk '{print $NF}' file.txt
+
+# print lines containing a specific pattern (ex: "apple")
+awk '/apple/' fruits.txt
+
+# calculate the sum of column 2 in a file
+awk '{ total += $2 } END {print total}' file.txt
+```
+
+### Using Grep
+
+`grep` is a command-line utility for searching plain-text files for lines that match a regular expression. Here are some examples of using `grep`:
+
+```bash
+# search for a specific string in a file
+grep "search text" file.txt
+
+# search for a pattern in a directory (subdirectories included)
+grep -r "pattern" .
+
+# print line numbers for matched strings
+grep -n "search text" file.txt
+
+# search for lines that do not contain a pattern
+grep -v "pattern" file.txt
+```
+
+### Using Cut
+
+`cut` is a command-line utility used to extract sections from each line of a file. Here are some examples:
+
+```bash
+# print the first column of a file (same as awk '{print $1}')
+cut -d" " -f1 file.txt
+
+# print the first 10 characters of each line
+cut -c1-10 file.txt
+
+# print columns 2, 4, and 6 of a file
+cut -d" " -f2,4,6 file.txt
+```
+
+## Conclusion
+
+Text processing in bash can be achieved using several command-line tools like echo, sed, awk, grep, and cut.  Knowing how to use these tools is crucial as it allows us to extract and manipulate data in plain-text files in various ways.

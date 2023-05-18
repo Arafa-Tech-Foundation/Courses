@@ -1,0 +1,98 @@
+# Module 3: Loops and Functions in Shell Scripting
+
+## Lesson 2: For Loops in Bash
+
+Welcome to Lesson 2 of the Loops and Functions module! In this lesson, we will learn about for loops in Bash.
+
+### What are for loops?
+
+For loops are used to iterate over a sequence of values. The values can be numbers, strings, or any other type that can be looped through. A for loop executes a set of commands for each value in the sequence.
+
+In Bash, the syntax for a for loop is as follows:
+
+```bash
+for variable_name in sequence
+do
+    command1
+    command2
+    ...
+done
+```
+
+- The `variable_name` represents the variable used to store each value in the sequence during each iteration of the loop.
+- The `sequence` represents the set of values that the loop iterates through.
+- The `commands` represent the set of statements executed during each iteration of the loop.
+
+### Example of for loop
+
+Let's iterate over a sequence of numbers using a for loop. In this example, we will print out the numbers from 1 to 5. We start with:
+
+```bash
+for i in 1 2 3 4 5
+do
+    echo $i
+done
+```
+
+- The `i` is the variable used to store each value in the sequence (1, 2, 3, 4, 5).
+- The `echo $i` command prints the value of `i` during each iteration of the loop.
+
+This will output:
+
+```
+1
+2
+3
+4
+5
+```
+
+### Using a for loop to loop through files
+
+For loops can also be used to loop through files in a directory. In this example, we will use a for loop to print out all the `.txt` files in the current directory.
+
+```bash
+for file in *.txt
+do
+    echo $file
+done
+```
+
+- The `*.txt` represents the set of `.txt` files in the current directory.
+- The `echo` command prints out the name of each `.txt` file during each iteration of the loop.
+
+### Nested for loops
+
+We can also use nested for loops to iterate over multiple sequences inside a loop. In this example, we will iterate over two sequences of numbers using nested for loops:
+
+```bash
+for i in 1 2 3
+do
+    for j in 1 2 3
+    do
+        echo "$i $j"
+    done
+done
+```
+
+- The first for loop iterates over the sequence (1, 2, 3).
+- The second for loop iterates over the sequence (1, 2, 3) for each value of `i`.
+- The `echo` command prints out the value of `i` and `j` during each iteration of the loop.
+
+This will output:
+
+```
+1 1
+1 2
+1 3
+2 1
+2 2
+2 3
+3 1
+3 2
+3 3
+```
+
+### Conclusion
+
+In this lesson, we learned about for loops in Bash. We learned how to iterate over a sequence of values using a for loop, how to loop through files in a directory, and how to use nested for loops to iterate over multiple sequences. Practice using for loops in your shell scripts to automate tasks and save time!

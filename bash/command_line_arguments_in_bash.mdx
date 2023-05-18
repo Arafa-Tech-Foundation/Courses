@@ -1,0 +1,86 @@
+# Module 5: Command Line Interface in Bash
+
+## Lesson 1: Introduction to Command Line Interface
+
+Welcome to module 5! In this lesson, we will be discussing the Command Line Interface (CLI) and its significance in bash.
+
+### What is the Command Line?
+
+The Command Line Interface (CLI) is a text-based interface used to interact with the Operating System (OS) directly. This is different from a Graphical User Interface (GUI) which is a visual interface that most of us are familiar with. A CLI can be used in different operating systems, but in this case, we will be using bash, which is a UNIX-like shell used in MacOS and Linux.
+
+### Why Use the CLI?
+
+There are several reasons why using the CLI is advantageous over the GUI:
+
+1. Efficient: CLI is faster and often easier to use when performing certain tasks. For example, copying many files at once can be done much faster using the CLI rather than clicking and dragging in a GUI.
+
+2. Automation: In the CLI, you can use scripts and commands, which permit automation of repetitive tasks that you would need to do manually in the GUI.
+
+3. Versatility: With CLI, you can manipulate files and directories, install and uninstall software, and configure your operating system, among other things with a single command.
+
+4. Accessibility: CLI can be used on remote machines and servers, enabling you to perform tasks without the usage of a graphical interface.
+
+### Basic Bash Commands
+
+Now that we understand the importance of using CLI, let us have a look at some of the basic commands that are used in bash.
+
+- `ls` - List directory contents.
+
+- `pwd` - Print the current working directory.
+
+- `cd` - Change the current working directory.
+
+- `mkdir` - Make a new directory.
+
+- `touch` - Make a new file.
+
+- `cp` - Copy a file or directory.
+
+- `mv` - Move a file or directory.
+
+- `rm` - Remove a file or directory.
+
+- `echo` - Print the output of a command.
+
+Here are some examples of basic bash commands:
+
+```
+$ ls
+folder1 folder2 file
+
+$ pwd
+/Users/user/desktop
+
+$ cd folder1
+/Users/user/desktop/folder1
+
+$ mkdir new_folder
+
+$ touch new_file.txt
+
+$ cp file /Users/user/desktop
+
+$ mv new_file.txt /Users/user/desktop/folder1
+
+$ rm folder2
+
+$ echo "Hello, World!"
+Hello, World!
+```
+
+### Command Line Arguments
+
+Command Line Arguments are values given by the user when they run a CLI command. They are often used to input values into commands for running in scripts or performing repetitive tasks. The arguments can be inputted after the name of the command.
+
+Here is an example:
+
+```
+$ echo "Hello, $1!"
+Hello, World!
+```
+
+In this example, $1 is used to reference the first argument given after the command name 'echo'. If 'World' was passed as the argument, this command would output 'Hello, World!'.
+
+### Conclusion
+
+In this lesson, we learnt about the Command Line Interface and how it is different from the Graphical User Interface. We reviewed the advantages of using CLI over GUI, and listed some of the basic commands frequently used in bash. We also explored Command Line Arguments and how they are used in CLI.

@@ -1,0 +1,62 @@
+# Module 1: Introduction to Shell Scripting
+
+## Lesson 1: Running Your First Script in Bash
+
+Welcome to the first lesson of the Introduction to Shell Scripting module! In this lesson, we'll learn how to create a simple shell script and run it in the Bash shell.
+
+### What is a Shell Script?
+
+A shell script is a program that consists of shell commands and can be executed in a shell. In Unix-like operating systems, the default shell is usually Bash. Shell scripts are often used to automate repetitive tasks or to execute a series of commands.
+
+### Creating a Shell Script
+
+To create a shell script, we'll start by opening a text editor. The simplest text editor to use is called Nano and can be opened by typing the following command in the terminal:
+
+```shell
+nano myscript.sh
+```
+
+This command opens a new file called myscript.sh in Nano.
+
+Next, we'll add some commands to our script. Let's start with a simple command that prints "Hello, World!" to the console:
+
+```shell
+#!/bin/bash
+echo "Hello, World!"
+```
+
+In this example, we specify that our script should be executed using the Bash shell by including the line "#!/bin/bash" at the beginning of the file. This is known as a shebang.
+
+Next, we include the command "echo" followed by the string "Hello, World!". This command simply prints the text "Hello, World!" to the console.
+
+### Running the Shell Script
+
+Now that we've created our shell script, we can run it by typing the following command in the terminal:
+
+```shell
+bash myscript.sh
+```
+
+This command tells the Bash shell to execute the commands in the file myscript.sh. The output should be the text "Hello, World!".
+
+### Making the Shell Script Executable
+
+If we try to execute our shell script using the command "./myscript.sh", we'll get a "Permission Denied" error because the file is not executable. To make our script executable, we'll need to change the file permissions using the "chmod" command:
+
+```shell
+chmod +x myscript.sh
+```
+
+The "chmod" command changes the permissions of a file. In this case, we're adding the executable permission (+x) to the file myscript.sh.
+
+Now that the file is executable, we can run the script using the "./" notation:
+
+```shell
+./myscript.sh
+```
+
+This should produce the same output as before ("Hello, World!").
+
+### Conclusion
+
+In this lesson, we learned how to create a simple shell script in the Bash shell. We also learned how to run the script and how to make the script executable. In the next lesson, we'll explore some basic shell scripting concepts to write more complex scripts.
