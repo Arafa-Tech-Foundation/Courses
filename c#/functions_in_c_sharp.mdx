@@ -1,0 +1,70 @@
+# Module 2: Control Structures and Functions
+
+## Lesson 4: Functions in C#
+
+Welcome to the fourth lesson of the Control Structures and Functions module! In this lesson, we'll learn about functions in C#.
+
+## Functions
+
+Functions are a way to group a set of statements that perform a specific task together. They make our code more modular and easier to understand and maintain. Functions make it easy to reuse code and reduce code redundancy.
+
+### Function Syntax
+
+The basic syntax of a function declaration in C# is as follows:
+
+```csharp
+access_specifier return_type function_name(parameter_list)
+{
+    // body of the function
+}
+```
+
+- The `access_specifier` can be one of the following: `public`, `private`, or `protected`.
+- The `return_type` specifies the type of value that the function will return. If the function doesn't return a value, then the `void` keyword is used.
+- The `function_name` is the name of the function.
+- The `parameter_list` is a list of parameters that are passed to the function. If the function doesn't take any parameters, then an empty list is used.
+
+### Function Example
+
+Let's take a look at a simple example of a function declaration with a return type that takes two parameters:
+
+```csharp
+public int Add(int a, int b)
+{
+    return a + b;
+}
+```
+
+In this example, we have a function called `Add` that takes two parameters `a` and `b` of type `int`. The function returns the sum of `a` and `b`.
+
+### Function Call
+
+After declaring a function, we can call it from other parts of our code. To call a function, we simply need to use the function name and pass in the required parameters, like so:
+
+```csharp
+int result = Add(2, 3);
+```
+
+In this example, we're calling the `Add` function with two parameters `2` and `3`. The function will return the sum of the two values, which is then assigned to the variable `result`.
+
+### Function Overloading
+
+Function overloading is when we have multiple functions with the same name but different parameter lists. C# allows us to overload functions as long as the parameter lists are unique. Let's take a look at an example:
+
+```csharp
+public int Add(int a, int b)
+{
+    return a + b;
+}
+
+public double Add(double a, double b)
+{
+    return a + b;
+}
+```
+
+In this example, we have two `Add` functions. The first `Add` function takes two integers as parameters and returns their sum. The second `Add` function takes two double values as parameters and returns their sum.
+
+### Conclusion
+
+In this lesson, we learned about functions in C#. We learned how to declare a function with a return type and parameters, how to call a function, and how to use function overloading to create multiple functions with the same name but unique parameter lists. Functions are an essential tool in C# programming, as they help us write more modular and reusable code.

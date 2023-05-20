@@ -1,0 +1,67 @@
+# Module 3: Arrays and Objects
+
+## Lesson 3: Lists in C#
+
+Welcome to the third lesson in the Arrays and Objects module! In this lesson, we'll learn about lists in C# and how they can be used to store and manipulate collections of data.
+
+## Lists in C#
+
+A list is a data structure that can store an ordered collection of elements. In C#, lists are defined in the System.Collections.Generic namespace and are represented by the List<T> class. The type parameter T defines the type of elements that the list can store.
+
+Here's an example of how to declare a list of integers in C#:
+
+```csharp
+using System.Collections.Generic;
+
+List<int> numbers = new List<int>();
+```
+
+## Adding Elements to a List
+
+To add elements to a list, we can use the Add() method. The Add() method adds an element to the end of the list.
+
+```csharp
+numbers.Add(1);
+numbers.Add(2);
+numbers.Add(3);
+```
+
+We can also use the AddRange() method to add multiple elements to the end of the list.
+
+```csharp
+List<int> moreNumbers = new List<int>{4, 5, 6};
+numbers.AddRange(moreNumbers);
+```
+
+## Accessing Elements in a List
+
+To access an element in a list, we can use the index operator []. The index operator takes a zero-based index as its parameter and returns the element at that position in the list.
+
+```csharp
+int firstNumber = numbers[0]; // returns 1
+int secondNumber = numbers[1]; // returns 2
+```
+
+We can also use the Contains() method to check if an element exists in the list.
+
+```csharp
+bool isTwoInList = numbers.Contains(2); // returns true
+```
+
+## Removing Elements from a List
+
+To remove an element from a list, we can use the Remove() method. The Remove() method takes an element as its parameter and removes the first occurrence of that element from the list.
+
+```csharp
+numbers.Remove(1); // removes the first occurrence of 1 from the list
+```
+
+We can also use the RemoveAt() method to remove an element at a specific index.
+
+```csharp
+numbers.RemoveAt(0); // removes the element at index 0 (which is 2)
+```
+
+## Conclusion
+
+In this lesson, we learned about lists in C# and how they can be used to store and manipulate collections of data. We covered how to declare a list, how to add and access elements in a list, and how to remove elements from a list. With these skills, you can now effectively use lists in your C# applications.

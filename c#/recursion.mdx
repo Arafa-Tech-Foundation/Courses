@@ -1,0 +1,44 @@
+# Module 2: Control Structures and Functions
+
+## Lesson: Recursion
+
+Welcome to the Recursion lesson of Module 2: Control Structures and Functions. In this lesson, we will learn about recursion, a powerful technique in programming that allows a function to call itself. We will explore how recursion works, when to use it, and some examples of recursive functions.
+
+## How Recursion Works
+
+Recursion is a technique in which a function calls itself to solve a problem by breaking it down into smaller subproblems. The function continues to call itself with smaller subproblems until the problem is small enough to solve without recursion. At this point, the function returns a result to the previous call and continues in this way until the original call completes.
+
+Recursion involves two major components: the base case and the recursive case. The base case is the problem that is small enough to solve without recursion, while the recursive case is the problem that is broken down into smaller subproblems and solved recursively.
+
+## When to Use Recursion
+
+Recursion is useful when a problem can be broken down into smaller subproblems that share some common characteristics. The solution to the problem is then obtained by combining the solution to the subproblems. Recursive functions are elegant, easy to read, and less error-prone than their non-recursive counterparts.
+
+However, recursion may increase the time and memory complexity of a program because multiple instances of the same function may be running at the same time. Therefore, it is essential to ensure that the base cases are well-defined and that recursion is used only when necessary.
+
+## Example of Recursion
+
+Let's take a look at an example of a recursive function that calculates the nth Fibonacci number. The Fibonacci sequence is a sequence of numbers in which each number is the sum of the two preceding ones, starting from 0 and 1. The first few Fibonacci numbers are 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
+
+```javascript
+function fibonacci(n) {
+  if (n === 0) {
+    return 0;
+  }
+  if (n === 1) {
+    return 1;
+  }
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+console.log(fibonacci(5)); // Output: 5
+console.log(fibonacci(10)); // Output: 55
+```
+
+In this example, we use recursion to calculate the nth Fibonacci number by calling the same function with smaller subproblems. The base cases are defined as n = 0 and n = 1, and the function returns the sum of the two preceding Fibonacci numbers for any other value of n.
+
+## Conclusion
+
+In this lesson, we learned about recursion, a technique in programming that allows a function to call itself to solve a problem by breaking it down into smaller subproblems. We learned about the two main components of recursion: the base case and the recursive case, and when recursion should be used.
+
+We also looked at an example of a recursive function that calculates the nth Fibonacci number. Congratulations, you've completed the Recursion lesson of Module 2: Control Structures and Functions!

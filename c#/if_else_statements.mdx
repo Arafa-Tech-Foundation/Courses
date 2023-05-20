@@ -1,0 +1,73 @@
+# Module 2: Control Structures and Functions
+
+## Lesson: if else statements
+
+Welcome to the if else statements lesson of Module 2! In this lesson, we will learn about if else statements and how they are used in programming.
+
+### Introduction
+
+The if else statement is used in programming to create conditional logic. In other words, it allows us to execute different blocks of code depending on whether a certain condition is true or false.
+
+The basic syntax of an if else statement is as follows:
+
+```python
+if condition:
+    # code to execute if the condition is true
+else:
+    # code to execute if the condition is false
+```
+
+### Example
+
+Let's take a look at an example:
+
+```python
+age = 21
+
+if age >= 18:
+    print("You are old enough to vote!")
+else:
+    print("You are not yet old enough to vote.")
+```
+
+In this example, we use an if else statement to check whether a person is old enough to vote. If their age is greater than or equal to 18, the first block of code (the print statement "You are old enough to vote!") will be executed. Otherwise, the second block of code (the print statement "You are not yet old enough to vote.") will be executed.
+
+### Complex Conditions
+
+Sometimes we need to check for more than one condition in an if else statement. We can use logical operators (such as "and" and "or") to create complex conditions.
+
+```python
+x = 5
+y = 10
+
+if x > 0 and y > 0:
+    print("Both x and y are positive!")
+elif x > 0 or y > 0:
+    print("At least one of x and y is positive.")
+else:
+    print("Neither x nor y are positive.")
+```
+
+In this example, we use both the "and" and "or" operator to check for different conditions. If both x and y are positive, the first block of code will be executed. If at least one of them is positive, the second block of code will be executed. Finally, if neither of them is positive, the third block of code will be executed.
+
+### Nested if else Statements
+
+We can also use nested if else statements to create more complex conditional logic.
+
+```python
+x = 10
+
+if x > 0:
+    if x > 10:
+        print("x is greater than 10!")
+    else:
+        print("x is between 1 and 10, inclusive.")
+else:
+    print("x is not greater than 0.")
+```
+
+In this example, we use a nested if else statement to check if x is greater than 0 and whether it is greater than 10. If x is greater than 10, the first block of code will be executed. Otherwise, if it is between 1 and 10 inclusive, the second block of code will be executed. Finally, if x is not greater than 0, the third block of code will be executed.
+
+### Conclusion
+
+In this lesson, we learned about if else statements and how they are used in programming. We looked at basic syntax, examples of complex conditions, and nested if else statements. By using if else statements, we can create conditional logic in our programs and execute different blocks of code depending on the conditions that are met.

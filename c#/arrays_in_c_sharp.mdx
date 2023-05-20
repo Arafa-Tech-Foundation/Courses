@@ -1,0 +1,93 @@
+# Module 3: Arrays and Objects
+
+## Lesson: Arrays in C#
+
+Welcome to the Arrays in C# lesson of the Arrays and Objects module! In this lesson, we will go over what arrays are, how to create and use arrays in C#, as well as some common operations you can perform with arrays.
+
+### What are Arrays?
+
+An array is a collection of elements of the same type. The elements in an array are stored in contiguous memory locations. Each element in the array can be accessed by its index, starting from 0 and going up to the length of the array minus one. 
+
+### Creating Arrays
+
+To create an array in C#, you first declare the array and specify the data type and number of elements it will hold. Here is an example of creating an array of integers:
+
+```csharp
+int[] myIntArray = new int[5];
+```
+
+This creates an array called `myIntArray` that can hold five integers. 
+
+You can also initialize the array with some values:
+
+```csharp
+int[] myIntArray = {1, 2, 3, 4, 5};
+```
+
+This creates an array called `myIntArray` that holds the numbers 1 through 5.
+
+### Accessing Array Elements
+
+To access an element in an array, you use the index of the element you want to access. Here is an example of accessing the third element (index 2) in an array:
+
+```csharp
+int[] myIntArray = {1, 2, 3, 4, 5};
+int thirdElement = myIntArray[2];
+Console.WriteLine(thirdElement); // prints 3
+```
+
+### Changing Array Elements
+
+Once you have created an array, you can change the value of its elements by assigning a new value to an index. Here is an example of changing the value of the third element in an array:
+
+```csharp
+int[] myIntArray = {1, 2, 3, 4, 5};
+myIntArray[2] = 10;
+```
+
+After this code executes, the value of the third element in `myIntArray` is 10.
+
+### Common Array Operations
+
+#### Length
+
+You can find the length of an array using its `Length` property. Here is an example:
+
+```csharp
+int[] myIntArray = {1, 2, 3, 4, 5};
+Console.WriteLine(myIntArray.Length); // prints 5
+```
+
+#### Foreach Loop
+
+You can loop through all the elements in an array using a foreach loop. Here is an example:
+
+```csharp
+int[] myIntArray = {1, 2, 3, 4, 5};
+foreach (int number in myIntArray) {
+    Console.WriteLine(number);
+}
+```
+
+This code will print the numbers 1 through 5 on separate lines.
+
+#### Array Methods
+
+There are many other useful operations you can perform with arrays using built-in methods. Here are a few examples:
+
+```csharp
+int[] myIntArray = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3};
+
+// Sort the array
+Array.Sort(myIntArray);
+
+// Find the index of the first occurrence of a value
+int firstFiveIndex = Array.IndexOf(myIntArray, 5);
+
+// Reverse the order of the elements in the array
+Array.Reverse(myIntArray);
+```
+
+### Conclusion
+
+In this lesson, we learned about arrays in C# and how to create and use them. We also went over some common array operations you can perform, such as accessing and changing elements, finding the length of an array, using a foreach loop, and using built-in array methods. With arrays, you can store and manipulate collections of data in a convenient and efficient way in C#.

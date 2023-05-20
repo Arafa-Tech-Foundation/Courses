@@ -1,0 +1,96 @@
+# Module 4: Encapsulation and Inheritance
+
+## Lesson: Delegates and Events
+
+Welcome to the Delegates and Events lesson of the Encapsulation and Inheritance module. In this lesson, we will learn about delegates and events in object-oriented programming.
+
+### Delegates
+
+A delegate is a type that represents a method signature, which includes the return type, parameter types, and name of a method. In C#, a delegate can be defined using the `delegate` keyword and can be used to create a reference to a method. Delegates provide a way to pass methods as parameters to other methods, which allows for more flexible and modular code.
+
+Here’s an example of how to define and use a delegate:
+
+```csharp
+delegate int Operation(int x, int y);
+
+class Calculation
+{
+    public int Add(int x, int y)
+    {
+        return x + y;
+    }
+
+    public int Multiply(int x, int y)
+    {
+        return x * y;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Calculation calc = new Calculation();
+
+        Operation calculator = new Operation(calc.Add);
+        int result = calculator(3, 5);
+        Console.WriteLine("Result: " + result); //Output: Result: 8
+
+        calculator = new Operation(calc.Multiply);
+        result = calculator(3, 5);
+        Console.WriteLine("Result: " + result); //Output: Result: 15
+    }
+}
+```
+
+In this example, we define an `Operation` delegate type with two `int` parameters and an `int` return type. We then create an instance of the `Calculation` class and create a delegate instance `calculator` that points to the `Add` method of the `Calculation` class. We call the `Add` method through the delegate instance by passing 3 and 5 as parameter values. We then reassign the instance to the `Multiply` method and get 15 when the method is called again using the delegate instance.
+
+### Events
+
+An event is a mechanism in C# that enables a class or object to notify other classes or objects when something of interest occurs. The class raising the event is called the publisher and the class that receives the event is called the subscriber. Events are declared using the `event` keyword and are usually associated with a delegate type, which specifies the signature of the method that will handle the event.
+
+Here’s an example of how to define and use an event:
+
+```csharp
+class Publisher
+{
+    public event EventHandler Event;
+
+    public void Publish()
+    {
+        Console.WriteLine("Publisher: Event started.");
+        Console.WriteLine("Publisher: Event raising...");
+        Event?.Invoke(this, EventArgs.Empty);
+        Console.WriteLine("Publisher: Event ended.");
+    }
+}
+
+class Subscriber
+{
+    public void OnEvent(object sender, EventArgs e)
+    {
+        Console.WriteLine("Subscriber: Event received.");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Publisher publisher = new Publisher();
+        Subscriber subscriber = new Subscriber();
+
+        publisher.Event += subscriber.OnEvent;
+
+        publisher.Publish();
+    }
+}
+```
+
+In this example, we define a `Publisher` class that has an `Event` member declared with the `event` keyword that is associated with the `EventHandler` delegate type. We then define a `Subscriber` class that has a method `OnEvent` that takes two parameters (an object that represents the publisher and an `EventArgs` argument that can contain additional event data). The `OnEvent` method is called when the `Event` is raised by the `Publisher` class and prints "Subscriber: Event received." to the console.
+
+In the `Main` method, we create an instance of the `Publisher` and `Subscriber` classes. We add the `OnEvent` method as a handler for the `Event` by attaching it to the `publisher.Event` event. We then call the `Publish` method on the `Publisher` instance, which raises the `Event`. This calls all the handlers attached to the event, which in this case is only the `OnEvent` method of the `Subscriber` instance.
+
+### Conclusion
+
+In this lesson, we learned about delegates and events in C# programming. Delegates provide a way to pass methods as parameters to other methods, which allows for more flexible and modular code. Events enable a class or object to notify other classes or objects when something of interest occurs. By using delegates and events in our code, we can write more maintainable, modular, and flexible applications.

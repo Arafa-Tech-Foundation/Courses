@@ -1,0 +1,76 @@
+# Module 1: Introduction to C#
+
+## Lesson 1: Data Types
+
+Welcome to the first lesson of the Introduction to C# module. In this lesson, we'll learn about data types in C#.
+
+### What are Data Types?
+
+A data type is a classification of data that specifies the type of value that a variable can hold. C# supports several built-in data types, each of which has a specific purpose. 
+
+## Numeric Data Types
+
+C# supports several different numeric data types, including int (for integers), float (for single-precision floating-point numbers), and double (for double-precision floating-point numbers). 
+
+```csharp
+int num = 10;
+float floatNum = 3.14f;
+double doubleNum = 1234.56;
+```
+
+Notice that we need to include a suffix 'f' when declaring a float variable to differentiate from the double.
+
+## Boolean Data Type
+
+Boolean data type can hold only two values: true or false.
+
+```csharp
+bool isTrue = true;
+bool isFalse = false;
+```
+
+## Char Data Type
+
+Char data type is used to represent a single character. 
+
+```csharp
+char letter = 'A';
+```
+
+## String Data Type
+
+String data type is used to represent multiple characters or a sequence of characters.
+
+```csharp
+string name = "John Doe";
+```
+
+## Object Data Type
+
+Object data type is a special data type in C#. It's used to hold an instance of a class or a value type.
+
+```csharp
+object myObject = new MyClass();
+```
+
+### Implicit and Explicit Type Casting
+
+C# provides two ways to convert a data type to another data type: implicit and explicit type casting.
+
+Implicit type casting means that the compiler automatically converts one data type to another data type without any loss of information.
+
+```csharp
+int num1 = 10;
+double num2 = num1; // implicit type casting from int to double
+```
+
+Explicit type casting means that we have to manually convert a data type to another data type.
+
+```csharp
+double num1 = 3.14;
+int num2 = (int) num1; // explicit type casting from double to int
+```
+
+### Conclusion
+
+In this lesson, we learned about the various data types in C#. We covered numeric data types, boolean data type, char data type, string data type, and object data type. We also learned about implicit and explicit type casting. Understanding data types is crucial for writing efficient and effective code in C#.

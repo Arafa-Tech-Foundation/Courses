@@ -1,0 +1,52 @@
+# Module 4: Encapsulation and Inheritance
+
+## Lesson: Access Modifiers
+
+In this lesson, we will learn about access modifiers, which are used to control the visibility of class members (fields, methods, and inner classes) from other parts of the program. 
+
+### The Four Access Modifiers
+
+Java has four access modifiers, which are as follows:
+
+- public: Members can be accessed from anywhere in the program.
+- protected: Members can be accessed within the same package or by subclasses in different packages.
+- default (no modifier): Members can be accessed within the same package.
+- private: Members can only be accessed within the same class.
+
+### Access Modifier Examples
+
+Let's take a look at some examples of using access modifiers with class members:
+
+```java
+public class Car {
+    public String make; // can be accessed from anywhere in the program
+    protected String model; // can be accessed within the package or by subclasses in different packages
+    String color; // default access modifier, can be accessed within the package
+    private int year; // can only be accessed within the Car class
+   
+    // ...
+}
+```
+
+In this example, the `make` field is declared as `public`, which means it can be accessed from anywhere in the program. The `model` field is declared as `protected`, which means it can be accessed within the same package or by subclasses in different packages. The `color` field has no access modifier, which means it has default access and can be accessed within the same package. The `year` field is declared as `private`, which means it can only be accessed within the `Car` class itself.
+
+```java
+public class Truck extends Car {
+    public void printModel() {
+        System.out.println(model); // Can be accessed because it's protected
+        System.out.println(make); // Can be accessed because it's public
+        System.out.println(color); // Can be accessed because it has default access
+        //System.out.println(year); // Can't be accessed because it's private to the Car class
+    }
+}
+```
+
+In this example, we have a `Truck` class that extends `Car`. In the `printModel` method, we can access the `model` field from `Car` because it's declared as protected and `Truck` is a subclass of `Car`. We can access the `make` field because it's public, and we can access the `color` field because it has default access and `Truck` and `Car` are in the same package. We can't access the `year` field because it's private to the `Car` class itself.
+
+### Benefits of Access Modifiers
+
+Access modifiers provide a means of encapsulating the implementation details of a class and hiding them from other parts of the program. This helps prevent accidental modification of a class's internal state and ensures that code using the class adheres to the class's intended usage.
+
+### Conclusion
+
+In this lesson, we learned about the four access modifiers in Java and how they are used to control the visibility of class members. We looked at examples of each access modifier and saw how they are used in practice. We also discussed the benefits of using access modifiers to encapsulate the implementation details of a class and ensure its intended usage.

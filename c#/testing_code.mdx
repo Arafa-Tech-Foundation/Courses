@@ -1,0 +1,49 @@
+# Module 5: Asynchronous Programming and Exception Handling
+
+## Lesson 3: Testing Code
+
+Welcome to the third lesson of the Asynchronous Programming and Exception Handling module! In this lesson, we'll learn about testing code and the importance of testing in JavaScript.
+
+## Why Test Code?
+
+Testing code is a crucial part of the development process. It helps catch errors and bugs before they make it into production code, saving time and money in the long run. Testing code also ensures that new code does not break existing features and functionality.
+
+## Types of Tests
+
+There are several types of tests that can be performed on code, including:
+
+- Unit tests: a method of testing individual functions or modules in isolation.
+- Integration tests: a method of testing how different modules or functions work together.
+- Acceptance tests: a method of testing the system as a whole, ensuring that it meets the requirements of the customer or end-user.
+
+## Testing Frameworks
+
+There are several testing frameworks available in JavaScript, including Jest, Jasmine, and Mocha. These frameworks provide tools for writing, running, and reporting on tests.
+
+In this lesson, we'll be using Jest to write and run our tests.
+
+## Writing Tests
+
+To write tests using Jest, we create a test file and define test cases using the "test" function. Here's an example:
+
+```javascript
+const myModule = require('./myModule');
+
+test('addition function should return the sum of two numbers', () => {
+  expect(myModule.addition(2,3)).toBe(5);
+});
+```
+
+In this example, we import the module we want to test, and define a test case that verifies that the addition function returns the correct sum.
+
+## Running Tests
+
+To run our tests using Jest, we simply run the "jest" command in our terminal or command prompt. Jest will automatically locate and run any test files in our project.
+
+## Test Coverage
+
+Test coverage is a measure of the effectiveness of our testing. It represents the percentage of code that is covered by our tests. Jest provides tools for generating test coverage reports, which can help us identify areas of our code that need more testing.
+
+## Conclusion
+
+In this lesson, we learned about the importance of testing code and the different types of tests that can be performed. We also learned about testing frameworks and how to write and run tests using Jest. Remember, testing is an essential part of the development process!

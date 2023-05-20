@@ -1,0 +1,97 @@
+# Module 3: Arrays and Objects
+
+## Lesson 3: Object Methods
+
+Welcome to the third lesson of the Arrays and Objects module! In this lesson, we'll learn about object methods and how to use them.
+
+## Object Methods
+
+Object methods are functions that are defined as part of an object and are used to perform actions on the object. They are used extensively in JavaScript for working with objects, and understanding how to create and use them is essential to becoming proficient in JavaScript.
+
+There are a number of built-in object methods available in JavaScript, such as:
+
+- `toString()`: Returns a string representation of an object.
+- `valueOf()`: Returns the primitive value of an object.
+- `hasOwnProperty()`: Returns a boolean indicating whether the object has the specified property as its own property.
+- `Object.keys()`: Returns an array containing the names of all the enumerable properties of an object.
+
+You can also create your own object methods using the same syntax as defining a regular function. Here's an example:
+
+```javascript
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+console.log(person.fullName()); // "John Doe"
+```
+
+Here, we defined a `fullName` method for the `person` object, which returns a string containing the person's first and last name.
+
+## Using "this" in Object Methods
+
+In the previous example, you may have noticed the use of `this` within the `fullName` method. `this` is a keyword that refers to the current object, and is commonly used in object methods to reference properties and methods of the object.
+
+Here's another example:
+
+```javascript
+const car = {
+  make: "Toyota",
+  model: "Corolla",
+  year: "2018",
+  drive: function() {
+    console.log("Driving a " + this.make + " " + this.model + " from " + this.year);
+  }
+};
+
+car.drive(); // "Driving a Toyota Corolla from 2018"
+```
+
+Here, we defined a `drive` method for the `car` object, which uses `this` to reference the `make`, `model`, and `year` properties of the object.
+
+## Object Constructors and Prototypes
+
+In addition to defining object methods, you can also define object constructors and prototypes in JavaScript.
+
+An object constructor is a function that is used to create new objects with the same properties and methods. Here's an example:
+
+```javascript
+function Person(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.fullName = function() {
+    return this.firstName + " " + this.lastName;
+  };
+}
+
+const john = new Person("John", "Doe");
+console.log(john.fullName()); // "John Doe"
+```
+
+Here, we defined a `Person` constructor function that creates new person objects with first and last names, and a `fullName` method to return the full name.
+
+Object prototypes are used to define the methods and properties that are inherited by objects created from a constructor function. Here's an example:
+
+```javascript
+function Vehicle(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+Vehicle.prototype.drive = function() {
+  console.log("Driving a " + this.make + " " + this.model + " from " + this.year);
+};
+
+const car = new Vehicle("Toyota", "Corolla", "2018");
+car.drive(); // "Driving a Toyota Corolla from 2018"
+```
+
+Here, we defined a `Vehicle` constructor function and a `drive` method in the prototype. The `car` object created from this constructor inherits the `drive` method.
+
+## Conclusion
+
+In this lesson, we learned about object methods in JavaScript and how to create and use them. We also learned about object constructors and prototypes, and how they can be used to create and define properties and methods for objects. With this knowledge, you should be able to work effectively with objects in JavaScript.
