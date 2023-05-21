@@ -1,0 +1,67 @@
+# Module 1: Introduction to Supervised Learning
+
+## Lesson 3: Building a Predictive Model
+
+Welcome to the third lesson of the Introduction to Supervised Learning module! In this lesson, we'll learn about building a predictive model using supervised learning algorithms.
+
+## Predictive Modeling
+
+In supervised learning, the goal is to build a predictive model based on labeled data. The labeled data consists of a set of input variables (also known as features) and their corresponding output variables (also known as labels). The goal is to use this labeled data to train a model that can predict the output variable for new, unseen input data.
+
+In predictive modeling, we typically split our labeled data into two sets: a training set and a testing set. We use the training set to train our model and the testing set to evaluate the performance of our model.
+
+## Supervised Learning Algorithms
+
+There are many different supervised learning algorithms available, each with their own strengths and weaknesses. Some commonly used algorithms include:
+
+- Linear Regression: used for predicting numeric values.
+- Logistic Regression: used for predicting binary or categorical values.
+- Decision Trees: used for classification and regression problems.
+- Random Forest: an ensemble method that uses multiple decision trees for classification and regression problems.
+- Support Vector Machines (SVMs): used for classification and regression problems.
+- Naive Bayes: used for classification problems.
+
+It's important to choose the appropriate algorithm for the data and problem at hand. In some cases, it may be necessary to experiment with multiple algorithms and compare their performance on the testing set.
+
+## Building a Predictive Model
+
+To build a predictive model, we typically follow these steps:
+
+1. Load and preprocess the data: This involves loading the data into our program and performing any necessary preprocessing steps such as normalization, imputation (filling in missing values), and feature selection.
+2. Split the data into training and testing sets: This is typically done using a function provided by a machine learning library such as scikit-learn.
+3. Train the model: This involves fitting the model to the training data using a function provided by a machine learning library.
+4. Evaluate the model: This involves using the testing set to evaluate the performance of our model. This can be done using various metrics such as accuracy, precision, recall, and F1 score.
+5. Tune hyperparameters: Many machine learning algorithms have hyperparameters that can be tuned to improve performance. This involves experimenting with different values for these hyperparameters and evaluating their effect on model performance.
+6. Predict new data: Once our model has been trained and tuned, we can use it to predict the output variable for new, unseen input data.
+
+Let's take a look at an example using scikit-learn to build a linear regression model:
+
+```python
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+
+# Load data
+X, y = load_data()
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+# Train model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Evaluate model
+score = model.score(X_test, y_test)
+print("Model score:", score)
+
+# Predict new data
+new_data = [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+predictions = model.predict(new_data)
+print("Predictions:", predictions)
+```
+
+In this example, we load our data and split it into training and testing sets. We then train a linear regression model on the training set and evaluate its performance on the testing set. Finally, we use the model to predict the output variable for some new input data.
+
+## Conclusion
+
+In this lesson, we learned about building a predictive model using supervised learning algorithms. We discussed the importance of choosing the appropriate algorithm for the data and problem at hand, and we walked through the steps involved in building a predictive model. We also saw an example of building and evaluating a linear regression model using scikit-learn.

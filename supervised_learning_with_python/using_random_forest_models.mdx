@@ -1,0 +1,123 @@
+# Module 3: Decision Trees and Random Forests
+
+## Lesson 2: Using Random Forest Models
+
+Welcome to Lesson 2 of the Decision Trees and Random Forests module! In this lesson, we'll learn about random forest models and how to use them in Python for classification and regression problems.
+
+### What is a Random Forest Model?
+
+A random forest model is an ensemble learning technique that builds multiple decision trees and combines their outputs to make more accurate predictions. A decision tree is a tree-like model of decisions and their consequences.
+
+The idea behind a random forest is to build several decision trees on randomly selected subsets of the training data and average their predictions to make the final prediction. The process of building decision trees on random subsets of the data is called bagging (bootstrap aggregating).
+
+### Random Forest Terminology
+
+Before we dive into random forest models, we need to understand a few basic terms:
+
+- Decision tree: A tree-like model of decisions and their consequences.
+- Ensemble learning: A technique that combines multiple models to improve performance.
+- Bagging: Building multiple models on different subsets of the training data to reduce overfitting.
+- Bootstrap: Randomly selecting subsets of the training data.
+- Random subspace method: Building models on randomly selected subsets of the features.
+- Out-of-bag error: An estimate of a model's performance on unseen data.
+
+### Random Forest Classification
+
+Let's start with an example of random forest classification. We'll be using the famous iris dataset, which contains information about three different types of iris flowers (setosa, versicolor, and virginica).
+
+```python
+from sklearn.datasets import load_iris
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Load the iris dataset
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create a random forest classifier
+rfc = RandomForestClassifier(n_estimators=100, random_state=42)
+
+# Train the classifier on the training data
+rfc.fit(X_train, y_train)
+
+# Make predictions on the testing data
+y_pred = rfc.predict(X_test)
+
+# Calculate the accuracy of the classifier
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)
+```
+
+In this example, we first load the iris dataset and split it into training and testing sets. We then create a random forest classifier with 100 trees and train it on the training data. Finally, we make predictions on the testing data and calculate the accuracy of the classifier.
+
+### Random Forest Regression
+
+Next, let's look at an example of random forest regression. We'll be using the Boston Housing dataset, which contains information about houses in the Boston area and their prices.
+
+```python
+from sklearn.datasets import load_boston
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
+
+# Load the Boston Housing dataset
+boston = load_boston()
+X = boston.data
+y = boston.target
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create a random forest regressor
+rfr = RandomForestRegressor(n_estimators=100, random_state=42)
+
+# Train the regressor on the training data
+rfr.fit(X_train, y_train)
+
+# Make predictions on the testing data
+y_pred = rfr.predict(X_test)
+
+# Calculate the mean squared error of the regressor
+mse = mean_squared_error(y_test, y_pred)
+print("Mean Squared Error:", mse)
+```
+
+In this example, we load the Boston Housing dataset and split it into training and testing sets. We then create a random forest regressor with 100 trees and train it on the training data. Finally, we make predictions on the testing data and calculate the mean squared error of the regressor.
+
+### Tuning a Random Forest Model
+
+One of the biggest advantages of using random forest models is that they're relatively easy to tune. You can experiment with different values for hyperparameters like the number of trees, the maximum depth of the trees, and the number of features used for each split.
+
+The `GridSearchCV` function in scikit-learn can be used to easily search for the optimal hyperparameters of a random forest model:
+
+```python
+from sklearn.model_selection import GridSearchCV
+
+# Define the parameter grid
+param_grid = {
+    "n_estimators": [50, 100, 150],
+    "max_depth": [5, 10, 15],
+    "max_features": [2, 4, 6]
+}
+
+# Create a random forest classifier
+rfc = RandomForestClassifier(random_state=42)
+
+# Perform grid search to find the best hyperparameters
+grid_search = GridSearchCV(rfc, param_grid=param_grid, cv=5, n_jobs=-1)
+grid_search.fit(X_train, y_train)
+
+# Print the best hyperparameters
+print("Best Hyperparameters:", grid_search.best_params_)
+```
+
+In this example, we define a grid of hyperparameters to search through and use the `GridSearchCV` function to perform a grid search for the optimal hyperparameters. The `cv` parameter specifies the number of cross-validation folds to use and the `n_jobs` parameter specifies the number of CPU cores to use for the search.
+
+### Conclusion
+
+In this lesson, we learned about random forest models and how to use them in Python for classification and regression problems. We also looked at some basic terminology associated with random forests and saw examples of using them on the iris and Boston Housing datasets. Finally, we learned how to tune a random forest model using grid search.

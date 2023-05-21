@@ -1,0 +1,157 @@
+# Module 2: Regression and KNN Models
+
+## Lesson 2: Using Regression Models
+
+Welcome to Lesson 2 of the Regression and KNN Models module. In this lesson, we'll learn about regression models and how to use them in Python.
+
+### What is Regression?
+
+Regression is a statistical method used to determine the relationship between a dependent variable and one or more independent variables. It is commonly used for predicting the future values of a continuous variable based on past data.
+
+There are several types of regression, including:
+
+- Simple Linear Regression: used for predicting a single continuous dependent variable based on a single independent variable.
+- Multiple Linear Regression: used for predicting a single continuous dependent variable based on two or more independent variables.
+- Polynomial Regression: used for predicting a single continuous dependent variable based on a polynomial function of one or more independent variables.
+
+### Simple Linear Regression
+
+Let's start with an example of simple linear regression. Suppose we want to predict the price of a house based on its size. We have the following data:
+
+|Size (square meters)|Price (thousands of dollars)|
+|---|---|
+|30|100|
+|50|200|
+|70|300|
+|90|400|
+|110|500|
+
+We can use simple linear regression to create a model that will predict the price of a house based on its size. First, we'll import the necessary libraries:
+
+```python
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+```
+
+Next, we'll create a Python dictionary to store our data:
+
+```python
+data = {'size': [30, 50, 70, 90, 110], 'price': [100, 200, 300, 400, 500]}
+df = pd.DataFrame(data)
+```
+
+Now, we'll create a linear regression model and fit it to our data:
+
+```python
+model = LinearRegression()
+model.fit(df[['size']], df['price'])
+```
+
+Finally, we can use our model to predict the price of a house based on its size:
+
+```python
+print(model.predict([[120]]))
+```
+
+This will print the predicted price of a 120 square meter house.
+
+### Multiple Linear Regression
+
+Now let's look at an example of multiple linear regression. Suppose we want to predict the weight of a person based on their age, height, and gender. We have the following data:
+
+|Age|Height (inches)|Gender |Weight (pounds)|
+|---|---|---|---|
+|20|72|M|174|
+|22|67|F|120|
+|24|68|F|142|
+|26|70|M|171|
+|28|69|M|176|
+
+We can use multiple linear regression to create a model that will predict the weight of a person based on their age, height, and gender. First, we'll import the necessary libraries:
+
+```python
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import OneHotEncoder
+```
+
+Next, we'll create a Python dictionary to store our data:
+
+```python
+data = {'age': [20, 22, 24, 26, 28], 'height': [72, 67, 68, 70, 69], 'gender': ['M', 'F', 'F', 'M', 'M'], 'weight': [174, 120, 142, 171, 176]}
+df = pd.DataFrame(data)
+```
+
+We need to convert the gender column to a binary representation using One Hot Encoding. We will create a new column for male and female:
+
+```python
+enc = OneHotEncoder(handle_unknown='ignore')
+enc_df = pd.DataFrame(enc.fit_transform(df[['gender']]).toarray())
+df = df.join(enc_df, rsuffix='_gender')
+df.rename(columns={0: 'F', 1: 'M'}, inplace=True)
+```
+
+Now, we'll create a linear regression model and fit it to our data:
+
+```python
+model = LinearRegression()
+model.fit(df[['age', 'height', 'F', 'M']], df['weight'])
+```
+
+Finally, we can use our model to predict the weight of a person based on their age, height, and gender:
+
+```python
+print(model.predict([[30, 75, 0, 1]]))
+```
+
+This will print the predicted weight of a 30-year-old, 75 inch tall male.
+
+### Polynomial Regression
+
+Finally, let's look at an example of polynomial regression. Suppose we want to predict the number of ice cream cones sold based on the temperature. We have the following data:
+
+|Temperature (degrees F)|Cones sold|
+|---|---|
+|60|150|
+|65|200|
+|70|250|
+|75|300|
+|80|350|
+
+We can use polynomial regression to create a model that will predict the number of ice cream cones sold based on the temperature. First, we'll import the necessary libraries:
+
+```python
+import pandas as pd
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
+```
+
+Next, we'll create a Python dictionary to store our data:
+
+```python
+data = {'temperature': [60, 65, 70, 75, 80], 'cones_sold': [150, 200, 250, 300, 350]}
+df = pd.DataFrame(data)
+```
+
+Now, we'll create a polynomial regression model and fit it to our data:
+
+```python
+X = df[['temperature']]
+poly = PolynomialFeatures(degree=2)
+X_poly = poly.fit_transform(X)
+model = LinearRegression()
+model.fit(X_poly, df['cones_sold'])
+```
+
+Finally, we can use our model to predict the number of ice cream cones sold based on the temperature:
+
+```python
+print(model.predict(poly.fit_transform([[85]])))
+```
+
+This will print the predicted number of ice cream cones sold at a temperature of 85 degrees F.
+
+## Conclusion
+
+In this lesson, we learned about regression models and how to use them in Python. We covered three types of regression models: simple linear regression, multiple linear regression, and polynomial regression. We also learned how to import the necessary libraries, create dataframes, and fit models to our data.

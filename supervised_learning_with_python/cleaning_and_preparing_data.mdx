@@ -1,0 +1,84 @@
+# Module 1: Introduction to Supervised Learning
+
+## Lesson: Cleaning and Preparing Data
+
+Welcome to the lesson on Cleaning and Preparing Data! In this lesson, we will discuss the importance of data cleaning and preparation before using it in supervised learning.
+
+### Why Clean and Prepare Data?
+
+Data preparation is one of the most important tasks of data analysis and machine learning. Raw data usually contains a lot of noise, missing values, inconsistencies, and irrelevant features that can affect the performance of predictive models. Cleaning and preparing data is essential to ensure the accuracy, reliability, and generalizability of machine learning algorithms.
+
+### Cleaning Data
+
+Data cleaning involves removing or correcting errors, missing values, duplicates, outliers, inconsistent formatting, and irrelevant information from a dataset. The following steps can help you to clean your data:
+
+1. Identify and remove duplicates: Duplicate values in a dataset can skew statistical analyses and cause overfitting. Use the pandas library in Python to identify duplicates and remove them using the drop_duplicates() function.
+
+```python
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+df.drop_duplicates(inplace=True)
+```
+
+2. Handle missing values: Missing values can be replaced by the mean, median, or mode of the remaining values in the column. Alternatively, you can remove rows with missing values. Use the fillna() and dropna() functions in Pandas to handle missing data.
+
+```python
+df.fillna(df.mean(), inplace=True)
+df.dropna(inplace=True)
+```
+
+3. Remove outliers: Outliers can have a significant impact on machine learning models by skewing results. You can use the Z-score technique or the Interquartile range (IQR) technique to identify and remove outliers.
+
+```python
+from scipy import stats
+
+z_scores = stats.zscore(df['Age'])
+abs_z_scores = np.abs(z_scores)
+filtered_entries = (abs_z_scores < 3)
+df = df[filtered_entries]
+```
+4. Feature scaling: Feature scaling is the process of normalizing the range of independent variables, so they all have the same scale. You can use the MinMaxScaler or StandardScaler class in Scikit-learn to scale your features.
+
+```python
+from sklearn.preprocessing import MinMaxScaler
+
+scaler = MinMaxScaler()
+df[['Age', 'Income']] = scaler.fit_transform(df[['Age', 'Income']])
+```
+
+### Preparing Data
+
+Preparing data involves formatting, transforming, and encoding the data to make it suitable for use in machine learning algorithms. The following steps can help you to prepare your data:
+
+1. Data formatting: Ensure that all data types have been correctly identified. Numerical data types should be integers or floating-point numbers, while categorical data types should be strings or integers.
+
+2. Data transformation: You may need to transform your data into a format that is more suitable for use in machine learning algorithms. Common transformations include data normalization, rescaling, encoding, and feature selection.
+
+3. Data encoding: Machine learning algorithms require that all data be in numerical form. You can use one-hot encoding, label encoding, or binary encoding to convert categorical data into numerical data.
+
+```python
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+
+label_encoder = LabelEncoder()
+df['Gender'] = label_encoder.fit_transform(df['Gender'])
+
+onehot_encoder = OneHotEncoder()
+ohe = onehot_encoder.fit_transform(df['City'].values.reshape(-1, 1)).toarray()
+```
+
+4. Feature Selection: Feature selection is the process of selecting a subset of input features that are most relevant to the output variable. You can use various supervised and unsupervised methods for feature selection, such as correlation analysis, principal component analysis (PCA), and decision tree algorithms.
+
+```python
+from sklearn.feature_selection import SelectKBest, f_classif
+
+X = df.drop(columns=['Purchased'])
+y = df['Purchased']
+
+selector = SelectKBest(f_classif, k=2)
+X = selector.fit_transform(X, y)
+```
+
+## Conclusion
+
+In this lesson, we learned the importance of cleaning and preparing data before using it in supervised learning. We discussed various techniques for data cleaning and preparation, such as removing duplicates, handling missing values, removing outliers, feature scaling, data encoding, and feature selection. Cleaning and preparing data is a crucial step to ensure the accuracy and effectiveness of machine learning models.

@@ -1,0 +1,108 @@
+# Module 2: Regression and KNN Models 
+
+## Lesson 3: Working with Real World Datasets
+
+Welcome to Lesson 3 of the Regression and KNN Models module! In this lesson, we will learn how to work with real-world datasets in regression and KNN models.
+
+### Importing and Exploring Datasets
+
+Before we can work with a dataset, we need to import it into our program. There are various file formats we can work with, such as CSV files, Excel files, and JSON files.
+
+In Python, we can use the pandas module to read and manipulate datasets. Let's take a look at an example:
+
+```python
+import pandas as pd
+
+data = pd.read_csv("dataset.csv")
+
+# view the first 5 rows of the dataset
+print(data.head())
+```
+
+In this example, we use the read_csv() function to import a CSV file called "dataset.csv". We then print the first 5 rows of the dataset using the head() function.
+
+Once we have imported the dataset, we should explore it to understand its properties, such as the number of rows and columns, the data types of each column, and the distribution of values. We can use pandas functions such as describe() and info() to get this information.
+
+```python
+# view the number of rows and columns in the dataset
+print(data.shape)
+
+# view the data types of each column in the dataset
+print(data.info())
+
+# view descriptive statistics for the dataset
+print(data.describe())
+```
+
+### Preprocessing Datasets
+
+Before we can use a dataset for building regression or KNN models, we need to preprocess it to clean and transform the data. Here are some common preprocessing steps:
+
+- Handling missing or invalid values
+- Encoding categorical variables
+- Scaling or normalizing numerical variables
+- Removing outliers
+
+Let's take a look at an example of handling missing values:
+
+```python
+# check for missing values
+print(data.isna().sum())
+
+# fill in missing values with the mean of the column
+data = data.fillna(data.mean())
+```
+
+In this example, we use the isna() function to check for missing values in the dataset. We then fill in the missing values with the mean of the column using the fillna() function.
+
+### Building Regression and KNN Models
+
+Once we have preprocessed the data, we can build regression and KNN models using scikit-learn, a popular machine learning library in Python.
+
+Here's an example of building a linear regression model:
+
+```python
+from sklearn.linear_model import LinearRegression
+
+# separate the target variable from the features
+X = data.drop(columns=["target"])
+y = data["target"]
+
+# split the dataset into training and testing sets
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
+
+# build the linear regression model
+model = LinearRegression().fit(X_train, y_train)
+
+# predict on the test set
+y_pred = model.predict(X_test)
+
+# evaluate the model
+from sklearn.metrics import mean_squared_error
+
+mse = mean_squared_error(y_test, y_pred)
+print("MSE:", mse)
+```
+
+In this example, we first separate the target variable from the features. We then split the dataset into training and testing sets using the train_test_split() function. We build a linear regression model using the LinearRegression() function, fit the model to the training set using the fit() function, and predict on the test set using the predict() function. Finally, we evaluate the model using the mean squared error (MSE) metric.
+
+We can build a KNN model using similar steps, but using the KNeighborsRegressor() function instead of LinearRegression():
+
+```python
+from sklearn.neighbors import KNeighborsRegressor
+
+model = KNeighborsRegressor(n_neighbors=5).fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+
+mse = mean_squared_error(y_test, y_pred)
+print("MSE:", mse)
+```
+
+In this example, we build a KNN model with 5 neighbors using the KNeighborsRegressor() function, fit the model to the training set using the fit() function, predict on the test set using the predict() function, and evaluate the model using the MSE metric.
+
+### Conclusion
+
+In this lesson, we learned how to import and explore real-world datasets in Python using pandas. We also learned how to preprocess the data for regression and KNN models, and how to build and evaluate these models using scikit-learn. With these skills, you are now equipped to work with a wide range of real-world datasets and build powerful models to make predictions and gain insights.

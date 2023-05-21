@@ -1,0 +1,82 @@
+# Module 2: Regression and KNN Models
+
+## Lesson: Choosing the Best Model
+
+In the previous lessons, we learned about regression and k-nearest neighbors (KNN) models and how to train and test them using Python's scikit-learn library. In this lesson, we will learn how to choose the best model for our data.
+
+### Model Evaluation Metrics
+
+To choose the best model, we first need to evaluate the performance of each model. There are several metrics we can use to evaluate a model:
+
+- **Mean Squared Error (MSE)**: This is the most commonly used evaluation metric for regression models. It calculates the average squared difference between the predicted values and the actual values.
+- **R-Squared (R2)**: This metric measures the proportion of variance in the dependent variable that is predictable from the independent variable(s).
+- **Accuracy**: This is the most commonly used evaluation metric for classification models. It measures the percentage of correctly classified instances.
+
+### Training and Testing Data
+
+Before we can evaluate our model, we need to split our data into training and testing sets. We then train our model on the training set and evaluate its performance on the testing set. This allows us to estimate how well our model will perform on new, unseen data.
+
+``` python
+from sklearn.model_selection import train_test_split
+
+# X is the feature set, y is the target variable
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+```
+
+Here, we split our data into training and testing sets with a 70-30 split and a random_state of 42.
+
+### Cross-Validation
+
+Cross-validation is a technique for evaluating the performance of a model by training and testing it on multiple subsets of the data. This can help us estimate the performance of our model on new, unseen data.
+
+``` python
+from sklearn.model_selection import cross_val_score
+
+# model is the regression or KNN model
+scores = cross_val_score(model, X, y, cv=5)
+```
+
+Here, we use cross-validation with 5 folds to evaluate the performance of our model on multiple subsets of the data.
+
+### Grid Search
+
+Grid search is a technique for finding the best values of hyperparameters for our model. Hyperparameters are the settings that we can tune to optimize the performance of our model.
+
+``` python
+from sklearn.model_selection import GridSearchCV
+
+# model is the regression or KNN model
+param_grid = {'n_neighbors': [5, 10, 15], 'weights': ['uniform', 'distance']}
+grid = GridSearchCV(model, param_grid, cv=5)
+
+# fit the grid search to our data
+grid.fit(X_train, y_train)
+
+# print the best hyperparameters
+print(grid.best_params_)
+```
+
+Here, we define a grid of hyperparameters to search over (n_neighbors and weights) and use cross-validation with 5 folds to evaluate the performance of each combination of hyperparameters. The best hyperparameters are then printed.
+
+### Model Selection
+
+To select the best model, we need to evaluate the performance of each model using our chosen metrics and choose the model with the best performance. It's important to keep in mind that a model that performs well on our training set may not perform well on new, unseen data, so we should use cross-validation to estimate how well our model will perform on new data.
+
+``` python
+from sklearn.linear_model import LinearRegression
+from sklearn.neighbors import KNeighborsRegressor
+
+# create a list of regression models to test
+models = [LinearRegression(), KNeighborsRegressor()]
+
+# evaluate the performance of each model
+for model in models:
+    scores = cross_val_score(model, X, y, cv=5, scoring='neg_mean_squared_error')
+    print(f"{type(model).__name__} MSE: {-scores.mean()}")
+```
+
+Here, we create a list of regression models to test (LinearRegression and KNeighborsRegressor) and evaluate the performance of each model using MSE as our evaluation metric.
+
+### Conclusion
+
+In this lesson, we learned how to choose the best model for our data by evaluating the performance of our models using metrics such as MSE and R2, splitting our data into training and testing sets, using cross-validation to estimate the performance of our model on new data, and using grid search to find the best hyperparameters for our model. By following these steps, we can select the model that performs the best on our data and is most likely to generalize well to new, unseen data.

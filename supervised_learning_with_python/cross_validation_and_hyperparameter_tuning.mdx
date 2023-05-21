@@ -1,0 +1,69 @@
+# Module 4: Optimization and Avoiding Overfitting
+
+## Lesson: Cross Validation and Hyperparameter Tuning
+
+Welcome to the Cross Validation and Hyperparameter Tuning lesson of the Optimization and Avoiding Overfitting module. In this lesson, we will be discussing two important techniques to optimize machine learning models: cross validation and hyperparameter tuning.
+
+### Cross Validation
+
+Cross validation is a technique used to evaluate a machine learning model's performance on new data. The basic idea behind cross validation is to split the data into multiple groups or "folds". One fold is used as the validation set, and the remaining folds are used as the training set. This process is repeated for each fold, so that every fold is used as the validation set at some point.
+
+There are several methods of cross validation, but the most common method is k-fold cross validation. In k-fold cross validation, the data is split into k folds, and the model is trained on k-1 folds and tested on the remaining fold. This process is repeated for each of the k folds, so that every fold is used as the test set once. The results from each test set are then averaged to produce an overall evaluation of the model's performance.
+
+Let's take a look at an example of k-fold cross validation in Python:
+
+```python
+from sklearn.model_selection import cross_val_score
+from sklearn.linear_model import LinearRegression
+from sklearn.datasets import load_boston
+
+boston = load_boston()
+X = boston.data
+y = boston.target
+
+model = LinearRegression()
+
+scores = cross_val_score(model, X, y, cv=5)
+print(scores)
+```
+
+Here, we import the necessary libraries and load the Boston housing dataset. We then define a LinearRegression model and use the cross_val_score function to perform 5-fold cross validation. The output is an array of the R-squared values for each fold.
+
+### Hyperparameter Tuning
+
+Hyperparameters are parameters that are set prior to training a machine learning model. These parameters are not learned from the data like the model's weights, but instead are set manually by the user. Examples of hyperparameters include the learning rate, regularization strength, and the number of trees in a random forest.
+
+Hyperparameter tuning is the process of finding the optimal values for these hyperparameters to produce the best possible model performance. There are several methods of hyperparameter tuning, including manual tuning, grid search, and random search.
+
+Manual tuning involves setting the hyperparameters manually and evaluating the model's performance. Grid search involves defining a grid of hyperparameter values and trying every possible combination to find the best set of hyperparameters. Random search is similar to grid search, but randomly samples from the hyperparameter space instead of trying every combination.
+
+Let's take a look at an example of using grid search for hyperparameter tuning in Python:
+
+```python
+from sklearn.model_selection import GridSearchCV
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.datasets import load_boston
+
+boston = load_boston()
+X = boston.data
+y = boston.target
+
+model = RandomForestRegressor()
+
+param_grid = {
+    'n_estimators': [100, 500, 1000],
+    'max_depth': [5, 10, 20],
+    'min_samples_split': [2, 5, 10]
+}
+
+grid_search = GridSearchCV(model, param_grid, cv=5)
+grid_search.fit(X, y)
+
+print(grid_search.best_params_)
+```
+
+Here, we import the necessary libraries and load the Boston housing dataset. We then define a RandomForestRegressor model and define a parameter grid of possible hyperparameter values. We pass the model and the parameter grid to the GridSearchCV function, which performs grid search with 5-fold cross validation. The output is the best set of hyperparameters found by the grid search.
+
+### Conclusion
+
+In this lesson, we learned about two important techniques for optimizing machine learning models: cross validation and hyperparameter tuning. We discussed the concept of cross validation and the k-fold cross validation method. We also discussed the concept of hyperparameters and three methods of hyperparameter tuning: manual tuning, grid search, and random search. These techniques are essential for producing the most accurate and performant machine learning models possible.

@@ -1,0 +1,63 @@
+# Module 4: Optimization and Avoiding Overfitting
+
+## Lesson: Dealing with Imbalanced Data
+
+Welcome to the Dealing with Imbalanced Data lesson in the Optimization and Avoiding Overfitting module. In this lesson, we will learn what imbalanced data is, how it affects model performance, and some techniques to handle imbalanced data.
+
+### What is Imbalanced Data?
+
+Imbalanced data is a situation where the target variable in the dataset has significantly more observations for one class than the others. For instance, consider a binary classification problem where the positive instances are only 5% of the total dataset. In this case, the dataset is imbalanced because one class is much more prevalent than the other.
+
+### How Imbalanced Data Affects Model Performance
+
+A model trained on imbalanced data can be biased towards the majority class. This is because the model is more likely to predict the majority class because it is the most prevalent. Thus, the model cannot accurately predict the minority class, resulting in poor performance, lower precision, recall, and accuracy.
+
+### Techniques to Handle Imbalanced Data
+
+Here are some techniques that can help to handle imbalanced data:
+
+#### 1. Resampling the Dataset
+
+Resampling is when we change the composition of the training dataset by adding or removing instances of one class to achieve balance. There are two resampling techniques:
+
+##### 1.1 Oversampling
+
+Oversampling is adding more instances to the minority class so that it matches the number of instances of the majority class. We can use various techniques like:
+
+- Random Oversampling: Duplicates random instances of the minority class.
+- SMOTE (Synthetic Minority Over-sampling Technique): Synthetic instances are created for the minority class close to actual instances, making the model aware of a more considerable range of feature combinations.
+
+##### 1.2 Undersampling
+
+Undersampling is removing instances of the majority class so that it matches the number of instances of the minority class. We can use these techniques:
+
+- Random Undersampling: Random instances of the majority class are removed.
+- Tomek Links: Undersample the majority class by removing points near the decision boundary.
+    
+In both resampling techniques, there is a tradeoff in either increasing the number of instances in the minority class or decreasing the number of instances in the majority class.
+
+#### 2. Class Weights
+
+Class weight assigns more weight to the minority class while training the model. 
+
+```python
+from sklearn.svm import SVC
+from sklearn.utils import class_weight
+
+X_train, y_train = ...
+class_weights = class_weight.compute_class_weight('balanced', np.unique(y_train), y_train)
+
+model = SVC(class_weight=class_weights)
+```
+
+#### 3. Generate for More Data
+
+Creating more data using augmentation techniques like rotating, flipping, or changing the brightness level can help deprioritize the majority class and have an ample number of instances for the minority class.
+
+#### 4. Anomaly Detection
+
+Anomaly detection is a method used to remove the outliers in data. When it comes to imbalanced data, the majority class can be considered as an outlier, and by removing it, we can have a more balanced dataset and better model performance.
+
+### Conclusion
+
+In this lesson, we've learned what imbalanced data is and how it affects model performance. We've also discussed techniques to handle imbalanced data, such as resampling, class weights, generating more data by augmentation, and anomaly detection. With these techniques, we can improve model performance and achieve better results for imbalanced datasets.

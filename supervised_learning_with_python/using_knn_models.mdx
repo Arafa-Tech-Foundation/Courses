@@ -1,0 +1,71 @@
+# Module 2: Regression and KNN Models
+
+## Lesson: Using KNN Models
+
+Welcome to the lesson on using KNN Models! In this lesson, we will learn how to use KNN models for regression and classification tasks.
+
+### K-Nearest Neighbors (KNN)
+
+KNN is a simple and powerful machine learning algorithm used for both regression and classification problems. The KNN algorithm works by finding the K-nearest data points to the input data point in question. The predicted output value is then based on the average output value of the K nearest neighbors.
+
+KNN is a non-parametric algorithm, meaning it does not depend on any assumptions of the data distribution. This makes it a flexible algorithm that can work well on many different types of data.
+
+### KNN for Regression
+
+To use the KNN algorithm for regression tasks, we need to first find the K-nearest neighbors to the input data point. Then, we can predict the output value by taking the average of the output values of the K nearest neighbors. Let's take a look at an example:
+
+```python
+from sklearn.neighbors import KNeighborsRegressor
+
+X_train = [[0, 0], [1, 1], [2, 2], [3, 3]]
+y_train = [0, 1, 2, 3]
+
+k = 2
+knn = KNeighborsRegressor(n_neighbors=k)
+knn.fit(X_train, y_train)
+
+X_test = [[1.5, 1.5]]
+predicted_output = knn.predict(X_test)
+
+print("Predicted Output:", predicted_output)
+```
+
+In this example, we are using the KNN algorithm for regression on a small dataset containing 4 data points. We first train the KNN model on the training dataset using k=2. We then use the trained model to predict the output value for a new data point [1.5, 1.5].
+
+The predicted output value is the average of the output values of the 2 nearest neighbors, which in this case is 1.5. Thus, the predicted output value for the input data point [1.5, 1.5] is 1.5.
+
+### KNN for Classification
+
+To use the KNN algorithm for classification tasks, we need to first find the K-nearest neighbors to the input data point. Then, we can predict the output class by taking the majority class of the K nearest neighbors. Let's take a look at an example:
+
+```python
+from sklearn.neighbors import KNeighborsClassifier
+
+X_train = [[0, 0], [1, 1], [2, 2], [3, 3]]
+y_train = [0, 0, 1, 1]
+
+k = 2
+knn = KNeighborsClassifier(n_neighbors=k)
+knn.fit(X_train, y_train)
+
+X_test = [[1.5, 1.5]]
+predicted_output = knn.predict(X_test)
+
+print("Predicted Output:", predicted_output)
+```
+
+In this example, we are using the KNN algorithm for classification on a small dataset containing 4 data points. We first train the KNN model on the training dataset using k=2. We then use the trained model to predict the output class for a new data point [1.5, 1.5].
+
+The predicted output class is the majority class of the 2 nearest neighbors, which in this case is class 0. Thus, the predicted output class for the input data point [1.5, 1.5] is class 0.
+
+### Choosing the Value of K
+
+The value of K is an important hyperparameter in the KNN algorithm. Choosing the correct value of K is important for achieving good model performance.
+
+A small value of K (e.g. K=1 or K=2) can lead to overfitting, where the model learns the noise in the training dataset. On the other hand, a large value of K can lead to underfitting, where the model is too simple and does not capture the underlying patterns in the data.
+
+The value of K is typically chosen using cross-validation on a validation dataset. A good rule of thumb is to choose K as the square root of the number of data points in the training dataset.
+
+### Conclusion
+
+In this lesson, we learned about the KNN algorithm for regression and classification tasks. We learned how to use the KNN algorithm to predict the output value or class for a new input data point. We also learned about the importance of choosing the correct value of K for achieving good model performance.

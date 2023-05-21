@@ -1,0 +1,73 @@
+# Module 3: Decision Trees and Random Forests
+
+## Lesson: Working with Large Datasets
+
+Welcome to the Working with Large Datasets lesson of the Decision Trees and Random Forests module! In this lesson, we will explore techniques for handling large datasets in Machine Learning.
+
+## Limitations of Traditional Models
+
+Traditional models such as Linear Regression, Logistic Regression or K-Nearest Neighbors can handle small datasets well, but they face issues with larger datasets, such as:
+
+- Low speed of model training.
+- Difficulty in exploring the high-dimensional feature space.
+- Unstable performance due to overfitting.
+
+## Understanding the Problem
+
+Before attempting to modify the model, it's important to understand how to define a large dataset. Machine Learning datasets with tens of thousands or millions of rows or features can be deemed large.
+
+## Sampling
+
+One way to handle large datasets is to take a representative but smaller sample of the data for model training and validation. The sample should be chosen such that it has the same statistical properties as the original dataset to avoid bias.
+
+```python
+import pandas as pd
+import numpy as np
+
+# Load the data
+df = pd.read_csv('data.csv')
+
+# Take a random sample of 10% of the data
+sample_df = df.sample(frac=0.1)
+
+```
+
+## Feature Selection
+
+Feature selection involves identifying the most important features that contribute to the predictive power of the model. This helps reduce the number of dimensions (features) and helps focus on the most relevant ones, thus reducing the computational complexity.
+
+```python
+from sklearn.feature_selection import SelectKBest, f_classif
+
+# Load and prepare the data
+X, y = load_data('data.csv')
+
+# Create selector object using ANOVA F-value
+selector = SelectKBest(f_classif, k=10)
+
+# Fit selector on the data
+X_new = selector.fit_transform(X, y)
+```
+In this example, we use the 'SelectKBest' function from the 'sklearn.feature_selection' module to choose the top 10 features with the highest ANOVA F-value.
+
+## Model Parallelization
+
+Model parallelization is the process of dividing large datasets into smaller ones and training multiple models in parallel. This helps speed up the training process.
+
+Parallelizing a model can be achieved using frameworks like TensorFlow, Keras or PyTorch. Multi-core processing can boost model training speed as well.
+
+```python
+import multiprocessing
+
+# Divide data into chunks
+num_cores = multiprocessing.cpu_count()
+chunks = [df[i:i + num_cores] for i in range(0, df.shape[0], num_cores)]
+
+# Train models on each chunk
+pool = multiprocessing.Pool(processes=num_cores)
+models = pool.map(train_model, chunks)
+```
+
+## Conclusion
+
+In this lesson, we learned how to handle large datasets in Machine Learning. We explored techniques such as sampling, feature selection, multi-core processing, and model parallelization. By implementing these techniques, we can improve the training speed and predictive performance of our models when dealing with big data.

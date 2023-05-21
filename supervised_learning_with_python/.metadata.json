@@ -1,0 +1,55 @@
+{
+  "name": "Introduction to Supervised Learning with Python",
+  "instructor": "Josef Macera",
+  "type": "application",
+  "languages": ["Python"],
+  "skills": [
+    "Learn the basics of supervised learning and how it applies to the field of data science",
+    "Understand how to build and evaluate a predictive model",
+    "Master the use of popular Python libraries such as Scikit-Learn and Pandas for data analysis and model building",
+    "Explore different types of models such as regression, k-nearest neighbors, decision trees and random forests",
+    "Learn how to optimize a model and avoid overfitting",
+    "Discover how to work with real-world datasets and choose the best model for a given problem"
+  ],
+  "title": "Introduction to Supervised Learning with Python",
+  "description": "Learn how to build predictive models with supervised learning using Python",
+  "modules": [
+    {
+      "name": "Module 1: Introduction to Supervised Learning",
+      "lessons": [
+        { "name": "what_is_supervised_learning", "video": "1-1.mp4" },
+        { "name": "building_a_predictive_model", "video": "1-2.mp4" },
+        { "name": "getting_started_with_python_libraries", "video": "1-3.mp4" },
+        { "name": "cleaning_and_preparing_data", "video": "1-4.mp4" }
+      ]
+    },
+    {
+      "name": "Module 2: Regression and KNN Models",
+      "lessons": [
+        { "name": "using_regression_models", "video": "2-1.mp4" },
+        { "name": "using_knn_models", "video": "2-2.mp4" },
+        { "name": "evaluating_and_optimizing_models", "video": "2-3.mp4" },
+        { "name": "choosing_the_best_model", "video": "2-4.mp4" },
+        { "name": "working_with_real_world_datasets", "video": "2-5.mp4" }
+      ]
+    },
+    {
+      "name": "Module 3: Decision Trees and Random Forests",
+      "lessons": [
+        { "name": "using_decision_tree_models", "video": "3-1.mp4" },
+        { "name": "using_random_forest_models", "video": "3-2.mp4" },
+        { "name": "working_with_large_datasets", "video": "3-3.mp4" },
+        { "name": "interpretability_and_visualization_of_models", "video": "3-4.mp4" }
+      ]
+    },
+    {
+      "name": "Module 4: Optimization and Avoiding Overfitting",
+      "lessons": [
+        { "name": "cross_validation_and_hyperparameter_tuning", "video": "4-1.mp4" },
+        { "name": "dealing_with_imbalanced_data", "video": "4-2.mp4" },
+        { "name": "avoiding_overfitting", "video": "4-3.mp4" },
+        { "name": "conclusion", "video": "4-4.mp4" }
+      ]
+    }
+  ]
+}

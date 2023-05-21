@@ -1,0 +1,52 @@
+# Module 3: Decision Trees and Random Forests
+
+## Lesson: Interpretability and Visualization of Models
+
+In this lesson, we will learn about how to interpret and visualize decision trees and random forests. Machine learning models become more complex with time, and it becomes increasingly challenging for individuals to understand the decision-making process made by the machine model. We will focus on understanding how to visualize decision-making processes and how to make the model easy to interpret.
+
+### Why Is Interpretability Essential?
+
+Interpretation is essential when you are dealing with non-transparent models. For example, in high-risk situations like the healthcare industry, it becomes critical to understand the decision-making process of the model. Interpretation becomes essential, and we need to know which feature has a more significant impact on the model. Proper interpretation of the model will also lead to the discovery of bugs and errors in the model.
+
+### Graphviz
+
+Graphviz is an open-source tool used for visualizing decision trees. The tool is written in C programming language and offers interfaces to many programming languages such as Python. It provides a simple interface to create network diagrams, and the diagram created is in vector format, making it simpler for the end-user. 
+
+To use Graphviz in Python, you first need to install the package using the command:
+
+```python
+!pip install graphviz
+```
+
+You can use the following code to visualize a decision tree with Graphviz in Python:
+
+```python
+from sklearn.tree import export_graphviz
+from IPython.display import SVG
+from graphviz import Source
+
+export_graphviz(tree, out_file='tree.dot', feature_names = iris_df.columns.values, rounded = True, precision = 3, filled = True)
+Source.from_file("tree.dot")
+```
+
+Here, we are using the export_graphviz function of the sklearn.tree package to generate a dot file, which is then used to create a decision tree visualization.
+
+### Feature Importance
+
+Feature importance is a measure of which feature contributes more to the model in comparison to the other features. Feature importance is an essential concept that we should consider while training models. It is helpful in model selection, feature selection, analysis of business models, and many more.
+
+Here's an example of how to get feature importance with a random forest model:
+
+```python
+model = RandomForestRegressor()
+model.fit(X_train, y_train)
+
+feat_importances = pd.Series(model.feature_importances_, index=X.columns)
+feat_importances.plot(kind='barh')
+```
+
+In this example, we are using a Random Forest Regressor to find the feature importance of the given feature dataset. We are plotting the feature importance in bar form.
+
+### Conclusion
+
+In this lesson, we learned how to use Graphviz to visualize decision trees, which is a handy tool for interpreting and understanding decision-making processes. We also covered feature importance and how it can be used in analyzing models. With these tools, we can now better understand and explain the decision-making processes of machine learning models.

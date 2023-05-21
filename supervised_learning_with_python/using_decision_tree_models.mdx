@@ -1,0 +1,48 @@
+# Module 3: Decision Trees and Random Forests
+
+## Lesson 1: Introduction to Decision Trees
+
+Welcome to the first lesson of the Decision Trees and Random Forests module. In this lesson, we'll introduce decision trees and how they are used in machine learning.
+
+### What is a Decision Tree?
+
+A decision tree is a tree-like model for decision-making. It is used to represent decisions and their possible consequences, including chance events and their probabilities. At each internal node of the tree, a decision is made based on the values of one or more input features. The outcome of the decision is then used to determine which child node to move to. This process continues until a leaf node is reached, which represents a predicted output value.
+
+### Creating a Decision Tree
+
+To create a decision tree, we first need to train the model on a dataset. The dataset should have one or more input features and a corresponding output value. We then use an algorithm to learn the relationships between the input features and the output value. The algorithm builds the decision tree by recursively splitting the data based on the values of the input features.
+
+Let's take a look at an example of creating a decision tree using the Iris dataset.
+
+```python
+from sklearn.datasets import load_iris
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
+
+# Load the dataset
+iris = load_iris()
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.2, random_state=42)
+
+# Create the decision tree classifier
+clf = DecisionTreeClassifier()
+
+# Train the model on the training dataset
+clf.fit(X_train, y_train)
+
+# Test the model on the testing dataset
+print(clf.score(X_test, y_test))
+```
+
+Here, we load the Iris dataset and split the data into training and testing sets. We then create a decision tree classifier and train the model on the training dataset. Finally, we test the model on the testing dataset and print the accuracy of the model.
+
+### Generalizing a Decision Tree
+
+One potential issue with decision trees is overfitting, where the model captures the noise in the training dataset instead of underlying relationships between the input features and the output value. To avoid overfitting, we can use techniques such as pruning or ensembling.
+
+Pruning involves removing branches from the decision tree that do not improve the performance of the model on the testing dataset. Ensembling involves combining multiple decision trees to create a more powerful model. Random forests, for example, use many decision trees trained on different subsets of the data and input features.
+
+### Conclusion
+
+In this lesson, we introduced decision trees and how they are used in machine learning. We covered the process of creating a decision tree from a dataset and discussed potential issues such as overfitting. We also introduced techniques such as pruning and ensembling to improve the performance of decision trees.

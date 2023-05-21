@@ -1,0 +1,56 @@
+Module 1: Introduction to Supervised Learning
+
+Lesson 1: What is Supervised Learning?
+
+Welcome to the first lesson of the Introduction to Supervised Learning module! In this lesson, we will learn what supervised learning is and its basic concepts.
+
+## What is Supervised Learning?
+
+Supervised learning is a type of machine learning where we teach a machine to learn from labeled data. Labeled data is data that is already pre-classified. The machine uses this labeled data to train and learn patterns, relationships, and rules. These rules and patterns can then be used to make predictions on new, unseen data.
+
+In supervised learning, we generally split our labeled data into two sets:
+
+1. Training set: This is the set of labeled data that we use to train our machine learning algorithm to learn the patterns and relationships in our data.
+2. Test set: This is the set of labeled data that we use to evaluate how well our algorithm is performing. We use a test set that is separate from the training set to check if the algorithm has learned correctly.
+
+## Basic Concepts in Supervised Learning
+
+There are a few basic concepts that are important to understand when working with supervised learning algorithms.
+
+1. Input features: These are the attributes or properties of our data that we use as input to our machine learning algorithm. These input features should be carefully selected because they can greatly impact the performance of our algorithm.
+2. Output labels: These are the categories or classes that we want our algorithm to learn to predict. For example, if we are building a spam filter, the output labels might be "spam" or "not spam".
+3. Model: A model is a mathematical representation of the patterns and relationships in our labeled data. Once a model has been trained on our labeled data, we can use it to make predictions on new, unseen data.
+4. Loss function: A loss function is used to measure the difference between the predicted output and the actual output. The goal is to minimize this difference to improve the accuracy of the model.
+5. Optimization algorithm: An optimization algorithm is used to adjust the parameters of our model to minimize the loss function. There are different types of algorithms, such as gradient descent, that can be used to optimize our model.
+
+## Example of a Supervised Learning Algorithm
+
+Let's take a look at an example of a simple supervised learning algorithm.
+
+Suppose we have a dataset of students' test scores and we want to predict if a student will pass or fail based on their test scores. We can use a logistic regression model to make this prediction.
+
+Here, the test scores would be the input features, and the pass or fail label would be the output label. We would split our data into a training set and a test set, and then train our logistic regression model on the training set. Once the model is trained, we can use it to predict if a new student will pass or fail based on their test scores.
+
+```python
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+
+# Load data
+X, y = load_data()
+
+# Split into training and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train model
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Predict on new data
+y_pred = model.predict(X_test)
+```
+
+In this example, we use the scikit-learn library to load our data and split it into training and test sets. We then train a logistic regression model on the training set and use it to predict on the test set.
+
+## Conclusion
+
+In this lesson, we learned what supervised learning is and its basic concepts, including input features, output labels, models, loss functions, and optimization algorithms. We also saw an example of a simple supervised learning algorithm using a logistic regression model.
