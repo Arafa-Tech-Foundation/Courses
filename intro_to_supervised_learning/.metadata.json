@@ -1,5 +1,5 @@
 {
-  "name": "Introduction to Supervised Learning with Python",
+  "name": "intro_to_supervised_learning",
   "instructor": "Josef Macera",
   "type": "application",
   "languages": ["Python"],
@@ -39,13 +39,19 @@
         { "name": "using_decision_tree_models", "video": "3-1.mp4" },
         { "name": "using_random_forest_models", "video": "3-2.mp4" },
         { "name": "working_with_large_datasets", "video": "3-3.mp4" },
-        { "name": "interpretability_and_visualization_of_models", "video": "3-4.mp4" }
+        {
+          "name": "interpretability_and_visualization_of_models",
+          "video": "3-4.mp4"
+        }
       ]
     },
     {
       "name": "Module 4: Optimization and Avoiding Overfitting",
       "lessons": [
-        { "name": "cross_validation_and_hyperparameter_tuning", "video": "4-1.mp4" },
+        {
+          "name": "cross_validation_and_hyperparameter_tuning",
+          "video": "4-1.mp4"
+        },
         { "name": "dealing_with_imbalanced_data", "video": "4-2.mp4" },
         { "name": "avoiding_overfitting", "video": "4-3.mp4" },
         { "name": "conclusion", "video": "4-4.mp4" }
